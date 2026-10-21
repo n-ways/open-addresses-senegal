@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local databases and exports (server/)
+/data/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+*.db
+
+# Secrets
+.env
+.env.*
+*.key
+*.pem
+
+# Build output and system files
+docs/paper/build/
+*.aux
+*.log
+*.png.tmp
+.DS_Store

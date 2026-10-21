@@ -1,0 +1,32 @@
+% Where the addresses are: compounds per 4 km cell (registry/anchors, drawn as data/density.png by
+% tools/paper-figures.py), over the 46 frozen code zones.
+\documentclass[border=2mm]{standalone}
+\usepackage{common}
+\pgfplotsset{colormap={snmap}{rgb255=(253,239,66) rgb255=(120,190,60) rgb255=(0,133,63) rgb255=(8,60,32)}}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+  width=16cm, axis equal image, scale only axis,
+  xmin=195, xmax=905, ymin=1360, ymax=1850,
+  xlabel={\tr{Easting, UTM zone 28N (km)}{Abscisse, UTM fuseau 28N (km)}},
+  ylabel={\tr{Northing (km)}{Ordonnée (km)}},
+  colorbar, colormap name=snmap,
+  point meta min=0, point meta max=4,
+  colorbar style={width=2.5mm, ytick={0,1,2,3,4}, yticklabels={1,10,100,{1\,000},{10\,000}},
+    ylabel={\tr{compounds per 16 km\textsuperscript{2} cell}{concessions par maille de 16 km\textsuperscript{2}}}, ylabel style={font=\scriptsize}},
+  axis background/.style={fill=white},
+]
+\addplot graphics[xmin=196, xmax=904, ymin=1360, ymax=1848, includegraphics={interpolate=false}] {data/density.png};
+\addplot[draw=ink, line width=0.3pt, unbounded coords=jump] table[x=x, y=y] {data/zones-outline.dat};
+\addplot[only marks, mark=none, nodes near coords={\fontsize{5.5}{6}\selectfont\bfseries\pgfplotspointmeta},
+  nodes near coords style={anchor=center, text=ink, fill=white, fill opacity=0.65, text opacity=1, inner sep=0.6pt},
+  point meta=explicit symbolic, x filter/.expression={\thisrow{areakm2}<300 ? nan : x}]
+  table[x=x, y=y, meta=key] {data/zones-labels.dat};
+% the three small zones of the Cap-Vert peninsula, labelled outside it
+\tikzset{lead/.style={ink, line width=0.3pt}, leadlab/.style={font=\fontsize{5.5}{6}\selectfont\bfseries, fill=white, inner sep=0.6pt}}
+\draw[lead] (axis cs:235.2,1628.6) -- (axis cs:212,1605) node[below, leadlab] {DKR};
+\draw[lead] (axis cs:241.4,1634.1) -- (axis cs:222,1668) node[above, leadlab] {GDW};
+\draw[lead] (axis cs:245.8,1633.6) -- (axis cs:252,1675) node[above, leadlab] {PKN};
+\end{axis}
+\end{tikzpicture}
+\end{document}

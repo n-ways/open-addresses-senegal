@@ -1,0 +1,23 @@
+# N-Ways Addressing for Senegal: what you need to install.
+#
+# Python 3.9 or later. The reference engine and its tests
+# (engine/reference/), the registry server (server/) and the light tool
+# tools/name-ranges.py use only Python's standard library: there is no Python
+# package to install, and `pip install -r requirements.txt` installs nothing.
+#
+# The server also runs in Docker (server/Dockerfile, docker-compose.yml),
+# which needs only Docker.
+#
+# To build the paper (docs/paper/build.sh): pandoc, tectonic and pdftocairo
+# (poppler).
+#
+# Only to rebuild the data from its sources (tools/issue_registry.py,
+# tools/build-zones.py, tools/extract-buildings.py, tools/building-stats.py),
+# not to run the engine or the server:
+#   - the DuckDB command-line tool, 1.1 or later, with its spatial extension,
+#     on PATH as `duckdb` (https://duckdb.org/docs/installation); the tools
+#     set its memory limit to 3 GB;
+#   - the source data listed in SOURCES.md (OpenStreetMap, Overture Maps
+#     footprints, geoBoundaries, GeoNames). tools/issue_registry.py also reads
+#     the N-Ways places database (NWAYS_DB) to classify buildings; without it,
+#     use the published data in registry/ and model/.

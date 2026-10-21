@@ -1,0 +1,28 @@
+% Shared look of the paper's figures: fonts, colours and pgfplots settings.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{common}
+\RequirePackage{fontspec}
+\setmainfont{LibertinusSans}[Extension=.otf,UprightFont=*-Regular,BoldFont=*-Bold,ItalicFont=*-Italic]
+\setmonofont{LibertinusMono}[Extension=.otf,UprightFont=*-Regular]
+\RequirePackage{unicode-math}
+\setmathfont{LibertinusMath-Regular.otf}
+\RequirePackage{pgfplots}
+\RequirePackage{pgfplotstable}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{calc}
+\definecolor{sngreen}{HTML}{00853F}
+\definecolor{snyellow}{HTML}{FDEF42}
+\definecolor{snred}{HTML}{E31B23}
+\definecolor{sngold}{HTML}{C9A300}
+\definecolor{ink}{HTML}{222222}
+\definecolor{muted}{HTML}{8A8A8A}
+\pgfplotsset{
+  every axis/.append style={font=\footnotesize, line width=0.4pt, tick style={line width=0.4pt}},
+  every axis label/.append style={font=\footnotesize},
+  every tick label/.append style={font=\scriptsize},
+  /pgf/number format/.cd, 1000 sep={\,},
+}
+% \tr{English}{French}: the figure's language is set by the wrapper file.
+\providecommand{\tr}[2]{#1}
+% French figures write decimals with a comma.
+\ifnum\tr{0}{1}=1 \pgfkeys{/pgf/number format/use comma}\fi

@@ -1,0 +1,122 @@
+{
+  "country": "SN",
+  "name": "Senegal",
+  "languages": [
+    "fr"
+  ],
+  "alphabet": "23456789CFGHJMPQRVWX",
+  "cellMetres": 3.0,
+  "buildingHeadroom": 2.0,
+  "regionLevel": "first-level division (ISO 3166-2)",
+  "regions": 14,
+  "buildings": 5642839,
+  "spotCodeLengths": [
+    7,
+    8
+  ],
+  "buildingCodeLengths": [
+    5
+  ],
+  "regionsToSubdivide": [
+    "SN-KD",
+    "SN-KE",
+    "SN-LG",
+    "SN-MT",
+    "SN-SL",
+    "SN-TC"
+  ],
+  "spoken": {
+    "fr": {
+      "2": "deux",
+      "3": "trois",
+      "4": "quatre",
+      "5": "cinq",
+      "6": "six",
+      "7": "sept",
+      "8": "huit",
+      "9": "neuf",
+      "C": "cé",
+      "F": "effe",
+      "G": "gé",
+      "H": "ache",
+      "J": "ji",
+      "M": "emme",
+      "P": "pé",
+      "Q": "ku",
+      "R": "erre",
+      "V": "vé",
+      "W": "double vé",
+      "X": "ixe"
+    }
+  },
+  "existing": {
+    "system": "Senegal has 5-digit postcodes (La Poste Sénégal), written to the left of the delivery office: '12500 DAKAR', '27000 Ziguinchor' (UPU). They are area-level (delivery zone / post office), not door-level: La Poste's own finder maps 4,143 localities and neighbourhoods to 166 values, of which 163 are well-formed codes (e.g. Almadies/Ngor 12000, Ouakam 12300, Touba 22300, Thiès ville 21000). Mail is mostly delivered to P.O. boxes (BP) and 'postchances'. Street names and building numbers exist in parts of Dakar and other cities from earlier addressing programmes, but are not used consistently.",
+    "status": "Re-checked 2026-10-17: no national door-level address system in use. The Ministry of Telecommunications and Digital Affairs relaunched the Adressage Numérique National (ANN) on 5-6 Aug 2026 (single geo-referenced address register; a Dakar pilot dates from 2021); the goal is to finish the pilot within a year before national roll-out. No address format, platform, API or open-data licence has been published.",
+    "postcodeFormat": "NNNNN (5 digits), e.g. 12500 DAKAR",
+    "lookup": "https://www.laposte.sn/code-postal-senegal/ (finder; data in a public JavaScript file, no API or licence)",
+    "openData": "No open national address register. The La Poste locality→postcode list is publicly readable but carries no licence, so it is not copied into the registry. Street names and some addr:* tags exist in OpenStreetMap (ODbL); house-number coverage was not counted (Overpass unavailable).",
+    "openAlgorithm": "Open Location Code (Plus Codes) is open (Apache-2.0) and works offline.",
+    "terms": "La Poste site terms for the postcode data not found; ANN terms not published.",
+    "lastChecked": "2026-10-17",
+    "findings": [
+      {
+        "name": "La Poste Sénégal postcodes",
+        "state": "live, area-level",
+        "format": "5 digits before the town, e.g. '12500 DAKAR'",
+        "openData": "finder + public JS file; no licence",
+        "inOSM": "some addr:postcode tags (not counted)"
+      },
+      {
+        "name": "Adressage Numérique National (ANN)",
+        "state": "relaunched Aug 2026, pilot phase (1-year target)",
+        "format": "not published",
+        "openData": "none announced",
+        "inOSM": false
+      },
+      {
+        "name": "P.O. boxes / postchances",
+        "state": "in use",
+        "format": "'BP 1534 27000 Ziguinchor'",
+        "openData": "none",
+        "inOSM": false
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.upu.int/UPU/media/upu/PostalEntitiesFiles/addressingUnit/senEn.pdf",
+        "kind": "official",
+        "note": "UPU addressing sheet for Senegal (02/2015): 5-digit postcode to the left of the delivery office, e.g. '12500 DAKAR', '27000 Ziguinchor', '46024 SAINT-LOUIS'"
+      },
+      {
+        "url": "https://www.laposte.sn/code-postal-senegal/",
+        "kind": "official",
+        "note": "La Poste Sénégal postcode finder (checked 2026-10-17)"
+      },
+      {
+        "url": "https://www.laposte.sn/wp-content/plugins/posteasy/assets/js/postal-data.js",
+        "kind": "official",
+        "note": "Data file behind the finder: 4,143 locality entries mapped to 165 distinct 5-digit codes (e.g. 'Almadies (Ngor/Almadies, Dakar)' 12000, 'Touba' 22300); no licence stated"
+      },
+      {
+        "url": "https://senego.com/adressage-numerique-le-senegal-se-donne-pour-objectif-de-boucler-la-phase-pilote-en-un-an_1990855.html",
+        "kind": "press",
+        "note": "5 Aug 2026: Ministry of Telecommunications and Digital Affairs workshop relaunching the Adressage Numérique National (ANN); goal to finish the pilot within a year before national roll-out"
+      },
+      {
+        "url": "https://www.osiris.sn/adressage-numerique-le-senegal-relance-un-chantier-strategique-reste-inacheve.html",
+        "kind": "press",
+        "note": "OSIRIS (Senegalese ICT observatory): ANN aims at a single geo-referenced address register; a Dakar pilot began in 2021; national service not in place"
+      },
+      {
+        "url": "https://github.com/google/open-location-code",
+        "kind": "other",
+        "note": "Open Location Code, Apache-2.0"
+      }
+    ]
+  },
+  "sources": {
+    "regions": "N-Ways regions (OpenStreetMap administrative boundaries, ODbL)",
+    "buildings": "OpenStreetMap (ODbL); Google Open Buildings (CC BY 4.0) and Microsoft building footprints (ODbL) via Overture Maps",
+    "existing": "Desk research on Senegal's postal and addressing systems (docs/existing-systems.md)"
+  }
+}

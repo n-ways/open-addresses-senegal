@@ -1,0 +1,352 @@
+[
+  {
+    "key": "DB",
+    "iso": "SN-DB",
+    "name": "Diourbel Region",
+    "nameFr": "Diourbel",
+    "nameLocal": "Région de Diourbel",
+    "wikidata": "Q856261",
+    "areaKm2": 4683.9,
+    "box": [
+      -16.68773,
+      14.53466,
+      -15.40418,
+      15.03321
+    ],
+    "buildings": {
+      "openstreetmap": 62983,
+      "ml": 659388,
+      "total": 722371
+    },
+    "codeLength": {
+      "spot": 7,
+      "building": 5
+    },
+    "needsSubdivision": false
+  },
+  {
+    "key": "DK",
+    "iso": "SN-DK",
+    "name": "Dakar Region",
+    "nameFr": "Région de Dakar",
+    "nameLocal": "Région de Dakar",
+    "wikidata": "Q856268",
+    "areaKm2": 619.7,
+    "box": [
+      -17.54902,
+      14.58534,
+      -17.12061,
+      14.8935
+    ],
+    "buildings": {
+      "openstreetmap": 110596,
+      "ml": 423494,
+      "total": 534090
+    },
+    "codeLength": {
+      "spot": 7,
+      "building": 5
+    },
+    "needsSubdivision": false
+  },
+  {
+    "key": "FK",
+    "iso": "SN-FK",
+    "name": "Fatick Region",
+    "nameFr": "Fatick",
+    "nameLocal": "Région de Fatick",
+    "wikidata": "Q856282",
+    "areaKm2": 7068.1,
+    "box": [
+      -16.8001,
+      13.59159,
+      -15.57208,
+      14.75338
+    ],
+    "buildings": {
+      "openstreetmap": 45381,
+      "ml": 336530,
+      "total": 381911
+    },
+    "codeLength": {
+      "spot": 7,
+      "building": 5
+    },
+    "needsSubdivision": false
+  },
+  {
+    "key": "KA",
+    "iso": "SN-KA",
+    "name": "Kaffrine Region",
+    "nameFr": "Région de Kaffrine",
+    "nameLocal": "Région de Kaffrine",
+    "wikidata": "Q1059694",
+    "areaKm2": 11377.6,
+    "box": [
+      -15.87741,
+      13.74097,
+      -14.59137,
+      14.74688
+    ],
+    "buildings": {
+      "openstreetmap": 21832,
+      "ml": 294488,
+      "total": 316320
+    },
+    "codeLength": {
+      "spot": 7,
+      "building": 5
+    },
+    "needsSubdivision": false
+  },
+  {
+    "key": "KD",
+    "iso": "SN-KD",
+    "name": "Kolda Region",
+    "nameFr": "Kolda",
+    "nameLocal": "Région de Kolda",
+    "wikidata": "Q738081",
+    "areaKm2": 13862.1,
+    "box": [
+      -15.3557,
+      12.65839,
+      -13.34381,
+      13.60046
+    ],
+    "buildings": {
+      "openstreetmap": 242441,
+      "ml": 169535,
+      "total": 411976
+    },
+    "codeLength": {
+      "spot": 8,
+      "building": 5
+    },
+    "needsSubdivision": true
+  },
+  {
+    "key": "KE",
+    "iso": "SN-KE",
+    "name": "Kédougou Region",
+    "nameFr": "Région de Kédougou",
+    "nameLocal": "Région de Kédougou",
+    "wikidata": "Q1046666",
+    "areaKm2": 16792.1,
+    "box": [
+      -13.23971,
+      12.31443,
+      -11.34595,
+      13.45674
+    ],
+    "buildings": {
+      "openstreetmap": 65568,
+      "ml": 84684,
+      "total": 150252
+    },
+    "codeLength": {
+      "spot": 8,
+      "building": 5
+    },
+    "needsSubdivision": true
+  },
+  {
+    "key": "KL",
+    "iso": "SN-KL",
+    "name": "Kaolack Region",
+    "nameFr": "Région de Kaolack",
+    "nameLocal": "Région de Kaolack",
+    "wikidata": "Q847671",
+    "areaKm2": 5319.8,
+    "box": [
+      -16.386,
+      13.5913,
+      -15.40968,
+      14.50054
+    ],
+    "buildings": {
+      "openstreetmap": 46442,
+      "ml": 398410,
+      "total": 444852
+    },
+    "codeLength": {
+      "spot": 7,
+      "building": 5
+    },
+    "needsSubdivision": false
+  },
+  {
+    "key": "LG",
+    "iso": "SN-LG",
+    "name": "Louga Region",
+    "nameFr": "Louga",
+    "nameLocal": "Région de Louga",
+    "wikidata": "Q738061",
+    "areaKm2": 25339.5,
+    "box": [
+      -16.74266,
+      14.60834,
+      -14.4846,
+      16.18604
+    ],
+    "buildings": {
+      "openstreetmap": 101878,
+      "ml": 405302,
+      "total": 507180
+    },
+    "codeLength": {
+      "spot": 8,
+      "building": 5
+    },
+    "needsSubdivision": true
+  },
+  {
+    "key": "MT",
+    "iso": "SN-MT",
+    "name": "Matam Region",
+    "nameFr": "Matam",
+    "nameLocal": "Région de Matam",
+    "wikidata": "Q856275",
+    "areaKm2": 29209.3,
+    "box": [
+      -14.84967,
+      14.38779,
+      -12.59621,
+      16.14826
+    ],
+    "buildings": {
+      "openstreetmap": 176844,
+      "ml": 103047,
+      "total": 279891
+    },
+    "codeLength": {
+      "spot": 8,
+      "building": 5
+    },
+    "needsSubdivision": true
+  },
+  {
+    "key": "SE",
+    "iso": "SN-SE",
+    "name": "Sédhiou Region",
+    "nameFr": "Région de Sédhiou",
+    "nameLocal": "Région de Sédhiou",
+    "wikidata": "Q589848",
+    "areaKm2": 7348.7,
+    "box": [
+      -16.04088,
+      12.42485,
+      -15.11227,
+      13.39529
+    ],
+    "buildings": {
+      "openstreetmap": 100953,
+      "ml": 47671,
+      "total": 148624
+    },
+    "codeLength": {
+      "spot": 7,
+      "building": 5
+    },
+    "needsSubdivision": false
+  },
+  {
+    "key": "SL",
+    "iso": "SN-SL",
+    "name": "Saint-Louis Region",
+    "nameFr": "Saint-Louis",
+    "nameLocal": "Région de Saint-Louis",
+    "wikidata": "Q178872",
+    "areaKm2": 18980.9,
+    "box": [
+      -16.52844,
+      15.49246,
+      -13.7022,
+      16.69197
+    ],
+    "buildings": {
+      "openstreetmap": 119045,
+      "ml": 283059,
+      "total": 402104
+    },
+    "codeLength": {
+      "spot": 8,
+      "building": 5
+    },
+    "needsSubdivision": true
+  },
+  {
+    "key": "TC",
+    "iso": "SN-TC",
+    "name": "Tambacounda Region",
+    "nameFr": "Région de Tambacounda",
+    "nameLocal": "Région de Tambacounda",
+    "wikidata": "Q848554",
+    "areaKm2": 42214.4,
+    "box": [
+      -14.82889,
+      12.62701,
+      -11.86445,
+      15.10962
+    ],
+    "buildings": {
+      "openstreetmap": 163105,
+      "ml": 210068,
+      "total": 373173
+    },
+    "codeLength": {
+      "spot": 8,
+      "building": 5
+    },
+    "needsSubdivision": true
+  },
+  {
+    "key": "TH",
+    "iso": "SN-TH",
+    "name": "Thiès Region",
+    "nameFr": "Thiès",
+    "nameLocal": "Région de Thiès",
+    "wikidata": "Q847682",
+    "areaKm2": 6694.9,
+    "box": [
+      -17.16176,
+      14.05379,
+      -16.12083,
+      15.45438
+    ],
+    "buildings": {
+      "openstreetmap": 67021,
+      "ml": 735999,
+      "total": 803020
+    },
+    "codeLength": {
+      "spot": 7,
+      "building": 5
+    },
+    "needsSubdivision": false
+  },
+  {
+    "key": "ZG",
+    "iso": "SN-ZG",
+    "name": "Ziguinchor Region",
+    "nameFr": "Région de Ziguinchor",
+    "nameLocal": "Région de Ziguinchor",
+    "wikidata": "Q822692",
+    "areaKm2": 7332.4,
+    "box": [
+      -16.79184,
+      12.33953,
+      -15.88908,
+      13.16885
+    ],
+    "buildings": {
+      "openstreetmap": 54630,
+      "ml": 112445,
+      "total": 167075
+    },
+    "codeLength": {
+      "spot": 7,
+      "building": 5
+    },
+    "needsSubdivision": false
+  }
+]

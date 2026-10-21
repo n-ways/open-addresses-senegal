@@ -1,0 +1,553 @@
+{
+  "country": "SN",
+  "name": "N-Ways Addressing for Senegal",
+  "version": "0.2",
+  "date": "2026-10-18",
+  "status": "issued 2026-10-20; open (LICENSING.md); not official, not a postcode, not a land title",
+  "firstCriterion": "memorability: people already remember a place word and a short number; the address is 'Ouakam 2512', and it is unique in all of Senegal on its own",
+  "existingSystems": {
+    "verdict": "postal codes exist but are coarse (delivery-office level, 163 codes) and not door-level; partial physical street addressing in parts of nine cities; the state's door-level Adressage Numérique National (ANN) is in pilot and has published no format",
+    "laPoste": {
+      "format": "NNNNN to the left of the delivery office",
+      "codes": 163,
+      "relation": "every compound carries laPosteCode (from OSM addr:postcode, or La Poste's list only with La Poste's permission); never embedded in the N-Ways code"
+    },
+    "streetPlates": {
+      "format": "quartier initials + street number (PE-44, SC-15) and metric door numbers",
+      "relation": "doors carry streetRef + metricNumber when confirmed"
+    },
+    "ann": {
+      "status": "relaunched 5-6 Aug 2026, pilot to finish within a year",
+      "relation": "every compound has annId; the ANN address is shown first once it exists; the registry is offered to the ANN (GOVERNANCE.md)"
+    },
+    "cadastre": {
+      "holder": "DGID / Direction du Cadastre; PROCASEF (830,000+ parcels in 138 communes by Jun 2026)",
+      "relation": "compound carries nicad and lotissementPlot when known; Add my home imports survey plans"
+    }
+  },
+  "hierarchy": {
+    "zone": {
+      "what": "46 frozen code zones: the 45 départements of 2019 (geoBoundaries) with Mbacké split into TBA (arr. Ndame: Touba + Mbacké town) and KTF (Kaël, Taïf)",
+      "why": "régions are too large (Tambacounda 42,214 km²) and Dakar region too dense for one number space; départements are what people say after the town; frozen so that administrative changes (Keur Massar, 2021) never move a code",
+      "keyLength": 3,
+      "files": [
+        "model/zones.json",
+        "model/zones.geojson"
+      ]
+    },
+    "lieu": {
+      "what": "the place word: quartier in towns, village in the countryside, cité for estates",
+      "source": "OpenStreetMap place nodes (neighbourhood, suburb, village, town, city) and GeoNames populated places; frozen at first issue, curated with the communes as aliases and plate names",
+      "assignment": "nearest quartier/village/locality node within 2.5 km in the same zone, else nearest town within 10 km, else nearest place of the zone; decided at first issue and frozen per compound",
+      "duplicates": "no context is ever needed: every lieu with the same normalised name, anywhere in Senegal, shares one national number range for that name, one block per lieu (see nationalNameRanges); the zone, the town after a comma and the phone's position are not part of the address. The nearest town of same-named lieux of one zone ('nearTown') is shown on the place card only",
+      "aliases": "OSM alt names, parenthesised long names, Wolof and French spellings (Ouakam/Wakam, Mbacké/Mbakke, Thiès/Thies) all resolve",
+      "renamedOrDisputed": "the code never changes; a new name is added as an alias",
+      "file": "model/lieux.json"
+    },
+    "compound": "the addressable unit: fenced plot, concession, villa, apartment block, school, market; one number in its lieu's block of the name's national range",
+    "structure": "a building of the compound: index 1 = largest, then by distance",
+    "unit": "a flat or a shop door inside a structure"
+  },
+  "formats": {
+    "remembered": {
+      "pattern": "<plate name> <number>",
+      "example": "Ouakam 2512",
+      "letters": "none",
+      "digits": "3, 4 or 5, never starting with 0; the same length for every lieu of one name",
+      "unique": "nationally on its own: 'Médina 12 150' is the Médina of Dakar and 'Médina 23 150' the Médina of Ziguinchor, with no zone or town said",
+      "withdrawn": "'<Lieu> <number>, <zone name>' (e.g. 'Medina 150, Ziguinchor') is not used: an address that needs its town to be told apart is not unique",
+      "plateName": "the lieu's plate name: at most 12 characters and 2 words (see plateNames)"
+    },
+    "written": {
+      "pattern": "<LIEU> <number> · <ZONE>",
+      "example": "OUAKAM 2512 · DAKAR",
+      "use": "plates, stickers, forms; the zone name is information for the reader, not part of the identity; no check letter is ever printed for people",
+      "officialName": "the lieu's full official name is printed in small type under the written form, for context; never required"
+    },
+    "canonical": {
+      "pattern": "SN-<KEY>-<lieu index 4 digits>-<number>-<check>[·structure[.unit]]",
+      "example": "SN-DKR-0080-2512-J·2",
+      "use": "APIs, QR codes, partner systems",
+      "check": "validate checks the zone key and lieu index against the frozen block table exactly, and the letter over name family + number"
+    },
+    "spot": {
+      "pattern": "<KEY> <E digits> <N digits> <check>",
+      "example": "DKR 5553 1512",
+      "use": "any point with no compound (field, market pitch, empty plot); computed offline",
+      "grid": "WGS 84 / UTM 28N, zone frame origin, cell 1/2/5/10 m, 4 or 5 digits per axis"
+    },
+    "numberLength": {
+      "rule": "per NAME, not per lieu: each lieu of the name needs a block of 3 x compounds rounded up to the grain (10 for 3 digits, 100 for 4-5 digits, at least one grain); digits = smallest d in {3,4,5} for which the blocks fill at most 90 % of the d-digit range",
+      "headroom": 3,
+      "headroomReason": "urban growth ~3.7 %/yr: 1.037^30 = 2.97, about 30 years",
+      "spare": "at least 10 % of every name's range stays unallocated at first issue, for new lieux of the same name: 90 / 900 / 9,000 numbers",
+      "ranges": {
+        "3": "100-999 (one lieu alone: up to 270 compounds)",
+        "4": "1000-9999 (up to 2,700)",
+        "5": "10000-99999 (up to 27,000)"
+      },
+      "overflow": "a full block takes a further block from the name's spare space, then '<Lieu> Extension' (official name), a new name with its own national range; its plate name is chosen by the commune when '<plate> Extension' is over the limit",
+      "split": "a lieu over 27,000 compounds is split along named sub-quartiers before first issue"
+    }
+  },
+  "plateNames": {
+    "rule": "a long address is not remembered, so the name in the remembered code is a PLATE name of at most 12 characters (NFC; letters, spaces, hyphens, apostrophes count one; an accented letter is one) and at most 2 words (linking words de/du/des/d'/la/le/les/l'/et/sur/en/au/aux/à/& do not count; a hyphen separates words); a trailing sector numeral counts in the characters, not as a word ('Liberté 6', 'HLM 5')",
+    "names": {
+      "officialName": "the full name from the map or the commune list: small print on cards and plates, accepted when typed (alias)",
+      "name": "the plate name used in the code"
+    },
+    "derivation": [
+      "documented short form with a source (known)",
+      "clean: numeral split off and written in digits; generic words (quartier, village de, hameau, lotissement, zone, secteur, campement) and scheme labels (S.I.C.A.P., Sicap) dropped; brackets, text after a slash, a second spelling after ou dropped; acronym dots removed",
+      "if it fits: used (as-is / cleaned)",
+      "else: runs of whole words that fit, ranked by rarity over all lieu names; the best taken only when clearly ahead (distinctive)",
+      "else, or when a Senegal rule applies: needsCouncilChoice with up to 3 candidates, the first used provisionally"
+    ],
+    "senegalRules": {
+      "cite": "'Cité' is kept in a name that fits ('Cité Lamy'); it only goes first when the name is too long",
+      "toCommune": [
+        "settlement heads of a person's, family's or holy place's name: Keur/Kër/Kerr, Darou/Dar, Médina/Madina, Médinatoul, Djannatoul, Boukhatoul, Saré, Sinthiou (and spellings), Sinthiang, Santhie, Gourel, Ouro/Wouro, Dara, Touba, Taïba, Missira, Hamdallaye, Baïti/Beyti",
+        "given names, family names and initials (Mamadou, Ousmane, Ndiaye, Diop, Fall, M.)",
+        "ethnic, compass and land qualifiers (Peul, Wolof, Sérère, Toucouleur, Bambara, Diola, Nord, Sud, Est, Ouest, Centre, Walo, Diéri, Ferlo, Kounda) and descriptive nouns (Marché, Gare, Plage...)",
+        "joined names of several quartiers and 'X de Y' names",
+        "a result equal to a commune or département seat, a regional capital or a large city of the region (not the lieu's own town; regional capitals and large cities are never own)",
+        "a result equal to another lieu of the same zone",
+        "short forms said but not documented ('Parcelles' for Parcelles Assainies)"
+      ]
+    },
+    "known": [
+      {
+        "official": "Saly Portudal",
+        "plate": "Saly",
+        "source": "SOURCES.md N1 (fr.wikipedia.org/wiki/Saly_Portudal)"
+      },
+      {
+        "official": "Sali Portudal",
+        "plate": "Saly",
+        "source": "SOURCES.md N1"
+      },
+      {
+        "official": "Dakar-Plateau",
+        "plate": "Plateau",
+        "source": "SOURCES.md N2 (fr.wikipedia.org/wiki/Dakar-Plateau)"
+      }
+    ],
+    "aliases": "the official name and other spellings are aliases; an alias claimed by two plate names is dropped (aliasesDropped in lieux.json)",
+    "ranges": "same-normalised plate names share one national range (nationalNameRanges)",
+    "council": "a flagged lieu keeps a provisional plate name (its first candidate) so that it can be numbered; the commune confirms or replaces it, and the number does not change",
+    "engine": "plate_ok / split_numeral in sn_engine.py; allocate_families and Lieux.add_lieu refuse a plate over the limit unless flagged",
+    "counts": {
+      "lieux": 14997,
+      "officialOverLimit": {
+        "any": 4208,
+        "over12Characters": 4154,
+        "over2Words": 1474
+      },
+      "byRule": {
+        "as-is": 10763,
+        "cleaned": 100,
+        "council": 3115,
+        "distinctive": 1016,
+        "known": 3
+      },
+      "needsCouncilChoice": 3116,
+      "stillOverLimitProvisionally": 172,
+      "aliasesDropped": 55,
+      "longestRememberedCode": {
+        "code": "Ancien Marché Hebdomadaire 22 299",
+        "length": 33,
+        "lieu": "FTK/0",
+        "officialName": "Ancien marché hebdomadaire"
+      },
+      "longestRememberedCodeNotFlagged": {
+        "code": "Yeumbeul Sud 20 699",
+        "length": 19,
+        "lieu": "PKN/38",
+        "officialName": "Yeumbeul sud"
+      }
+    },
+    "before": {
+      "nameKeys": 12344,
+      "sharedNames": 1404,
+      "lieuxInSharedNames": 4057,
+      "largestSharedRange": {
+        "names": [
+          "Darou Salam",
+          "Darou salam",
+          "Darou-Salam"
+        ],
+        "lieux": 23,
+        "compounds": 22091,
+        "digits": 5
+      },
+      "mostSharedName": {
+        "names": [
+          "Darou Salam",
+          "Darou salam",
+          "Darou-Salam"
+        ],
+        "lieux": 23,
+        "compounds": 22091,
+        "digits": 5
+      },
+      "lieuxByDigits": {
+        "3": 10625,
+        "4": 3777,
+        "5": 595
+      },
+      "namesByDigits": {
+        "3": 9794,
+        "4": 2336,
+        "5": 214
+      },
+      "shareCompoundsByDigits": {
+        "3": 0.2285,
+        "4": 0.4589,
+        "5": 0.3126
+      }
+    },
+    "after": {
+      "nameKeys": 11043,
+      "sharedNames": 1974,
+      "lieuxInSharedNames": 5928,
+      "largestSharedRange": {
+        "names": [
+          "Darou Salam",
+          "Darou-Salam"
+        ],
+        "lieux": 23,
+        "compounds": 22091,
+        "digits": 5
+      },
+      "mostSharedName": {
+        "names": [
+          "Ndiayene",
+          "Ndiayenne",
+          "Ndiayène"
+        ],
+        "lieux": 32,
+        "compounds": 8754,
+        "digits": 5
+      },
+      "lieuxByDigits": {
+        "3": 9591,
+        "4": 4565,
+        "5": 841
+      },
+      "namesByDigits": {
+        "3": 8473,
+        "4": 2345,
+        "5": 225
+      },
+      "shareCompoundsByDigits": {
+        "3": 0.1999,
+        "4": 0.4659,
+        "5": 0.3342
+      }
+    },
+    "files": [
+      "tools/sn_plates.py",
+      "engine/reference/plate_names.py",
+      "tools/name-ranges.py",
+      "model/lieux.json"
+    ]
+  },
+  "nationalNameRanges": {
+    "rule": "a remembered address is said without its town, so it must be unique nationally on its own, with no context: two quartiers called Médina cannot both have a Médina 150",
+    "model": "every lieu whose plate name folds to the same name key belongs to one name family; the family has ONE national number range, cut into one block per lieu; 'name + number' falls in exactly one block, so it decodes to one lieu and one compound anywhere in Senegal",
+    "normalisation": {
+      "language": "French and Wolof (official Wolof orthography, décret 2005-992), applied to every place word",
+      "steps": [
+        "ñ -> ny, œ -> oe, æ -> ae; accents and case removed",
+        "hyphens, apostrophes, dots, brackets -> spaces; St/Ste/Sainte -> saint",
+        "trailing numeral dropped (with numero/no): HLM, HLM 2 ... HLM 6 are one name; Pikine and Pikine 3 are one name",
+        "leading articles and generic words dropped when something follows: le, la, les, l', de, du, d', quartier, village, hameau (Cité is kept)",
+        "spaces removed (Keur Massar = Keurmassar)",
+        "French/Wolof spelling folded: ou+vowel -> w (Ouakam = Wakam); ou -> u (Darou = Daru); eu -> e (Keur = Kër); kh -> x; th -> t; ph -> f; dj, di+vowel -> j (Ndiaye = Njaay); gn -> ny; c+e/i/y -> s; ck/qu/q/c -> k (Mbacké = Mbakke); y -> i; silent h dropped (Hamdallaye = Amdalaye)",
+        "doubled letters collapsed (Gounass = Gounas), final silent e dropped (Ndiayène = Ndiayene)"
+      ],
+      "why": "deliberately generous: names people can confuse by ear or spelling must share one range, or two places would have the same remembered address; over-folding only lengthens a range",
+      "function": "engine name_key"
+    },
+    "blocks": "cut from the bottom of the name's range, one per lieu, in (zone key, lieu index) order; e.g. Médina (9 lieux, 5 digits): Dakar 10400-17799, Saint-Louis 19600-22899, Ziguinchor 22900-23399, free 23400-99999",
+    "numeral": "the trailing numeral of a name stays in the place word ('HLM 5 17 395'); decoding takes the last d digits of the name's length as the number, and any digits before must be the lieu's own numeral ('HLM 17395' = 'HLM 5 17 395'; 'HLM 3 17395' refused)",
+    "qualifiers": {
+      "rule": "names whose lieux together do not fit 5 digits: the largest take ONE established qualifier people already say (as 'Médina Baye' is a name of its own), decided once per name with the commune and listed; never a zone name at the end, never an ordinal",
+      "list": [],
+      "today": "none needed with the 2026-10-18 counts; the fullest 5-digit range is Darou Salam, 75.1 % allocated",
+      "file": "tools/name-ranges.py QUALIFIERS"
+    },
+    "stability": "the block table is frozen at first issue: blocks are never renumbered, moved or shrunk; a new lieu with an existing name gets a new block from the name's spare space; a full block gets a further block of one grain; a renamed lieu keeps its block",
+    "checkLetter": "computed over the name family id + number; the lieu is bound by the block table (one lieu per number of a name), so a one-digit slip into another same-named lieu's block changes one payload position and is always caught",
+    "counts": {
+      "source": "model/name-families.json (tools/name-ranges.py, 2026-10-18)",
+      "lieux": 14997,
+      "nameKeys": 11043,
+      "repeatingNames": 1974,
+      "lieuxWithRepeatingNames": 5928,
+      "repeatingNamesAcrossZones": 1322,
+      "repeatingNamesWithinOneZoneOnly": 652,
+      "shareCompoundsInRepeatingNames": 0.419,
+      "sharedRangesByDigits": {
+        "3": 902,
+        "4": 964,
+        "5": 108
+      },
+      "largestSharedRange": {
+        "name": "Darou Salam",
+        "lieux": 23,
+        "zones": 17,
+        "compounds": 22091,
+        "digits": 5,
+        "allocatedShare": 0.751
+      },
+      "namesNeedingQualifier": 0,
+      "shareCompoundsByDigits": {
+        "3": 0.1999,
+        "4": 0.4659,
+        "5": 0.3342
+      },
+      "shareCompoundsByDigitsWithPerLieuRanges": {
+        "3": 0.297,
+        "4": 0.4541,
+        "5": 0.2489
+      },
+      "shareCompoundsByDigitsWithOfficialNames": {
+        "3": 0.2285,
+        "4": 0.4589,
+        "5": 0.3126
+      },
+      "basis": "plate names"
+    },
+    "files": [
+      "model/name-families.json",
+      "model/lieux.json (family, digits, blocks per lieu)",
+      "tools/name-ranges.py"
+    ]
+  },
+  "checkLetter": {
+    "method": "ISO/IEC 7064 MOD 11-2 over name family id (5 digits) + number (5, zero-padded); spot codes: zone index + E + N digits",
+    "letters": "FHJKMQRTWXZ",
+    "lettersReason": "French letter names: one of each rhyming set (no B C D G P V; T kept), one of each e-e pair (F, M, R), J kept and G dropped (gé/ji), no vowels, no Y, no O/I/L",
+    "detects": "every single wrong digit and every swap of adjacent digits, including a slip into another same-named lieu's block",
+    "remembered": false
+  },
+  "spoken": {
+    "fr": "place word, then the number as a house number (3 digits: 'cent vingt') or in pairs like phone numbers (4: 'quarante-cinq, douze'; 5: 'quarante-cinq, cent vingt-huit')",
+    "wo": "place word, then digits one by one (benn, ñaar, ñett, ñeent, juróom…); Wolof 3/4 and 8/9 sound alike, so the app reads the code back",
+    "otherLanguages": "Pulaar, Serer, Jola, Mandinka speakers use the same place word and French or Wolof digits"
+  },
+  "compounds": {
+    "rules": [
+      {
+        "id": "R0",
+        "name": "enclosure",
+        "condition": "centroid inside an OSM wall/fence, an N-Ways gated site, an Add-my-home outline or a cadastral parcel",
+        "confidence": 0.9,
+        "estates": "a cité with one gate becomes the estate of the compounds inside, not one compound"
+      },
+      {
+        "id": "R1",
+        "name": "satellite",
+        "condition": "footprint < 30 m² within 4 m (urban) / 8 m (rural) of a structure >= 30 m²",
+        "confidence": 0.6
+      },
+      {
+        "id": "R2",
+        "name": "rural concession",
+        "condition": "rural fabric, footprints < 120 m², gap <= 6 m, at most 30 structures",
+        "confidence": 0.5
+      },
+      {
+        "id": "R3",
+        "name": "people",
+        "condition": "the building's owner + 1, or 2 independent confirmations: 'one home' / 'separate home'",
+        "confidence": 0.95
+      }
+    ],
+    "urbanFabric": ">= 100 structures in the 250 m UTM tile (1,600/km²)",
+    "neverMerged": "two main structures (>= 30 m²) in urban fabric by shape alone: wall-to-wall houses in the Médina, Pikine or Touba are separate concessions",
+    "gap": "centroid distance minus equivalent-circle radii sqrt(area/pi)",
+    "gate": "primary entrance; navigation ends there; sources: confirmed door > Add my home > OSM gate/entrance > N-Ways routing gates",
+    "profile": {
+      "use": [
+        "residential-one-household",
+        "residential-multi-household",
+        "mixed",
+        "commercial",
+        "public",
+        "religious",
+        "industrial",
+        "unknown"
+      ],
+      "fields": [
+        "use",
+        "useConfidence",
+        "plotAreaM2",
+        "structures",
+        "floorAreaM2",
+        "gates",
+        "estate",
+        "laPosteCode",
+        "streetRefs",
+        "annId",
+        "nicad",
+        "lotissementPlot",
+        "groupingRule",
+        "groupingConfidence",
+        "status"
+      ]
+    }
+  },
+  "buildingProfile": {
+    "fields": {
+      "class": "taxonomy code",
+      "classConfidence": "0-1",
+      "footprintM2": "polygon area in UTM 28N",
+      "perimeterM": "polygon perimeter",
+      "heightM": "OSM height, else OSM building:levels x 3.0 m, else null (the ML h is a rendering filler and is never used)",
+      "floors": "OSM building:levels, else height / 3.0 m, else 1 (source 'default')",
+      "rPlus": "RDC, R+1, R+2…",
+      "floorAreaM2": "footprint x floors (estimate flag when floors is default)",
+      "name": "businesses and public buildings only",
+      "status": "existing | construction | ruin | demolished",
+      "entrances": "doors with kind, streetRef, metricNumber",
+      "sources": "per attribute: osm:<tag>, ml:footprint, places:<category>, people, partner:<name>, default",
+      "lastConfirmed": "date per attribute"
+    },
+    "classes": {
+      "res.concession": "concession familiale",
+      "res.maison": "maison basse / villa",
+      "res.immeuble": "immeuble d'habitation R+2 and up",
+      "res.case": "case (hut)",
+      "res.annexe": "annexe (kitchen, toilets, store, gatehouse, boys' quarters)",
+      "com.boutique": "boutique",
+      "com.marche": "marché / cantines",
+      "com.bureau": "bureaux, banque",
+      "com.entrepot": "entrepôt / magasin",
+      "com.station": "station-service",
+      "com.atelier": "atelier, garage, vulcanisateur",
+      "hot.hotel": "hôtel / campement / auberge",
+      "hot.restaurant": "restaurant, dibiterie, café",
+      "gov.admin": "administration (ministère, gouvernance, préfecture, mairie, police, gendarmerie, poste)",
+      "edu.ecole": "école",
+      "edu.daara": "daara (only from tags, places or people)",
+      "edu.universite": "université",
+      "san.hopital": "hôpital",
+      "san.centre": "centre / poste / case de santé",
+      "san.pharmacie": "pharmacie",
+      "rel.mosquee": "mosquée",
+      "rel.eglise": "église",
+      "rel.mausolee": "mausolée",
+      "ind.usine": "industrie",
+      "tra.gare": "gare routière, gare, port, aéroport",
+      "pec.quai": "quai de pêche, fumoir",
+      "agr.magasin": "magasin de stockage / secco",
+      "agr.grenier": "grenier",
+      "agr.ferme": "bâtiment agricole",
+      "mix.immeuble": "immeuble mixte (commerce au rez-de-chaussée)",
+      "chantier": "en construction",
+      "ruine": "ruine",
+      "inconnu": "inconnu"
+    },
+    "inference": "SPEC.md section 6.2: OSM tags (0.85-0.9) > N-Ways places inside the footprint (0.6-0.7) > shape and height (0.2-0.5); people's confirmations set 0.95",
+    "privacy": {
+      "public": [
+        "position",
+        "outline",
+        "class",
+        "size",
+        "floors",
+        "status",
+        "gate position",
+        "business and public-building names",
+        "street plate"
+      ],
+      "private": [
+        "occupants (never collected)",
+        "household counts (kept only as one/several, shown to nobody)",
+        "Add-my-home photos (kept for verification, not published)",
+        "doors a household asked to hide"
+      ],
+      "law": "Loi 2008-12 and Décret 2008-721; authority: CDP; geolocation processing declared before launch (déclaration normale)"
+    }
+  },
+  "addMyHome": {
+    "steps": [
+      "gate: GPS averaged 10 s + one gate photo",
+      "outline: (a) tap corners on imagery, (b) walk inside the wall with ARKit/ARCore, (c) import survey-plan beacons (Yoff/UTM 28N EPSG:31028, NSGD2004/UTM 28N or WGS 84/UTM 28N EPSG:32628) + NICAD or lotissement plot",
+      "describe: households, structures, floors, use",
+      "provisional address: next reserved number in the lieu's block (midpoint between Hilbert neighbours), else a further block from the name's spare space, else '<Lieu> Extension'",
+      "confirmed: a delivery/arrival by someone else, 30 days without a neighbour's dispute, or new imagery/footprints"
+    ],
+    "safeguards": [
+      "an address, not a land title (stated in the flow)",
+      "overlaps flagged, not issued",
+      "gate on the outline, area 20-20,000 m², closed loop, GPS vs AR within 5 m, imported plan within 30 m of the gate",
+      "keeps outline + gate position + gate photo only; no video, no interior",
+      "offline: spot code at once; the address is issued by the registry on the next connection"
+    ],
+    "legal": "Law 64-46 (domaine national), Law 2011-07 (titre foncier); only the cadastre and géomètres-experts survey for titles; N-Ways never decides land disputes",
+    "officialAreas": "status 'provisional-alias': no N-Ways plate; the household is told to ask the commune for the official number"
+  },
+  "getting": {
+    "channels": [
+      "N-Ways app: 'Votre adresse' shown as soon as home is known; one tap to share by WhatsApp or SMS link",
+      "plates and QR stickers",
+      "Add my home",
+      "partners (couriers, banks, utilities) look up a customer's address with the customer's consent"
+    ],
+    "laterOption": "an SMS lookup service (possible later option, not planned now)"
+  },
+  "dataProtection": {
+    "law": "Loi n° 2008-12 du 25 janvier 2008; Décret n° 2008-721",
+    "authority": "Commission de protection des données personnelles (CDP)",
+    "reform": "replacement bill (APDP) pending since 2019; no adoption found as of 2026-10-18 (unverified absence)"
+  },
+  "governance": "N-WAYS LIMITED maintains it and is the single issuer; hand-over to the ANN or a body it designates; see GOVERNANCE.md",
+  "coverageMask": {
+    "rule": "where a government address system exists (even partial), use the government's data and show its address as written: an official address is the one people are legally held to; N-Ways addresses only where nothing official exists",
+    "levels": {
+      "ann": "ANN address shown as written; N-Ways address is an alias",
+      "official-municipal": "municipal street addressing (street codes such as PE-44, metric door numbers) shown as written; N-Ways address shown only as temporary until the official number is obtained; no N-Ways plates",
+      "nways": "N-Ways address proposed, plates and stickers"
+    },
+    "granularity": "lieu (quartier / village)",
+    "evidence": [
+      "official dataset from a commune, ARTP, ADM or the ANN",
+      ">= 3 OSM streets in the lieu with programme street references (1,601 such streets nationally)",
+      "official plates confirmed by people at sampled doors"
+    ],
+    "growth": "the mask only grows; when official coverage reaches an N-Ways lieu, its addresses are retired as primary and kept as aliases resolving to the official address (crosswalk); never reissued",
+    "notInMask": "La Poste 5-digit postcodes (delivery-office level): the door-level model applies, every compound maps to its laPosteCode"
+  },
+  "statistics": {
+    "source": "model/building-stats.json, model/lieux-stats.json, model/name-families.json (2026-10-18)",
+    "footprints": 5632681,
+    "compounds": 3595628,
+    "dakarDepartement": {
+      "structures": 135785,
+      "compounds": 107391,
+      "shareInMulti": 0.326,
+      "compoundsWithKnownGate": 126,
+      "shareCompoundsWithKnownGate": 0.0012
+    },
+    "touba": {
+      "structures": 417008,
+      "compounds": 289293,
+      "shareInMulti": 0.495,
+      "compoundsWithKnownGate": 3,
+      "shareCompoundsWithKnownGate": 0.0
+    },
+    "numberDigitsShare": {
+      "3": 0.1999,
+      "4": 0.4659,
+      "5": 0.3342
+    },
+    "lieuxUsed": 14997,
+    "officialMaskShare": 0.0358,
+    "repeatingNames": 1974,
+    "lieuxWithRepeatingNames": 5928,
+    "plateNamesNeedingCouncilChoice": 3116
+  }
+}

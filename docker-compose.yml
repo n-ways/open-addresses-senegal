@@ -1,0 +1,22 @@
+# The registry server in one command: `docker compose up -d`.
+# On first start it imports registry/ into the `addresses-data` volume
+# (checked against registry/MANIFEST.json), then serves http://localhost:8080/v1.
+# Read-only unless ISSUE_KEYS is set: see server/README.md, "Who may issue".
+services:
+  addresses:
+    build:
+      context: .
+      dockerfile: server/Dockerfile
+    image: n-ways-addresses-sn
+    ports:
+      - "${PORT:-8080}:8080"
+    environment:
+      ISSUE_KEYS: ${ISSUE_KEYS:-}
+      ISSUE_PER_DAY: ${ISSUE_PER_DAY:-5}
+      CORS_ORIGINS: ${CORS_ORIGINS:-*}
+    volumes:
+      - addresses-data:/data
+    restart: unless-stopped
+
+volumes:
+  addresses-data:

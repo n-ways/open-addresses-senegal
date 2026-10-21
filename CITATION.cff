@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use these addresses, the model or the paper, please cite them as below."
+title: "N-Ways Addressing for Senegal"
+type: dataset
+authors:
+  - name: "The N-Ways Addressing Group, N-WAYS LIMITED"
+    website: "https://nways.ng"
+    email: "hello@nways.ng"
+date-released: "2026-10-20"
+license: ODbL-1.0
+repository-code: "https://github.com/n-ways/open-addresses-senegal"
+url: "https://github.com/n-ways/open-addresses-senegal"
+keywords:
+  - addressing
+  - Senegal
+  - digital addresses
+  - place names
+  - geocoding
+  - building footprints
+abstract: >-
+  An addressing model, reference engine and issued registry for Senegal: every
+  compound has a remembered address made of a place word people already use and
+  a short number ("Ouakam 2512"), unique nationally without context, with a
+  machine form carrying an ISO/IEC 7064 MOD 11-2 check letter and an offline
+  spot-code grid for places without a compound.
+preferred-citation:
+  type: report
+  title: "N-Ways Addressing for Senegal: a memorable, nationally unique address for every compound"
+  authors:
+    - name: "The N-Ways Addressing Group"
+  institution:
+    name: "N-WAYS LIMITED"
+  year: 2026
+  month: 10
+  url: "https://github.com/n-ways/open-addresses-senegal/blob/main/docs/paper.md"
+  license: CC-BY-4.0

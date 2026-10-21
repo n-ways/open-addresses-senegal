@@ -1,0 +1,43 @@
+% Two national name ranges (model/name-families.json): every place called Médina, and every place
+% called Darou Salam, draws its numbers from one 5-digit range, 10000-99999, cut into one block per
+% place (Eqs. (6)-(9)). Grey is the range still free for new places of the name.
+\documentclass[border=2mm]{standalone}
+\usepackage{common}
+\pgfplotstableread{data/ranges.dat}\ranges
+\pgfplotstablegetrowsof{\ranges}\pgfmathtruncatemacro{\nranges}{\pgfplotsretval-1}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+  width=15cm, height=4.4cm, scale only axis,
+  xmin=10000, xmax=100000, ymin=0.4, ymax=2.8,
+  ytick={1,2}, yticklabels={Darou Salam, Médina},
+  xtick={10000,20000,30000,40000,50000,60000,70000,80000,90000,100000},
+  xticklabels={10\,000,20\,000,30\,000,40\,000,50\,000,60\,000,70\,000,80\,000,90\,000,99\,999},
+  xlabel={\tr{number in the address}{numéro de l'adresse}},
+  scaled x ticks=false, axis lines*=left, y axis line style={draw=none}, ytick style={draw=none},
+  clip=false,
+]
+\fill[muted!18] (axis cs:10000,0.78) rectangle (axis cs:100000,1.22);
+\fill[muted!18] (axis cs:10000,1.78) rectangle (axis cs:100000,2.22);
+\pgfplotsinvokeforeach{0,...,\nranges}{
+  \pgfplotstablegetelem{#1}{row}\of\ranges \let\r\pgfplotsretval
+  \pgfplotstablegetelem{#1}{lo}\of\ranges \let\lo\pgfplotsretval
+  \pgfplotstablegetelem{#1}{hi}\of\ranges \let\hi\pgfplotsretval
+  \pgfmathtruncatemacro{\odd}{mod(#1,2)}
+  \ifnum\odd=0 \def\c{sngreen}\else\def\c{sngold}\fi
+  \edef\tmp{\noexpand\fill[\c, draw=white, line width=0.25pt]
+    (axis cs:\lo,\r-0.22) rectangle (axis cs:\hi+1,\r+0.22);}\tmp
+}
+% the largest blocks, named
+\tikzset{bl/.style={font=\scriptsize, text=ink, anchor=south}}
+\node[bl] at (axis cs:14050,2.24) {Dakar};
+\node[bl] at (axis cs:21150,2.24) {Saint-Louis};
+\draw[ink, line width=0.3pt] (axis cs:23050,2.23) -- (axis cs:25500,2.55) node[right, font=\scriptsize, text=ink, inner sep=1pt] {Ziguinchor};
+\node[bl, anchor=north] at (axis cs:34500,0.76) {Pikine (PKN)};
+\node[bl, anchor=north] at (axis cs:61400,0.76) {Touba (TBA)};
+\node[bl, anchor=north] at (axis cs:17100,0.76) {Mbour};
+\node[font=\scriptsize, text=ink, anchor=west, align=left] at (axis cs:40000,2) {\tr{9 places in 8 zones, 4\,250 compounds;}{9 lieux dans 8 zones, 4\,250 concessions ;}\\\tr{free for new places: 23\,300--99\,999}{libre pour de nouveaux lieux : 23\,300--99\,999}};
+\node[font=\scriptsize, text=ink, anchor=west, align=left] at (axis cs:78500,1) {\tr{23 places in 17 zones,}{23 lieux dans 17 zones,}\\\tr{22\,082 compounds;}{22\,082 concessions ;}\\\tr{free: 77\,500--99\,999}{libre : 77\,500--99\,999}};
+\end{axis}
+\end{tikzpicture}
+\end{document}

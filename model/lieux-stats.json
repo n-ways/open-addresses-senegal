@@ -1,0 +1,2422 @@
+{
+ "summary": {
+  "headroom": 3,
+  "rule": "one national range per name key; one block per lieu = 3 x compounds rounded up to tens (3 digits) or hundreds (4-5 digits); digits = smallest d in {3,4,5} with blocks <= 90 % of the range",
+  "candidates": 16994,
+  "droppedGeonamesDuplicates": 1142,
+  "lieuxUsed": 14997,
+  "compounds": 3595628,
+  "shareCompoundsByDigits": {
+   "3": 0.1996,
+   "4": 0.4662,
+   "5": 0.3342
+  },
+  "shareCompoundsInOversizeLieux": 0.0,
+  "lieuxByDigits": {
+   "3": 9585,
+   "4": 4571,
+   "5": 841
+  },
+  "oversizeLieux": 0,
+  "programmeStreetRefs": 1601,
+  "shareCompoundsInOfficialMask": 0.0358,
+  "lieuxInOfficialMask": 112,
+  "medianCompoundsPerLieu": 79,
+  "repeatingNames": 1974,
+  "lieuxWithRepeatingNames": 5928
+ },
+ "zones": {
+  "BIG": {
+   "lieux": 595,
+   "compounds": 65014,
+   "compoundsByDigits": {
+    "3": 27209,
+    "4": 27547,
+    "5": 10266
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 521,
+    "4": 69,
+    "5": 5
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Kafountine",
+     "officialName": "Kafountine",
+     "compounds": 6128,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Tangori",
+     "officialName": "Tangori",
+     "compounds": 3575,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Balib",
+     "officialName": "Balib",
+     "compounds": 2323,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Babou Nditi",
+     "officialName": "Keur Babou Nditi",
+     "compounds": 2278,
+     "needsCouncilChoice": true
+    },
+    {
+     "name": "Diana",
+     "officialName": "Diana",
+     "compounds": 1443,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 167
+  },
+  "BKL": {
+   "lieux": 219,
+   "compounds": 41719,
+   "compoundsByDigits": {
+    "3": 9935,
+    "4": 24782,
+    "5": 7020
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 158,
+    "4": 57,
+    "5": 4
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Bakel",
+     "officialName": "Bakel",
+     "compounds": 4139,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Diyabougou",
+     "officialName": "Diyabougou",
+     "compounds": 2837,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Ouro Thièrno",
+     "officialName": "Ouro Thièrno",
+     "compounds": 2143,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Yélingara",
+     "officialName": "Yélingara",
+     "compounds": 2031,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Alahina",
+     "officialName": "Alahina",
+     "compounds": 1714,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 65
+  },
+  "BMB": {
+   "lieux": 489,
+   "compounds": 82990,
+   "compoundsByDigits": {
+    "3": 23498,
+    "4": 48887,
+    "5": 10649
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 300,
+    "4": 162,
+    "5": 27
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Nanlar",
+     "officialName": "Nanlar",
+     "compounds": 2492,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Diourane",
+     "officialName": "Diourane",
+     "compounds": 2469,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Ngogom",
+     "officialName": "Ngogom",
+     "compounds": 2420,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Doutki",
+     "officialName": "Doutki",
+     "compounds": 2024,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Mérina",
+     "officialName": "Mérina",
+     "compounds": 1624,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 228
+  },
+  "BNK": {
+   "lieux": 253,
+   "compounds": 36246,
+   "compoundsByDigits": {
+    "3": 14363,
+    "4": 15484,
+    "5": 6421
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 189,
+    "4": 52,
+    "5": 12
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Wandifa",
+     "officialName": "Madina Wandifa",
+     "compounds": 4591,
+     "needsCouncilChoice": true
+    },
+    {
+     "name": "Ndiamakouta",
+     "officialName": "Ndiamakouta",
+     "compounds": 1444,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Kampoto",
+     "officialName": "Kampoto",
+     "compounds": 1127,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Boghal",
+     "officialName": "Boghal",
+     "compounds": 927,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Mouride",
+     "officialName": "Touba Mouride",
+     "compounds": 881,
+     "needsCouncilChoice": true
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 96
+  },
+  "BRK": {
+   "lieux": 202,
+   "compounds": 33638,
+   "compoundsByDigits": {
+    "3": 11311,
+    "4": 21055,
+    "5": 1290
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 129,
+    "4": 65,
+    "5": 8
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Keur Ismaïla",
+     "officialName": "Keur Ismaïla",
+     "compounds": 1833,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Fas Mactar",
+     "officialName": "Fas Mactar",
+     "compounds": 1047,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Alhaji Babou",
+     "officialName": "Keur Alhaji Babou",
+     "compounds": 1045,
+     "needsCouncilChoice": true
+    },
+    {
+     "name": "Diamal",
+     "officialName": "Diamal",
+     "compounds": 972,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Ngouye",
+     "officialName": "Ngouye",
+     "compounds": 939,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 75
+  },
+  "DAG": {
+   "lieux": 235,
+   "compounds": 89037,
+   "compoundsByDigits": {
+    "3": 11059,
+    "4": 54012,
+    "5": 23978
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 104,
+    "4": 109,
+    "5": 22
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Dagana",
+     "officialName": "Dagana",
+     "compounds": 7336,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Ross Béthio",
+     "officialName": "Ross Béthio",
+     "compounds": 3299,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Thiarréne",
+     "officialName": "Khouma Thiarréne",
+     "compounds": 2696,
+     "needsCouncilChoice": true
+    },
+    {
+     "name": "Ronkh",
+     "officialName": "Ronkh",
+     "compounds": 2433,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Rhouma",
+     "officialName": "Rhouma",
+     "compounds": 2267,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 106
+  },
+  "DBL": {
+   "lieux": 425,
+   "compounds": 68340,
+   "compoundsByDigits": {
+    "3": 22144,
+    "4": 16670,
+    "5": 29604
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 306,
+    "4": 94,
+    "5": 25
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Tiébo",
+     "officialName": "Tiébo",
+     "compounds": 11131,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Rodiel",
+     "officialName": "Rodiel",
+     "compounds": 5481,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Ngodiél",
+     "officialName": "Ngodiél",
+     "compounds": 3664,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Pikine",
+     "officialName": "Pikine",
+     "compounds": 3602,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Ndankh",
+     "officialName": "Ndankh",
+     "compounds": 2985,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 189
+  },
+  "DKR": {
+   "lieux": 112,
+   "compounds": 107391,
+   "compoundsByDigits": {
+    "3": 1311,
+    "4": 67345,
+    "5": 38774
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 9,
+    "4": 78,
+    "5": 25
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Parcelles",
+     "officialName": "Parcelles Assainies",
+     "compounds": 9130,
+     "needsCouncilChoice": true
+    },
+    {
+     "name": "Ngaparou",
+     "officialName": "Ngaparou",
+     "compounds": 3494,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Keur Damel",
+     "officialName": "Keur Damel",
+     "compounds": 3492,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Cambérène",
+     "officialName": "Cambérène",
+     "compounds": 3019,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Mamelles",
+     "officialName": "Mamelles",
+     "compounds": 2939,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 47242,
+   "lieuxInOfficialMask": 46,
+   "lieuxSharingANameNationally": 52
+  },
+  "FDG": {
+   "lieux": 416,
+   "compounds": 79386,
+   "compoundsByDigits": {
+    "3": 20515,
+    "4": 47074,
+    "5": 11819
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 255,
+    "4": 140,
+    "5": 21
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Santhie Sadi",
+     "officialName": "Santhie Sadi",
+     "compounds": 4018,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Dangane",
+     "officialName": "Dangane",
+     "compounds": 3321,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Ndorong Log",
+     "officialName": "Ndorong Log",
+     "compounds": 2223,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Sapp",
+     "officialName": "Sapp",
+     "compounds": 1959,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Keur Malaw",
+     "officialName": "Keur Malaw",
+     "compounds": 1665,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 168
+  },
+  "FTK": {
+   "lieux": 461,
+   "compounds": 101619,
+   "compoundsByDigits": {
+    "3": 27978,
+    "4": 56696,
+    "5": 16954
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 291,
+    "4": 155,
+    "5": 15
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Fatick",
+     "officialName": "Fatick",
+     "compounds": 5585,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Poukham I",
+     "officialName": "Poukham I",
+     "compounds": 4900,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Ancien Marché Hebdomadaire",
+     "officialName": "Ancien marché hebdomadaire",
+     "compounds": 4059,
+     "needsCouncilChoice": true
+    },
+    {
+     "name": "Fimela",
+     "officialName": "Fimela",
+     "compounds": 1694,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Ndianèm",
+     "officialName": "Ndianèm",
+     "compounds": 1694,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 188
+  },
+  "GDW": {
+   "lieux": 11,
+   "compounds": 23541,
+   "compoundsByDigits": {
+    "3": 180,
+    "4": 5924,
+    "5": 17321
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 1,
+    "4": 5,
+    "5": 5
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Angel Mouss",
+     "officialName": "Quarter Angel Mouss",
+     "compounds": 4000,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Gounas",
+     "officialName": "Médina Gounas",
+     "compounds": 3978,
+     "needsCouncilChoice": true
+    },
+    {
+     "name": "Barry & Ly",
+     "officialName": "Cite Barry & Ly",
+     "compounds": 3511,
+     "needsCouncilChoice": true
+    },
+    {
+     "name": "Limamoulaye",
+     "officialName": "N’diareme limamoulaye",
+     "compounds": 3003,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Golf Sud",
+     "officialName": "Golf Sud",
+     "compounds": 2829,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 13324,
+   "lieuxInOfficialMask": 6,
+   "lieuxSharingANameNationally": 1
+  },
+  "GMP": {
+   "lieux": 225,
+   "compounds": 27855,
+   "compoundsByDigits": {
+    "3": 11370,
+    "4": 15869,
+    "5": 626
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 166,
+    "4": 53,
+    "5": 6
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Pontodos",
+     "officialName": "Pontodos Diola",
+     "compounds": 1972,
+     "needsCouncilChoice": true
+    },
+    {
+     "name": "Baghère",
+     "officialName": "Baghère",
+     "compounds": 1206,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Diattakounda",
+     "officialName": "Diattakounda",
+     "compounds": 1002,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Karantaba",
+     "officialName": "Karantaba",
+     "compounds": 930,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Yarang",
+     "officialName": "Yarang Balante",
+     "compounds": 705,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 73
+  },
+  "GNG": {
+   "lieux": 221,
+   "compounds": 39821,
+   "compoundsByDigits": {
+    "3": 11234,
+    "4": 17876,
+    "5": 10699
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 142,
+    "4": 67,
+    "5": 12
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Guinguinéo",
+     "officialName": "Guinguinéo",
+     "compounds": 4789,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Fas Kahone",
+     "officialName": "Fas Kahone",
+     "compounds": 3346,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Fass",
+     "officialName": "Fass",
+     "compounds": 1540,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Mboss",
+     "officialName": "Mboss",
+     "compounds": 1491,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Maka Ndiaye",
+     "officialName": "Maka Ndiaye",
+     "compounds": 1056,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 99
+  },
+  "GOS": {
+   "lieux": 291,
+   "compounds": 30812,
+   "compoundsByDigits": {
+    "3": 13475,
+    "4": 13200,
+    "5": 4152
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 202,
+    "4": 67,
+    "5": 22
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Gossas",
+     "officialName": "Gossas",
+     "compounds": 2350,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Djené",
+     "officialName": "Djené",
+     "compounds": 2157,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Tchissé",
+     "officialName": "Tchissé Keur Mor",
+     "compounds": 1278,
+     "needsCouncilChoice": true
+    },
+    {
+     "name": "Lagane",
+     "officialName": "Ndiène Lagane",
+     "compounds": 1187,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Khayane",
+     "officialName": "Khayane Wolof",
+     "compounds": 1029,
+     "needsCouncilChoice": true
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 123
+  },
+  "GRY": {
+   "lieux": 424,
+   "compounds": 35869,
+   "compoundsByDigits": {
+    "3": 15528,
+    "4": 19876,
+    "5": 558
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 323,
+    "4": 89,
+    "5": 12
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Fergo",
+     "officialName": "Fergo",
+     "compounds": 1982,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Kotiari",
+     "officialName": "Kotiari",
+     "compounds": 1426,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Bala",
+     "officialName": "Bala",
+     "compounds": 998,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Goudiry",
+     "officialName": "Goudiry",
+     "compounds": 875,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Soudouta",
+     "officialName": "Soudouta",
+     "compounds": 660,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 157
+  },
+  "KAF": {
+   "lieux": 294,
+   "compounds": 75371,
+   "compoundsByDigits": {
+    "3": 11684,
+    "4": 39224,
+    "5": 24423
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 129,
+    "4": 133,
+    "5": 32
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Soto",
+     "officialName": "Soto",
+     "compounds": 4188,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Ngodiba",
+     "officialName": "Ngodiba",
+     "compounds": 3450,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Dimbé",
+     "officialName": "Sintiou Dimbé",
+     "compounds": 2949,
+     "needsCouncilChoice": true
+    },
+    {
+     "name": "Lougue",
+     "officialName": "Lougue Bambara",
+     "compounds": 2855,
+     "needsCouncilChoice": true
+    },
+    {
+     "name": "Ndjigui",
+     "officialName": "Ndjigui",
+     "compounds": 2844,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 156
+  },
+  "KAO": {
+   "lieux": 468,
+   "compounds": 129000,
+   "compoundsByDigits": {
+    "3": 24741,
+    "4": 54953,
+    "5": 49360
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 280,
+    "4": 165,
+    "5": 23
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Dialegne",
+     "officialName": "Dialegne",
+     "compounds": 11179,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Tabangoye",
+     "officialName": "Tabangoye",
+     "compounds": 6075,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Kassaville",
+     "officialName": "Kassaville",
+     "compounds": 5011,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Ndorong",
+     "officialName": "Ndorong",
+     "compounds": 4996,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Medina Nord",
+     "officialName": "Medina Nord",
+     "compounds": 4931,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 198
+  },
+  "KBM": {
+   "lieux": 639,
+   "compounds": 94350,
+   "compoundsByDigits": {
+    "3": 33730,
+    "4": 43214,
+    "5": 17494
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 450,
+    "4": 159,
+    "5": 30
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Mbéguéré",
+     "officialName": "Mbéguéré",
+     "compounds": 6738,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Lamane",
+     "officialName": "Ndakhar Lamane",
+     "compounds": 3171,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Gala Mbingue",
+     "officialName": "Gala Mbingue",
+     "compounds": 2919,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Andoulaye",
+     "officialName": "Andoulaye",
+     "compounds": 1919,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Diom",
+     "officialName": "Diom",
+     "compounds": 1879,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 226
+  },
+  "KDG": {
+   "lieux": 176,
+   "compounds": 47454,
+   "compoundsByDigits": {
+    "3": 8484,
+    "4": 7815,
+    "5": 31208
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 136,
+    "4": 33,
+    "5": 7
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Fadiga",
+     "officialName": "Fadiga",
+     "compounds": 13523,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Kénioto",
+     "officialName": "Madina Kénioto",
+     "compounds": 5971,
+     "needsCouncilChoice": true
+    },
+    {
+     "name": "Batakokouta",
+     "officialName": "Batakokouta",
+     "compounds": 5550,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Kédougou",
+     "officialName": "Kédougou",
+     "compounds": 5031,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Badian",
+     "officialName": "Badian",
+     "compounds": 824,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 49
+  },
+  "KGH": {
+   "lieux": 309,
+   "compounds": 48690,
+   "compoundsByDigits": {
+    "3": 14140,
+    "4": 24954,
+    "5": 9587
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 178,
+    "4": 106,
+    "5": 25
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Koungneul",
+     "officialName": "Koungneul Sossé",
+     "compounds": 6174,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Wadène",
+     "officialName": "Missirah Wadène",
+     "compounds": 1991,
+     "needsCouncilChoice": true
+    },
+    {
+     "name": "Koungheul",
+     "officialName": "Koungheul",
+     "compounds": 1127,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Tiéguène",
+     "officialName": "Darou Tiéguène",
+     "compounds": 1060,
+     "needsCouncilChoice": true
+    },
+    {
+     "name": "Lour-Escale",
+     "officialName": "Lour-Escale",
+     "compounds": 927,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 156
+  },
+  "KLD": {
+   "lieux": 515,
+   "compounds": 72580,
+   "compoundsByDigits": {
+    "3": 25032,
+    "4": 18343,
+    "5": 29230
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 418,
+    "4": 86,
+    "5": 11
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Gaïdé",
+     "officialName": "Gaïdé",
+     "compounds": 9513,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Faraba",
+     "officialName": "Faraba",
+     "compounds": 8625,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Ousmane",
+     "officialName": "Ousmane Abdoulaye",
+     "compounds": 5354,
+     "needsCouncilChoice": true
+    },
+    {
+     "name": "Saré Dianfou",
+     "officialName": "Saré Dianfou",
+     "compounds": 5187,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Saré Kemo",
+     "officialName": "Saré kemo",
+     "compounds": 1752,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 174
+  },
+  "KNL": {
+   "lieux": 189,
+   "compounds": 65987,
+   "compoundsByDigits": {
+    "3": 11133,
+    "4": 48457,
+    "5": 6414
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 102,
+    "4": 83,
+    "5": 4
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Ounaré",
+     "officialName": "Hamady Ounaré",
+     "compounds": 3049,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Kanel",
+     "officialName": "Kanel",
+     "compounds": 3006,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Ndendory",
+     "officialName": "Ndendory",
+     "compounds": 2049,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Waoundé",
+     "officialName": "Waoundé",
+     "compounds": 1942,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Banadié",
+     "officialName": "Banadié",
+     "compounds": 1873,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 61
+  },
+  "KPT": {
+   "lieux": 269,
+   "compounds": 40207,
+   "compoundsByDigits": {
+    "3": 11675,
+    "4": 23381,
+    "5": 5168
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 162,
+    "4": 85,
+    "5": 22
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Koumpentoum",
+     "officialName": "Koumpentoum",
+     "compounds": 3210,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Méréto",
+     "officialName": "Méréto",
+     "compounds": 2062,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Kaba",
+     "officialName": "Kaba",
+     "compounds": 1454,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Malem Niani",
+     "officialName": "Malem Niani",
+     "compounds": 1016,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Payar",
+     "officialName": "Payar",
+     "compounds": 923,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 124
+  },
+  "KTF": {
+   "lieux": 237,
+   "compounds": 22922,
+   "compoundsByDigits": {
+    "3": 9503,
+    "4": 12269,
+    "5": 1185
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 159,
+    "4": 60,
+    "5": 18
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Sadio",
+     "officialName": "Sadio",
+     "compounds": 2295,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Bouliéri",
+     "officialName": "Bouliéri Peul",
+     "compounds": 1831,
+     "needsCouncilChoice": true
+    },
+    {
+     "name": "Dam",
+     "officialName": "Dam",
+     "compounds": 670,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Salam Tip",
+     "officialName": "Darou Salam Tip",
+     "compounds": 496,
+     "needsCouncilChoice": true
+    },
+    {
+     "name": "Madiop",
+     "officialName": "Keur Madiop Serere",
+     "compounds": 476,
+     "needsCouncilChoice": true
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 104
+  },
+  "LGA": {
+   "lieux": 716,
+   "compounds": 131158,
+   "compoundsByDigits": {
+    "3": 35360,
+    "4": 61015,
+    "5": 34945
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 441,
+    "4": 227,
+    "5": 48
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Bayakh",
+     "officialName": "Bayakh",
+     "compounds": 12451,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Nguéye Dili",
+     "officialName": "Nguéye Dili",
+     "compounds": 6756,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Ndiang",
+     "officialName": "Ndiang",
+     "compounds": 2864,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Dagaït",
+     "officialName": "Dagaït",
+     "compounds": 2813,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Mbèr",
+     "officialName": "Mbèr",
+     "compounds": 2382,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 304
+  },
+  "LNG": {
+   "lieux": 560,
+   "compounds": 96845,
+   "compoundsByDigits": {
+    "3": 33377,
+    "4": 48125,
+    "5": 15432
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 384,
+    "4": 157,
+    "5": 19
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Diori",
+     "officialName": "Diori",
+     "compounds": 4562,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Som",
+     "officialName": "Som",
+     "compounds": 4229,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Nguet",
+     "officialName": "Nguet",
+     "compounds": 3223,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Labgar",
+     "officialName": "Labgar",
+     "compounds": 1659,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Ndibène",
+     "officialName": "Ndibène Dahra",
+     "compounds": 1603,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 200
+  },
+  "MAT": {
+   "lieux": 208,
+   "compounds": 77412,
+   "compoundsByDigits": {
+    "3": 10358,
+    "4": 54256,
+    "5": 12846
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 109,
+    "4": 95,
+    "5": 4
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Ourossogui",
+     "officialName": "Ourossogui",
+     "compounds": 5508,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Tokossel",
+     "officialName": "Tilogne Tokossel",
+     "compounds": 3133,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Tiambe",
+     "officialName": "Tiambe",
+     "compounds": 2931,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Bokidiawé",
+     "officialName": "Bokidiawé",
+     "compounds": 2332,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Agnam Civol",
+     "officialName": "Agnam Civol",
+     "compounds": 1772,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 68
+  },
+  "MBR": {
+   "lieux": 438,
+   "compounds": 205241,
+   "compoundsByDigits": {
+    "3": 23882,
+    "4": 71923,
+    "5": 109611
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 233,
+    "4": 166,
+    "5": 39
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Oncad",
+     "officialName": "Oncad",
+     "compounds": 20610,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Malikounda",
+     "officialName": "Malikounda Sas",
+     "compounds": 9390,
+     "needsCouncilChoice": true
+    },
+    {
+     "name": "Niakhniakhal",
+     "officialName": "Saly Niakhniakhal",
+     "compounds": 9219,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Falokh",
+     "officialName": "Falokh",
+     "compounds": 7277,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Saly",
+     "officialName": "Saly Portudal",
+     "compounds": 7260,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 195
+  },
+  "MHD": {
+   "lieux": 157,
+   "compounds": 25129,
+   "compoundsByDigits": {
+    "3": 7167,
+    "4": 16835,
+    "5": 1137
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 88,
+    "4": 58,
+    "5": 11
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Niahene",
+     "officialName": "Niahene",
+     "compounds": 1909,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Khelcom",
+     "officialName": "Khelcom",
+     "compounds": 913,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Ngainth",
+     "officialName": "Ndioum Ngainth",
+     "compounds": 899,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "M'Badianene",
+     "officialName": "M'Badianene",
+     "compounds": 866,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Diam Diam",
+     "officialName": "Diam Diam",
+     "compounds": 675,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 80
+  },
+  "MYF": {
+   "lieux": 463,
+   "compounds": 54530,
+   "compoundsByDigits": {
+    "3": 19081,
+    "4": 31477,
+    "5": 3975
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 319,
+    "4": 123,
+    "5": 21
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Mandakh",
+     "officialName": "Medina Mandakh",
+     "compounds": 1554,
+     "needsCouncilChoice": true
+    },
+    {
+     "name": "Yorofoula",
+     "officialName": "Médina-Yorofoula",
+     "compounds": 1319,
+     "needsCouncilChoice": true
+    },
+    {
+     "name": "Fouladou",
+     "officialName": "Touba Fouladou",
+     "compounds": 1139,
+     "needsCouncilChoice": true
+    },
+    {
+     "name": "Yadoulaye",
+     "officialName": "Yadoulaye",
+     "compounds": 1120,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Meo Ndiobene",
+     "officialName": "Meo Ndiobene",
+     "compounds": 1070,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 199
+  },
+  "NRP": {
+   "lieux": 524,
+   "compounds": 103631,
+   "compoundsByDigits": {
+    "3": 26765,
+    "4": 62288,
+    "5": 14572
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 290,
+    "4": 194,
+    "5": 40
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Diamaguène",
+     "officialName": "Diamaguène",
+     "compounds": 3254,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Nioro du Rip",
+     "officialName": "Nioro du Rip",
+     "compounds": 2576,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Mairie",
+     "officialName": "MAIRIE",
+     "compounds": 2303,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Ayip Guèye",
+     "officialName": "Keur Ayip Guèye",
+     "compounds": 2262,
+     "needsCouncilChoice": true
+    },
+    {
+     "name": "Tianda",
+     "officialName": "Tianda",
+     "compounds": 2051,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 232
+  },
+  "OUS": {
+   "lieux": 70,
+   "compounds": 16166,
+   "compoundsByDigits": {
+    "3": 3393,
+    "4": 11320,
+    "5": 1459
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 44,
+    "4": 22,
+    "5": 4
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Kajinole",
+     "officialName": "Kajinole",
+     "compounds": 1728,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Cap Skirring",
+     "officialName": "Cap Skirring",
+     "compounds": 1321,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Mossor",
+     "officialName": "Mossor",
+     "compounds": 872,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Kahinda",
+     "officialName": "Kahinda",
+     "compounds": 804,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Oukout",
+     "officialName": "Oukout",
+     "compounds": 766,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 18
+  },
+  "PKN": {
+   "lieux": 39,
+   "compounds": 123528,
+   "compoundsByDigits": {
+    "3": 54,
+    "4": 16092,
+    "5": 107448
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 1,
+    "4": 12,
+    "5": 26
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Ndiorane",
+     "officialName": "Niaye Ndiorane",
+     "compounds": 9778,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Darou Salam",
+     "officialName": "Darou salam",
+     "compounds": 7520,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Mbaye Fal",
+     "officialName": "Keur Mbaye Fal",
+     "compounds": 6101,
+     "needsCouncilChoice": true
+    },
+    {
+     "name": "Moktar Ba",
+     "officialName": "Keur Moktar Ba",
+     "compounds": 5936,
+     "needsCouncilChoice": true
+    },
+    {
+     "name": "Yeumbeul",
+     "officialName": "Yeumbeul Nord",
+     "compounds": 5867,
+     "needsCouncilChoice": true
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 9067,
+   "lieuxInOfficialMask": 6,
+   "lieuxSharingANameNationally": 17
+  },
+  "POD": {
+   "lieux": 364,
+   "compounds": 91206,
+   "compoundsByDigits": {
+    "3": 19425,
+    "4": 68055,
+    "5": 3787
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 212,
+    "4": 146,
+    "5": 6
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Souima",
+     "officialName": "Souima",
+     "compounds": 3084,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Tatki",
+     "officialName": "Tatki",
+     "compounds": 2660,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Boulinaye",
+     "officialName": "Boulinaye",
+     "compounds": 2271,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Boubacar",
+     "officialName": "Thillé Boubacar",
+     "compounds": 2005,
+     "needsCouncilChoice": true
+    },
+    {
+     "name": "Fanaye Diery",
+     "officialName": "Fanaye Diery",
+     "compounds": 1701,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 100
+  },
+  "RAN": {
+   "lieux": 131,
+   "compounds": 32582,
+   "compoundsByDigits": {
+    "3": 7300,
+    "4": 23907,
+    "5": 1390
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 62,
+    "4": 63,
+    "5": 6
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Tiékodié",
+     "officialName": "Louggué Tiékodié",
+     "compounds": 1833,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Gourel Badi",
+     "officialName": "Gourel Badi",
+     "compounds": 1264,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Sangué",
+     "officialName": "Tionok Sangué",
+     "compounds": 1161,
+     "needsCouncilChoice": true
+    },
+    {
+     "name": "Lobaly",
+     "officialName": "Lobaly",
+     "compounds": 997,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Oudalaye",
+     "officialName": "Oudalaye",
+     "compounds": 990,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 57
+  },
+  "RUF": {
+   "lieux": 119,
+   "compounds": 158639,
+   "compoundsByDigits": {
+    "3": 2526,
+    "4": 68219,
+    "5": 87976
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 18,
+    "4": 69,
+    "5": 32
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Tivaouane",
+     "officialName": "Tivaouane Peul",
+     "compounds": 7608,
+     "needsCouncilChoice": true
+    },
+    {
+     "name": "Cité Tawfekh",
+     "officialName": "Cité Tawfekh",
+     "compounds": 5630,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Ndiougouye",
+     "officialName": "Ndiougouye",
+     "compounds": 5236,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Rufisque",
+     "officialName": "Rufisque Ouest",
+     "compounds": 4408,
+     "needsCouncilChoice": true
+    },
+    {
+     "name": "Almadie 2",
+     "officialName": "Almadie 2",
+     "compounds": 4234,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 47
+  },
+  "SED": {
+   "lieux": 211,
+   "compounds": 32315,
+   "compoundsByDigits": {
+    "3": 11531,
+    "4": 13801,
+    "5": 6990
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 144,
+    "4": 62,
+    "5": 5
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Bakoum",
+     "officialName": "Bakoum",
+     "compounds": 3681,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Badjimor",
+     "officialName": "Badjimor",
+     "compounds": 2841,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Manguire",
+     "officialName": "Manguire",
+     "compounds": 1200,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Koussy",
+     "officialName": "Koussy",
+     "compounds": 865,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Saré Toumané",
+     "officialName": "Saré Toumané",
+     "compounds": 673,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 95
+  },
+  "SLM": {
+   "lieux": 97,
+   "compounds": 5832,
+   "compoundsByDigits": {
+    "3": 4217,
+    "4": 1622,
+    "5": 0
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 91,
+    "4": 6,
+    "5": 0
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Roudji",
+     "officialName": "Sinthiou Roudji",
+     "compounds": 1004,
+     "needsCouncilChoice": true
+    },
+    {
+     "name": "Dakateli",
+     "officialName": "Dakateli",
+     "compounds": 320,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Samou",
+     "officialName": "Samou",
+     "compounds": 176,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Gada Pété",
+     "officialName": "Gada Pété",
+     "compounds": 168,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Mbourou",
+     "officialName": "Thiangoung Mbourou",
+     "compounds": 150,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 18
+  },
+  "SRY": {
+   "lieux": 152,
+   "compounds": 45751,
+   "compoundsByDigits": {
+    "3": 6305,
+    "4": 21957,
+    "5": 17497
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 96,
+    "4": 50,
+    "5": 6
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Bantata Koto",
+     "officialName": "Bantata Koto",
+     "compounds": 7310,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Kharakena",
+     "officialName": "Kharakena",
+     "compounds": 3714,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Sambaranbougou",
+     "officialName": "Sambaranbougou",
+     "compounds": 3122,
+     "needsCouncilChoice": true
+    },
+    {
+     "name": "Douta",
+     "officialName": "Douta",
+     "compounds": 2977,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Saraya",
+     "officialName": "Saraya",
+     "compounds": 1608,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 38
+  },
+  "STL": {
+   "lieux": 194,
+   "compounds": 73622,
+   "compoundsByDigits": {
+    "3": 8079,
+    "4": 49175,
+    "5": 16452
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 99,
+    "4": 87,
+    "5": 8
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Pikine 3",
+     "officialName": "Pikine 3",
+     "compounds": 5359,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Pikine",
+     "officialName": "Pikine",
+     "compounds": 3001,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Diaminar",
+     "officialName": "Diaminar",
+     "compounds": 2341,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Léona",
+     "officialName": "Léona",
+     "compounds": 2288,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Dakhar-Bango",
+     "officialName": "Dakhar-Bango",
+     "compounds": 2260,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 26893,
+   "lieuxInOfficialMask": 25,
+   "lieuxSharingANameNationally": 63
+  },
+  "TBA": {
+   "lieux": 241,
+   "compounds": 289293,
+   "compoundsByDigits": {
+    "3": 8772,
+    "4": 37782,
+    "5": 242774
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 113,
+    "4": 69,
+    "5": 59
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Féto",
+     "officialName": "Féto",
+     "compounds": 10878,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Darou Salam",
+     "officialName": "Darou Salam",
+     "compounds": 10109,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Darou Miname",
+     "officialName": "Darou Miname",
+     "compounds": 10078,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Keur Niang",
+     "officialName": "Keur Niang",
+     "compounds": 9050,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Marnane",
+     "officialName": "Darou Marnane",
+     "compounds": 8729,
+     "needsCouncilChoice": true
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 108
+  },
+  "TBC": {
+   "lieux": 674,
+   "compounds": 100066,
+   "compoundsByDigits": {
+    "3": 26459,
+    "4": 30451,
+    "5": 43192
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 514,
+    "4": 140,
+    "5": 20
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Diadie",
+     "officialName": "Gourel Diadie",
+     "compounds": 15679,
+     "needsCouncilChoice": true
+    },
+    {
+     "name": "Djidje",
+     "officialName": "Djidje Kounda",
+     "compounds": 11865,
+     "needsCouncilChoice": true
+    },
+    {
+     "name": "Tambacounda",
+     "officialName": "Tambacounda",
+     "compounds": 7100,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Kandéri",
+     "officialName": "Kandéri Niana",
+     "compounds": 2891,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Maka",
+     "officialName": "Maka",
+     "compounds": 2152,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 260
+  },
+  "THS": {
+   "lieux": 485,
+   "compounds": 175559,
+   "compoundsByDigits": {
+    "3": 23339,
+    "4": 110426,
+    "5": 41880
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 243,
+    "4": 211,
+    "5": 31
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Medina Fall",
+     "officialName": "Medina Fall",
+     "compounds": 5156,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Cité Lamy",
+     "officialName": "Cité Lamy",
+     "compounds": 4256,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Silmane",
+     "officialName": "Silmane",
+     "compounds": 3828,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Thiès Sud",
+     "officialName": "Thiès Sud",
+     "compounds": 3581,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Dioung",
+     "officialName": "Dioung",
+     "compounds": 3303,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 12717,
+   "lieuxInOfficialMask": 10,
+   "lieuxSharingANameNationally": 193
+  },
+  "TIV": {
+   "lieux": 822,
+   "compounds": 144847,
+   "compoundsByDigits": {
+    "3": 37307,
+    "4": 82908,
+    "5": 24630
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 509,
+    "4": 278,
+    "5": 35
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Bitiw Sèye",
+     "officialName": "Bitiw Sèye",
+     "compounds": 6723,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Niobo Dem",
+     "officialName": "Keur Niobo Dem",
+     "compounds": 4426,
+     "needsCouncilChoice": true
+    },
+    {
+     "name": "Djibi Souké",
+     "officialName": "Keur Djibi Souké",
+     "compounds": 3589,
+     "needsCouncilChoice": true
+    },
+    {
+     "name": "Ndindi Bal",
+     "officialName": "Ndindi Bal",
+     "compounds": 3215,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Siné Mbarik",
+     "officialName": "Siné Mbarik",
+     "compounds": 2377,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 371
+  },
+  "VEL": {
+   "lieux": 460,
+   "compounds": 104240,
+   "compoundsByDigits": {
+    "3": 25933,
+    "4": 36912,
+    "5": 41424
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 342,
+    "4": 103,
+    "5": 15
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Gounas",
+     "officialName": "Médina Gounas",
+     "compounds": 16559,
+     "needsCouncilChoice": true
+    },
+    {
+     "name": "Diaobé",
+     "officialName": "Diaobé",
+     "compounds": 6384,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Vélingara",
+     "officialName": "Vélingara",
+     "compounds": 6007,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Kaèl",
+     "officialName": "Kaèl",
+     "compounds": 3867,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Iérovalo",
+     "officialName": "Iérovalo",
+     "compounds": 3588,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 0,
+   "lieuxInOfficialMask": 0,
+   "lieuxSharingANameNationally": 148
+  },
+  "ZIG": {
+   "lieux": 197,
+   "compounds": 48197,
+   "compoundsByDigits": {
+    "3": 6040,
+    "4": 33441,
+    "5": 8725
+   },
+   "compoundsInOversizeLieux": 0,
+   "lieuxByDigits": {
+    "3": 123,
+    "4": 61,
+    "5": 13
+   },
+   "oversizeLieux": [],
+   "largest": [
+    {
+     "name": "Néma",
+     "officialName": "Néma",
+     "compounds": 2082,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Kénia",
+     "officialName": "Kénia",
+     "compounds": 1755,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Boucotte Sud",
+     "officialName": "Boucotte Sud",
+     "compounds": 1731,
+     "needsCouncilChoice": false
+    },
+    {
+     "name": "Alassane",
+     "officialName": "Kandé Alassane",
+     "compounds": 1618,
+     "needsCouncilChoice": true
+    },
+    {
+     "name": "Lyndiane",
+     "officialName": "Lyndiane",
+     "compounds": 1587,
+     "needsCouncilChoice": false
+    }
+   ],
+   "orphanCompounds": 0,
+   "compoundsInOfficialMask": 19657,
+   "lieuxInOfficialMask": 19,
+   "lieuxSharingANameNationally": 82
+  }
+ }
+}

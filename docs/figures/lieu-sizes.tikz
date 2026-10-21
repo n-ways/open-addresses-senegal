@@ -1,0 +1,26 @@
+% How many compounds each place (lieu) holds: 14,997 places, logarithmic bins of five per decade.
+% The dashed lines are the largest place that fits alone in a 3-, 4- and 5-digit range (Eq. (8)).
+\documentclass[border=2mm]{standalone}
+\usepackage{common}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+  width=12cm, height=6.2cm,
+  xmode=log, log basis x=10, xmin=1, xmax=40000,
+  ymin=0, ymax=2500, ytick distance=500,
+  xlabel={\tr{compounds in the place (logarithmic scale)}{concessions du lieu (échelle logarithmique)}},
+  ylabel={\tr{places}{lieux}},
+  ymajorgrids, grid style={muted!25},
+  axis lines*=left, enlarge x limits=false,
+]
+\addplot[ybar interval, fill=sngreen!75, draw=white, line width=0.3pt] table[x=lo, y=lieux] {data/lieu-sizes.dat};
+\draw[draw=snred, dashed, line width=0.6pt] (axis cs:270,0) -- (axis cs:270,2300);
+\draw[draw=snred, dashed, line width=0.6pt] (axis cs:2700,0) -- (axis cs:2700,2300);
+\draw[draw=snred, dashed, line width=0.6pt] (axis cs:27000,0) -- (axis cs:27000,2300);
+\node[snred, font=\scriptsize, anchor=east] at (axis cs:260,2380) {\tr{fits 3 digits}{tient en 3 chiffres}\,$\leftarrow$};
+\node[snred, font=\scriptsize, anchor=east] at (axis cs:2600,2380) {\tr{4 digits}{4 chiffres}\,$\leftarrow$};
+\node[snred, font=\scriptsize, anchor=east] at (axis cs:26000,2380) {\tr{5 digits}{5 chiffres}\,$\leftarrow$};
+\node[ink, font=\scriptsize, anchor=north west, align=left] at (axis cs:2900,1900) {\tr{median 79 compounds}{médiane : 79 concessions}\\\tr{largest 20\,610}{le plus grand : 20\,610}};
+\end{axis}
+\end{tikzpicture}
+\end{document}

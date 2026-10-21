@@ -1,0 +1,2440 @@
+# N-Ways Addressing for Senegal: the registry API (OpenAPI 3.1). Served by server/ (python3 -m server serve).
+openapi: 3.1.0
+info:
+  title: 'N-Ways Addressing for Senegal: registry API'
+  version: '1'
+  description: 'Serves the published registry of Senegal''s N-Ways addresses and, on the deployment designated as the issuer,
+    issues new ones by the same rules. Every response is JSON; an error is {"error": {"code", "message"}} with the matching
+    HTTP status. Examples are real responses from a server running on the full registry; long lists are shortened.'
+  license:
+    name: Apache-2.0 (code); ODbL 1.0 (data)
+    identifier: Apache-2.0
+  contact:
+    name: N-WAYS LIMITED
+    url: https://nways.ng
+    email: hello@nways.ng
+servers:
+- url: http://localhost:8080
+  description: docker compose up
+paths:
+  /v1/health:
+    get:
+      summary: Service health
+      operationId: health
+      responses:
+        '200':
+          description: Up
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Health'
+              examples:
+                ok:
+                  summary: Health
+                  value:
+                    status: ok
+                    country: SN
+                    codes: 3597128
+                    registryExported: '2026-10-21T18:48:16Z'
+  /v1/info:
+    get:
+      summary: Country, counts, licences and credit
+      operationId: info
+      responses:
+        '200':
+          description: Information
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Info'
+              examples:
+                info:
+                  summary: Information
+                  value:
+                    country: SN
+                    name: Senegal
+                    zones: 46
+                    areas: 14997
+                    codes:
+                      total: 3597128
+                      byStatus:
+                        provisional: 3597128
+                    byZone:
+                      BIG: 65019
+                      BKL: 41737
+                      BMB: 83034
+                      BNK: 36264
+                      BRK: 33656
+                      DAG: 89049
+                      DBL: 68418
+                      DKR: 107430
+                      FDG: 79408
+                      FTK: 101628
+                      GDW: 23425
+                      GMP: 27865
+                      GNG: 39809
+                      GOS: 30827
+                      GRY: 35962
+                      KAF: 75331
+                      KAO: 129054
+                      KBM: 94438
+                      KDG: 47506
+                      KGH: 48680
+                      KLD: 72605
+                      KNL: 66004
+                      KPT: 40224
+                      KTF: 22957
+                      LGA: 131320
+                      LNG: 96934
+                      MAT: 77460
+                      MBR: 205416
+                      MHD: 25139
+                      MYF: 54533
+                      NRP: 103624
+                      OUS: 16172
+                      PKN: 123594
+                      POD: 91267
+                      RAN: 32597
+                      RUF: 158721
+                      SED: 32322
+                      SLM: 5839
+                      SRY: 45759
+                      STL: 73706
+                      TBA: 289328
+                      TBC: 100102
+                      THS: 175645
+                      TIV: 144845
+                      VEL: 104269
+                      ZIG: 48206
+                    registry:
+                      exported: '2026-10-21T18:48:16Z'
+                      imported: '2026-10-21T18:57:22Z'
+                      addresses: 3597128
+                    licences:
+                      data: ODbL 1.0 (LICENSE-DATA)
+                      code: Apache-2.0 (LICENSE)
+                      documents: CC BY 4.0 (LICENSE-DOCS)
+                    credit: N-Ways Addressing for Senegal, © N-WAYS LIMITED (nways.ng)
+                    creditUrl: https://github.com/n-ways/open-addresses-senegal
+                    engine: internal/addressing/sn (SPEC v0.2)
+                    spec: engine/SPEC.md v0.2
+                    issuing:
+                      enabled: false
+                      perKeyPerDay: 5
+  /v1/codes/{machine}:
+    get:
+      summary: The full card of an address
+      operationId: getCode
+      parameters:
+      - name: machine
+        in: path
+        required: true
+        schema:
+          type: string
+        example: SN-DKR-0080-2512-J
+      responses:
+        '200':
+          description: The address
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Card'
+              examples:
+                card:
+                  summary: One address
+                  value:
+                    machine: SN-DKR-0080-2512-J
+                    remembered: Ouakam 2512
+                    written: OUAKAM 2512 · DAKAR
+                    spokenFr: Ouakam, vingt-cinq, douze
+                    spokenWo: Ouakam, ñaar, juróom, benn, ñaar
+                    number: 2512
+                    check: J
+                    status: provisional
+                    issued: bulk
+                    issuedAt: '2026-10-20T03:43:01Z'
+                    entrance:
+                      lat: 14.7247067
+                      lng: -17.4849374
+                      kind: centre
+                    spotCode: DKR 2719 4676
+                    plusCode: 7C64PGF8+V2P
+                    area:
+                      id: DKR-0080
+                      plateName: Ouakam
+                      officialName: Ouakam
+                      kind: suburb
+                      nearTown: null
+                      needsCommuneChoice: false
+                    zone:
+                      key: DKR
+                      name: Dakar
+                      plateName: Dakar
+                      region: SN-DK
+                    compound:
+                      class: res.maison
+                      use: residential
+                      kind: un_batiment
+                      structures: 1
+                      floorAreaM2: 32.7
+                    postcode: null
+                    coverage: null
+                    officialAddress: null
+                    registry:
+                      canonical: SN-DKR-0080-2512-J
+                      remembered: Ouakam 2512
+                      written: OUAKAM 2512 · DAKAR
+                      lieu: DKR-0080
+                      official_name: Ouakam
+                      number: '2512'
+                      check: J
+                      status: provisional
+                      issued: bulk
+                      issued_at: '2026-10-20T03:43:01Z'
+                      entrance_lat: '14.7247067'
+                      entrance_lng: '-17.4849374'
+                      entrance_kind: centre
+                      spot_code: DKR 2719 4676
+                      class: res.maison
+                      use: residential
+                      kind: un_batiment
+                      structures: '1'
+                      floor_area_m2: '32.7'
+                      postcode: ''
+                      coverage: ''
+                      official_address: ''
+                    credit: N-Ways Addressing for Senegal, © N-WAYS LIMITED (nways.ng)
+                    creditUrl: https://github.com/n-ways/open-addresses-senegal
+        '400':
+          description: invalid_code
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              examples:
+                invalid_code_0:
+                  summary: A machine form with a wrong check letter
+                  value:
+                    error:
+                      code: invalid_code
+                      message: 'Check letter does not match: a character is wrong or two are swapped.'
+        '404':
+          description: not_found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              examples:
+                not_found_0:
+                  summary: A valid machine form that was never issued
+                  value:
+                    error:
+                      code: not_found
+                      message: SN-DKR-0080-2513-F is a valid form, but no address has been issued with it.
+    patch:
+      summary: Change the status or move the entrance (issuing key)
+      operationId: patchCode
+      security:
+      - issuingKey: []
+      parameters:
+      - name: machine
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchRequest'
+            examples:
+              confirm:
+                value:
+                  status: confirmed
+              move:
+                value:
+                  entrance:
+                    lat: 14.72462
+                    lng: -17.485
+      responses:
+        '200':
+          description: The address after the change
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Card'
+              examples:
+                confirmed:
+                  summary: Confirm an address
+                  value:
+                    machine: SN-DKR-0080-2512-J
+                    remembered: Ouakam 2512
+                    written: OUAKAM 2512 · DAKAR
+                    spokenFr: Ouakam, vingt-cinq, douze
+                    spokenWo: Ouakam, ñaar, juróom, benn, ñaar
+                    number: 2512
+                    check: J
+                    status: confirmed
+                    issued: bulk
+                    issuedAt: '2026-10-20T03:43:01Z'
+                    entrance:
+                      lat: 14.7247067
+                      lng: -17.4849374
+                      kind: centre
+                    spotCode: DKR 2719 4676
+                    plusCode: 7C64PGF8+V2P
+                    area:
+                      id: DKR-0080
+                      plateName: Ouakam
+                      officialName: Ouakam
+                      kind: suburb
+                      nearTown: null
+                      needsCommuneChoice: false
+                    zone:
+                      key: DKR
+                      name: Dakar
+                      plateName: Dakar
+                      region: SN-DK
+                    compound:
+                      class: res.maison
+                      use: residential
+                      kind: un_batiment
+                      structures: 1
+                      floorAreaM2: 32.7
+                    postcode: null
+                    coverage: null
+                    officialAddress: null
+                    registry:
+                      canonical: SN-DKR-0080-2512-J
+                      remembered: Ouakam 2512
+                      written: OUAKAM 2512 · DAKAR
+                      lieu: DKR-0080
+                      official_name: Ouakam
+                      number: '2512'
+                      check: J
+                      status: confirmed
+                      issued: bulk
+                      issued_at: '2026-10-20T03:43:01Z'
+                      entrance_lat: '14.7247067'
+                      entrance_lng: '-17.4849374'
+                      entrance_kind: centre
+                      spot_code: DKR 2719 4676
+                      class: res.maison
+                      use: residential
+                      kind: un_batiment
+                      structures: '1'
+                      floor_area_m2: '32.7'
+                      postcode: ''
+                      coverage: ''
+                      official_address: ''
+                    credit: N-Ways Addressing for Senegal, © N-WAYS LIMITED (nways.ng)
+                    creditUrl: https://github.com/n-ways/open-addresses-senegal
+                moved:
+                  summary: Move the entrance to the real gate
+                  value:
+                    machine: SN-DKR-0080-2512-J
+                    remembered: Ouakam 2512
+                    written: OUAKAM 2512 · DAKAR
+                    spokenFr: Ouakam, vingt-cinq, douze
+                    spokenWo: Ouakam, ñaar, juróom, benn, ñaar
+                    number: 2512
+                    check: J
+                    status: confirmed
+                    issued: bulk
+                    issuedAt: '2026-10-20T03:43:01Z'
+                    entrance:
+                      lat: 14.72462
+                      lng: -17.485
+                      kind: gate
+                    spotCode: DKR 2715 4671
+                    plusCode: 7C64PGF8+R2R
+                    area:
+                      id: DKR-0080
+                      plateName: Ouakam
+                      officialName: Ouakam
+                      kind: suburb
+                      nearTown: null
+                      needsCommuneChoice: false
+                    zone:
+                      key: DKR
+                      name: Dakar
+                      plateName: Dakar
+                      region: SN-DK
+                    compound:
+                      class: res.maison
+                      use: residential
+                      kind: un_batiment
+                      structures: 1
+                      floorAreaM2: 32.7
+                    postcode: null
+                    coverage: null
+                    officialAddress: null
+                    registry:
+                      canonical: SN-DKR-0080-2512-J
+                      remembered: Ouakam 2512
+                      written: OUAKAM 2512 · DAKAR
+                      lieu: DKR-0080
+                      official_name: Ouakam
+                      number: '2512'
+                      check: J
+                      status: confirmed
+                      issued: bulk
+                      issued_at: '2026-10-20T03:43:01Z'
+                      entrance_lat: '14.7246200'
+                      entrance_lng: '-17.4850000'
+                      entrance_kind: gate
+                      spot_code: DKR 2715 4671
+                      class: res.maison
+                      use: residential
+                      kind: un_batiment
+                      structures: '1'
+                      floor_area_m2: '32.7'
+                      postcode: ''
+                      coverage: ''
+                      official_address: ''
+                    credit: N-Ways Addressing for Senegal, © N-WAYS LIMITED (nways.ng)
+                    creditUrl: https://github.com/n-ways/open-addresses-senegal
+        '422':
+          description: far
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              examples:
+                far_0:
+                  summary: A move of more than 80 m
+                  value:
+                    error:
+                      code: far
+                      message: The entrance moves at most 80 m; that point is 599 m away.
+  /v1/codes:
+    post:
+      summary: Issue an address for a new compound or another door (issuing key)
+      operationId: issue
+      security:
+      - issuingKey: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/IssueRequest'
+            examples:
+              new:
+                value:
+                  lat: 14.6681
+                  lng: -17.4317
+                  outline:
+                  - - -17.43179
+                    - 14.66804
+                  - - -17.43161
+                    - 14.66804
+                  - - -17.43161
+                    - 14.66817
+                  - - -17.43179
+                    - 14.66817
+              door:
+                value:
+                  lat: 14.72475
+                  lng: -17.48484
+                  of: SN-DKR-0080-2512-J
+      responses:
+        '201':
+          description: Issued
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Card'
+              examples:
+                new:
+                  summary: Issue an address for a new compound
+                  value:
+                    machine: SN-DKR-0025-1005-H
+                    remembered: Plateau 1005
+                    written: PLATEAU 1005 · DAKAR
+                    spokenFr: Plateau, dix, zéro cinq
+                    spokenWo: Plateau, benn, tus, tus, juróom
+                    number: 1005
+                    check: H
+                    status: provisional
+                    issued: on-demand
+                    issuedAt: '2026-10-21T19:01:28Z'
+                    entrance:
+                      lat: 14.6681
+                      lng: -17.4317
+                      kind: centre
+                    spotCode: DKR 5553 1512
+                    plusCode: 7C64MH99+68V
+                    area:
+                      id: DKR-0025
+                      plateName: Plateau
+                      officialName: Dakar-Plateau
+                      kind: suburb
+                      nearTown: null
+                      needsCommuneChoice: false
+                    zone:
+                      key: DKR
+                      name: Dakar
+                      plateName: Dakar
+                      region: SN-DK
+                    compound:
+                      class: res.maison
+                      use: residential
+                      kind: un_batiment
+                      structures: 1
+                      floorAreaM2: 279.1
+                    postcode: null
+                    coverage: null
+                    officialAddress: null
+                    registry:
+                      canonical: SN-DKR-0025-1005-H
+                      remembered: Plateau 1005
+                      written: PLATEAU 1005 · DAKAR
+                      lieu: DKR-0025
+                      official_name: Dakar-Plateau
+                      number: '1005'
+                      check: H
+                      status: provisional
+                      issued: on-demand
+                      issued_at: '2026-10-21T19:01:28Z'
+                      entrance_lat: '14.6681000'
+                      entrance_lng: '-17.4317000'
+                      entrance_kind: centre
+                      spot_code: DKR 5553 1512
+                      class: res.maison
+                      use: residential
+                      kind: un_batiment
+                      structures: '1'
+                      floor_area_m2: '279.1'
+                      postcode: ''
+                      coverage: ''
+                      official_address: ''
+                    credit: N-Ways Addressing for Senegal, © N-WAYS LIMITED (nways.ng)
+                    creditUrl: https://github.com/n-ways/open-addresses-senegal
+                door:
+                  summary: Another door of a compound
+                  value:
+                    machine: SN-DKR-0080-2510-R
+                    remembered: Ouakam 2510
+                    written: OUAKAM 2510 · DAKAR
+                    spokenFr: Ouakam, vingt-cinq, dix
+                    spokenWo: Ouakam, ñaar, juróom, benn, tus
+                    number: 2510
+                    check: R
+                    status: provisional
+                    issued: on-demand
+                    issuedAt: '2026-10-21T19:01:28Z'
+                    entrance:
+                      lat: 14.72475
+                      lng: -17.48484
+                      kind: door
+                    spotCode: DKR 2724 4678
+                    plusCode: 7C64PGF8+W33
+                    area:
+                      id: DKR-0080
+                      plateName: Ouakam
+                      officialName: Ouakam
+                      kind: suburb
+                      nearTown: null
+                      needsCommuneChoice: false
+                    zone:
+                      key: DKR
+                      name: Dakar
+                      plateName: Dakar
+                      region: SN-DK
+                    compound:
+                      class: null
+                      use: unknown
+                      kind: porte
+                      structures: 0
+                      floorAreaM2: 0.0
+                    postcode: null
+                    coverage: null
+                    officialAddress: null
+                    registry:
+                      canonical: SN-DKR-0080-2510-R
+                      remembered: Ouakam 2510
+                      written: OUAKAM 2510 · DAKAR
+                      lieu: DKR-0080
+                      official_name: Ouakam
+                      number: '2510'
+                      check: R
+                      status: provisional
+                      issued: on-demand
+                      issued_at: '2026-10-21T19:01:28Z'
+                      entrance_lat: '14.7247500'
+                      entrance_lng: '-17.4848400'
+                      entrance_kind: door
+                      spot_code: DKR 2724 4678
+                      class: ''
+                      use: unknown
+                      kind: porte
+                      structures: '0'
+                      floor_area_m2: '0.0'
+                      postcode: ''
+                      coverage: ''
+                      official_address: ''
+                    credit: N-Ways Addressing for Senegal, © N-WAYS LIMITED (nways.ng)
+                    creditUrl: https://github.com/n-ways/open-addresses-senegal
+        '401':
+          description: unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              examples:
+                unauthorized_0:
+                  summary: No key
+                  value:
+                    error:
+                      code: unauthorized
+                      message: 'Send the issuing key as "Authorization: Bearer <key>".'
+        '403':
+          description: read_only
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              examples:
+                read_only_0:
+                  summary: Issuing on a read-only deployment
+                  value:
+                    error:
+                      code: read_only
+                      message: 'This deployment is read-only: it serves the published registry and does not issue. Only the
+                        deployment designated as Senegal''s issuer issues addresses.'
+        '409':
+          description: exists
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              examples:
+                exists_0:
+                  summary: The same building again
+                  value:
+                    error:
+                      code: exists
+                      message: 'This building already has its address: Plateau 1005.'
+                      existing:
+                        machine: SN-DKR-0025-1005-H
+                        remembered: Plateau 1005
+                        written: PLATEAU 1005 · DAKAR
+                        spokenFr: Plateau, dix, zéro cinq
+                        spokenWo: Plateau, benn, tus, tus, juróom
+                        number: 1005
+                        check: H
+                        status: provisional
+                        issued: on-demand
+                        issuedAt: '2026-10-21T19:01:28Z'
+                        entrance:
+                          lat: 14.6681
+                          lng: -17.4317
+                          kind: centre
+                        spotCode: DKR 5553 1512
+                        plusCode: 7C64MH99+68V
+                        area:
+                          id: DKR-0025
+                          plateName: Plateau
+                          officialName: Dakar-Plateau
+                          kind: suburb
+                          nearTown: null
+                          needsCommuneChoice: false
+                        zone:
+                          key: DKR
+                          name: Dakar
+                          plateName: Dakar
+                          region: SN-DK
+                        compound:
+                          class: res.maison
+                          use: residential
+                          kind: un_batiment
+                          structures: 1
+                          floorAreaM2: 279.1
+                        postcode: null
+                        coverage: null
+                        officialAddress: null
+                        registry:
+                          canonical: SN-DKR-0025-1005-H
+                          remembered: Plateau 1005
+                          written: PLATEAU 1005 · DAKAR
+                          lieu: DKR-0025
+                          official_name: Dakar-Plateau
+                          number: '1005'
+                          check: H
+                          status: provisional
+                          issued: on-demand
+                          issued_at: '2026-10-21T19:01:28Z'
+                          entrance_lat: '14.6681000'
+                          entrance_lng: '-17.4317000'
+                          entrance_kind: centre
+                          spot_code: DKR 5553 1512
+                          class: res.maison
+                          use: residential
+                          kind: un_batiment
+                          structures: '1'
+                          floor_area_m2: '279.1'
+                          postcode: ''
+                          coverage: ''
+                          official_address: ''
+                        credit: N-Ways Addressing for Senegal, © N-WAYS LIMITED (nways.ng)
+                        creditUrl: https://github.com/n-ways/open-addresses-senegal
+        '422':
+          description: bad_outline
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              examples:
+                bad_outline_0:
+                  summary: An outline too small for a compound
+                  value:
+                    error:
+                      code: bad_outline
+                      message: That outline is 5 m², but a compound's is between 12 m² and 2 ha.
+                far_1:
+                  summary: A door more than 80 m away
+                  value:
+                    error:
+                      code: far
+                      message: That door is more than 80 m from Ouakam 2512.
+                outside_2:
+                  summary: A point across the national border
+                  value:
+                    error:
+                      code: outside
+                      message: That spot is outside Senegal, so it cannot have an N-Ways Senegal address.
+        '429':
+          description: 'limit: the key has issued its daily number'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                error:
+                  code: limit
+                  message: This key has issued 5 addresses in the last 24 hours, its limit. Try again later.
+  /v1/find:
+    get:
+      summary: Find an address as people say or type it
+      operationId: find
+      parameters:
+      - name: q
+        in: query
+        required: true
+        schema:
+          type: string
+        description: A remembered address (any case, spacing or accents), a machine form, an official address or a spot code
+      responses:
+        '200':
+          description: One or more matches
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Find'
+              examples:
+                remembered:
+                  summary: 'Find: a remembered address, typed loosely'
+                  value:
+                    query: ouakam2512
+                    kind: remembered
+                    matches:
+                    - machine: SN-DKR-0080-2512-J
+                      remembered: Ouakam 2512
+                      written: OUAKAM 2512 · DAKAR
+                      spokenFr: Ouakam, vingt-cinq, douze
+                      spokenWo: Ouakam, ñaar, juróom, benn, ñaar
+                      number: 2512
+                      check: J
+                      status: provisional
+                      issued: bulk
+                      issuedAt: '2026-10-20T03:43:01Z'
+                      entrance:
+                        lat: 14.7247067
+                        lng: -17.4849374
+                        kind: centre
+                      spotCode: DKR 2719 4676
+                      plusCode: 7C64PGF8+V2P
+                      area:
+                        id: DKR-0080
+                        plateName: Ouakam
+                        officialName: Ouakam
+                        kind: suburb
+                        nearTown: null
+                        needsCommuneChoice: false
+                      zone:
+                        key: DKR
+                        name: Dakar
+                        plateName: Dakar
+                        region: SN-DK
+                      compound:
+                        class: res.maison
+                        use: residential
+                        kind: un_batiment
+                        structures: 1
+                        floorAreaM2: 32.7
+                      postcode: null
+                      coverage: null
+                      officialAddress: null
+                      registry:
+                        canonical: SN-DKR-0080-2512-J
+                        remembered: Ouakam 2512
+                        written: OUAKAM 2512 · DAKAR
+                        lieu: DKR-0080
+                        official_name: Ouakam
+                        number: '2512'
+                        check: J
+                        status: provisional
+                        issued: bulk
+                        issued_at: '2026-10-20T03:43:01Z'
+                        entrance_lat: '14.7247067'
+                        entrance_lng: '-17.4849374'
+                        entrance_kind: centre
+                        spot_code: DKR 2719 4676
+                        class: res.maison
+                        use: residential
+                        kind: un_batiment
+                        structures: '1'
+                        floor_area_m2: '32.7'
+                        postcode: ''
+                        coverage: ''
+                        official_address: ''
+                      credit: N-Ways Addressing for Senegal, © N-WAYS LIMITED (nways.ng)
+                      creditUrl: https://github.com/n-ways/open-addresses-senegal
+                grouped:
+                  summary: 'Find: a five-digit number, grouped or not'
+                  value:
+                    query: MEDINA KEL 17404
+                    kind: remembered
+                    matches:
+                    - machine: SN-PKN-0027-17404-X
+                      remembered: Médina Kel 17 404
+                      written: MÉDINA KEL 17 404 · PIKINE
+                      spokenFr: Médina Kel, dix-sept, quatre cent quatre
+                      spokenWo: Médina Kel, benn, juróom ñaar, ñeent, tus, ñeent
+                      number: 17404
+                      check: X
+                      status: provisional
+                      issued: bulk
+                      issuedAt: '2026-10-20T03:45:39Z'
+                      entrance:
+                        lat: 14.7754149
+                        lng: -17.3127966
+                        kind: centre
+                      spotCode: PKN 6520 3384
+                      plusCode: 7C64QMGP+5V8
+                      area:
+                        id: PKN-0027
+                        plateName: Médina Kel
+                        officialName: Médina Kel
+                        kind: locality
+                        nearTown: null
+                        needsCommuneChoice: false
+                      zone:
+                        key: PKN
+                        name: Pikine (incl. Keur Massar)
+                        plateName: Pikine
+                        region: SN-DK
+                      compound:
+                        class: com.boutique
+                        use: commercial
+                        kind: un_batiment
+                        structures: 1
+                        floorAreaM2: 259.6
+                      postcode: '10000'
+                      coverage: official
+                      officialAddress: 125 Boulevard Ainoumady
+                      registry:
+                        canonical: SN-PKN-0027-17404-X
+                        remembered: Médina Kel 17 404
+                        written: MÉDINA KEL 17 404 · PIKINE
+                        lieu: PKN-0027
+                        official_name: Médina Kel
+                        number: '17404'
+                        check: X
+                        status: provisional
+                        issued: bulk
+                        issued_at: '2026-10-20T03:45:39Z'
+                        entrance_lat: '14.7754149'
+                        entrance_lng: '-17.3127966'
+                        entrance_kind: centre
+                        spot_code: PKN 6520 3384
+                        class: com.boutique
+                        use: commercial
+                        kind: un_batiment
+                        structures: '1'
+                        floor_area_m2: '259.6'
+                        postcode: '10000'
+                        coverage: official
+                        official_address: 125 Boulevard Ainoumady
+                      credit: N-Ways Addressing for Senegal, © N-WAYS LIMITED (nways.ng)
+                      creditUrl: https://github.com/n-ways/open-addresses-senegal
+                official:
+                  summary: 'Find: an official address'
+                  value:
+                    query: 125 Boulevard Ainoumady
+                    kind: official
+                    matches:
+                    - machine: SN-PKN-0027-17404-X
+                      remembered: Médina Kel 17 404
+                      written: MÉDINA KEL 17 404 · PIKINE
+                      spokenFr: Médina Kel, dix-sept, quatre cent quatre
+                      spokenWo: Médina Kel, benn, juróom ñaar, ñeent, tus, ñeent
+                      number: 17404
+                      check: X
+                      status: provisional
+                      issued: bulk
+                      issuedAt: '2026-10-20T03:45:39Z'
+                      entrance:
+                        lat: 14.7754149
+                        lng: -17.3127966
+                        kind: centre
+                      spotCode: PKN 6520 3384
+                      plusCode: 7C64QMGP+5V8
+                      area:
+                        id: PKN-0027
+                        plateName: Médina Kel
+                        officialName: Médina Kel
+                        kind: locality
+                        nearTown: null
+                        needsCommuneChoice: false
+                      zone:
+                        key: PKN
+                        name: Pikine (incl. Keur Massar)
+                        plateName: Pikine
+                        region: SN-DK
+                      compound:
+                        class: com.boutique
+                        use: commercial
+                        kind: un_batiment
+                        structures: 1
+                        floorAreaM2: 259.6
+                      postcode: '10000'
+                      coverage: official
+                      officialAddress: 125 Boulevard Ainoumady
+                      registry:
+                        canonical: SN-PKN-0027-17404-X
+                        remembered: Médina Kel 17 404
+                        written: MÉDINA KEL 17 404 · PIKINE
+                        lieu: PKN-0027
+                        official_name: Médina Kel
+                        number: '17404'
+                        check: X
+                        status: provisional
+                        issued: bulk
+                        issued_at: '2026-10-20T03:45:39Z'
+                        entrance_lat: '14.7754149'
+                        entrance_lng: '-17.3127966'
+                        entrance_kind: centre
+                        spot_code: PKN 6520 3384
+                        class: com.boutique
+                        use: commercial
+                        kind: un_batiment
+                        structures: '1'
+                        floor_area_m2: '259.6'
+                        postcode: '10000'
+                        coverage: official
+                        official_address: 125 Boulevard Ainoumady
+                      credit: N-Ways Addressing for Senegal, © N-WAYS LIMITED (nways.ng)
+                      creditUrl: https://github.com/n-ways/open-addresses-senegal
+                machine:
+                  summary: 'Find: a machine form'
+                  value:
+                    query: sn-dkr-0080-2512-j
+                    kind: machine
+                    matches:
+                    - machine: SN-DKR-0080-2512-J
+                      remembered: Ouakam 2512
+                      written: OUAKAM 2512 · DAKAR
+                      spokenFr: Ouakam, vingt-cinq, douze
+                      spokenWo: Ouakam, ñaar, juróom, benn, ñaar
+                      number: 2512
+                      check: J
+                      status: provisional
+                      issued: bulk
+                      issuedAt: '2026-10-20T03:43:01Z'
+                      entrance:
+                        lat: 14.7247067
+                        lng: -17.4849374
+                        kind: centre
+                      spotCode: DKR 2719 4676
+                      plusCode: 7C64PGF8+V2P
+                      area:
+                        id: DKR-0080
+                        plateName: Ouakam
+                        officialName: Ouakam
+                        kind: suburb
+                        nearTown: null
+                        needsCommuneChoice: false
+                      zone:
+                        key: DKR
+                        name: Dakar
+                        plateName: Dakar
+                        region: SN-DK
+                      compound:
+                        class: res.maison
+                        use: residential
+                        kind: un_batiment
+                        structures: 1
+                        floorAreaM2: 32.7
+                      postcode: null
+                      coverage: null
+                      officialAddress: null
+                      registry:
+                        canonical: SN-DKR-0080-2512-J
+                        remembered: Ouakam 2512
+                        written: OUAKAM 2512 · DAKAR
+                        lieu: DKR-0080
+                        official_name: Ouakam
+                        number: '2512'
+                        check: J
+                        status: provisional
+                        issued: bulk
+                        issued_at: '2026-10-20T03:43:01Z'
+                        entrance_lat: '14.7247067'
+                        entrance_lng: '-17.4849374'
+                        entrance_kind: centre
+                        spot_code: DKR 2719 4676
+                        class: res.maison
+                        use: residential
+                        kind: un_batiment
+                        structures: '1'
+                        floor_area_m2: '32.7'
+                        postcode: ''
+                        coverage: ''
+                        official_address: ''
+                      credit: N-Ways Addressing for Senegal, © N-WAYS LIMITED (nways.ng)
+                      creditUrl: https://github.com/n-ways/open-addresses-senegal
+        '400':
+          description: bad_request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              examples:
+                bad_request_0:
+                  summary: 'Find: nothing to search for'
+                  value:
+                    error:
+                      code: bad_request
+                      message: 'q is required: a remembered address (Ouakam 2512), a machine form, an official address or
+                        a spot code'
+                invalid_code_1:
+                  summary: 'Find: a wrong check letter is refused, not corrected'
+                  value:
+                    error:
+                      code: invalid_code
+                      message: 'Check letter does not match: a character is wrong or two are swapped.'
+        '404':
+          description: not_found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              examples:
+                not_found_0:
+                  summary: 'Find: a number in a range with no compound yet'
+                  value:
+                    error:
+                      code: not_found
+                      message: No compound has Medina 12 150 yet (the number is in the range of Medina, Dakar).
+                not_found_1:
+                  summary: 'Find: a spot code where no compound stands'
+                  value:
+                    error:
+                      code: not_found
+                      message: 'No address is at DKR 5553 1512 yet: it is a spot, not an address.'
+  /v1/at:
+    get:
+      summary: The address of the compound at a point
+      operationId: at
+      parameters:
+      - name: lat
+        in: query
+        required: true
+        schema:
+          type: number
+          minimum: -90
+          maximum: 90
+        description: Latitude, WGS 84 decimal degrees
+      - name: lng
+        in: query
+        required: true
+        schema:
+          type: number
+          minimum: -180
+          maximum: 180
+        description: Longitude, WGS 84 decimal degrees
+      description: Found when an outline issued by this deployment holds the point, or a live entrance is within 12 m (the
+        issuer's distance). Otherwise status none, with the area a new address would be numbered in. A point in no zone, or
+        more than 300 m outside the national border whatever the zones say (engine/SPEC.md 2.3), is outside (422).
+      responses:
+        '200':
+          description: Found or none
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/At'
+              examples:
+                found:
+                  summary: 'At a point: a compound'
+                  value:
+                    status: found
+                    distanceM: 0.0
+                    zone:
+                      key: DKR
+                      name: Dakar
+                      plateName: Dakar
+                    code:
+                      machine: SN-DKR-0080-2512-J
+                      remembered: Ouakam 2512
+                      written: OUAKAM 2512 · DAKAR
+                      spokenFr: Ouakam, vingt-cinq, douze
+                      spokenWo: Ouakam, ñaar, juróom, benn, ñaar
+                      number: 2512
+                      check: J
+                      status: provisional
+                      issued: bulk
+                      issuedAt: '2026-10-20T03:43:01Z'
+                      entrance:
+                        lat: 14.7247067
+                        lng: -17.4849374
+                        kind: centre
+                      spotCode: DKR 2719 4676
+                      plusCode: 7C64PGF8+V2P
+                      area:
+                        id: DKR-0080
+                        plateName: Ouakam
+                        officialName: Ouakam
+                        kind: suburb
+                        nearTown: null
+                        needsCommuneChoice: false
+                      zone:
+                        key: DKR
+                        name: Dakar
+                        plateName: Dakar
+                        region: SN-DK
+                      compound:
+                        class: res.maison
+                        use: residential
+                        kind: un_batiment
+                        structures: 1
+                        floorAreaM2: 32.7
+                      postcode: null
+                      coverage: null
+                      officialAddress: null
+                      registry:
+                        canonical: SN-DKR-0080-2512-J
+                        remembered: Ouakam 2512
+                        written: OUAKAM 2512 · DAKAR
+                        lieu: DKR-0080
+                        official_name: Ouakam
+                        number: '2512'
+                        check: J
+                        status: provisional
+                        issued: bulk
+                        issued_at: '2026-10-20T03:43:01Z'
+                        entrance_lat: '14.7247067'
+                        entrance_lng: '-17.4849374'
+                        entrance_kind: centre
+                        spot_code: DKR 2719 4676
+                        class: res.maison
+                        use: residential
+                        kind: un_batiment
+                        structures: '1'
+                        floor_area_m2: '32.7'
+                        postcode: ''
+                        coverage: ''
+                        official_address: ''
+                      credit: N-Ways Addressing for Senegal, © N-WAYS LIMITED (nways.ng)
+                      creditUrl: https://github.com/n-ways/open-addresses-senegal
+                none:
+                  summary: 'At a point: no compound within 12 m'
+                  value:
+                    status: none
+                    zone:
+                      key: DKR
+                      name: Dakar
+                      plateName: Dakar
+                    area:
+                      id: DKR-0025
+                      plateName: Plateau
+                      officialName: Dakar-Plateau
+                      kind: suburb
+                    spotCode: DKR 5553 1512
+        '422':
+          description: outside
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              examples:
+                outside_0:
+                  summary: At a point outside Senegal
+                  value:
+                    error:
+                      code: outside
+                      message: That point is outside Senegal.
+                outside_1:
+                  summary: At a point the zone rule reaches, across the national border
+                  value:
+                    error:
+                      code: outside
+                      message: That point is outside Senegal.
+  /v1/near:
+    get:
+      summary: Addresses near a point
+      operationId: near
+      parameters:
+      - name: lat
+        in: query
+        required: true
+        schema:
+          type: number
+          minimum: -90
+          maximum: 90
+        description: Latitude, WGS 84 decimal degrees
+      - name: lng
+        in: query
+        required: true
+        schema:
+          type: number
+          minimum: -180
+          maximum: 180
+        description: Longitude, WGS 84 decimal degrees
+      - name: radius
+        in: query
+        schema:
+          type: number
+          default: 100
+          maximum: 500
+        description: Metres
+      - name: limit
+        in: query
+        schema:
+          type: integer
+          default: 20
+          minimum: 1
+          maximum: 100
+      responses:
+        '200':
+          description: Nearest first
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Near'
+              examples:
+                near:
+                  summary: Near a point
+                  value:
+                    lat: 14.7247067
+                    lng: -17.4849374
+                    radiusM: 30.0
+                    count: 3
+                    codes:
+                    - distanceM: 0.0
+                      machine: SN-DKR-0080-2512-J
+                      remembered: Ouakam 2512
+                      status: provisional
+                      entrance:
+                        lat: 14.7247067
+                        lng: -17.4849374
+                        kind: centre
+                      spotCode: DKR 2719 4676
+                    - distanceM: 6.9
+                      machine: SN-DKR-0080-2472-W
+                      remembered: Ouakam 2472
+                      status: provisional
+                      entrance:
+                        lat: 14.7247569
+                        lng: -17.484975
+                        kind: centre
+                      spotCode: DKR 2717 4679
+                    - distanceM: 7.9
+                      machine: SN-DKR-0080-2509-K
+                      remembered: Ouakam 2509
+                      status: provisional
+                      entrance:
+                        lat: 14.7247175
+                        lng: -17.484865
+                        kind: centre
+                      spotCode: DKR 2723 4677
+        '400':
+          description: bad_request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              examples:
+                bad_request_0:
+                  summary: 'Near: radius over 500 m'
+                  value:
+                    error:
+                      code: bad_request
+                      message: radius is in metres, more than 0 and at most 500
+  /v1/verify:
+    get:
+      summary: Validate a machine form (syntax, check letter, issued or not) or a spot code
+      operationId: verify
+      parameters:
+      - name: code
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: The verdict
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Verify'
+              examples:
+                valid:
+                  summary: Verify a machine form
+                  value:
+                    code: SN-DKR-0080-2512-J
+                    kind: machine
+                    valid: true
+                    reason: null
+                    machine: SN-DKR-0080-2512-J
+                    issued: true
+                    status: provisional
+                swapped:
+                  summary: 'Verify: two digits swapped'
+                  value:
+                    code: SN-DKR-0080-2152-J
+                    kind: machine
+                    valid: false
+                    reason: 'Check letter does not match: a character is wrong or two are swapped.'
+                    issued: false
+  /v1/spot:
+    get:
+      summary: The spot code of a point
+      operationId: spot
+      parameters:
+      - name: lat
+        in: query
+        required: true
+        schema:
+          type: number
+          minimum: -90
+          maximum: 90
+        description: Latitude, WGS 84 decimal degrees
+      - name: lng
+        in: query
+        required: true
+        schema:
+          type: number
+          minimum: -180
+          maximum: 180
+        description: Longitude, WGS 84 decimal degrees
+      responses:
+        '200':
+          description: Spot code
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Spot'
+              examples:
+                spot:
+                  summary: Spot code of a point
+                  value:
+                    spotCode: DKR 5553 1512
+                    zone: DKR
+                    cellMetres: 2
+                    spokenFr: D K R | cinquante-cinq, cinquante-trois | quinze, douze
+                    spokenWo: D K R | juróom, juróom, juróom, ñett | benn, juróom, benn, ñaar
+                    plusCode: 7C64MH99+68V
+        '422':
+          description: outside
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              examples:
+                outside_0:
+                  summary: At a point outside Senegal
+                  value:
+                    error:
+                      code: outside
+                      message: That point is outside Senegal.
+  /v1/spot/decode:
+    get:
+      summary: The centre of a spot code's cell
+      operationId: spotDecode
+      parameters:
+      - name: code
+        in: query
+        required: true
+        schema:
+          type: string
+        example: DKR 5553 1512
+      responses:
+        '200':
+          description: Decoded
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SpotDecode'
+              examples:
+                decoded:
+                  summary: Decode a spot code
+                  value:
+                    spotCode: DKR 5553 1512
+                    zone: DKR
+                    lat: 14.6681018
+                    lng: -17.4316927
+                    cellMetres: 2
+        '400':
+          description: invalid_code
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              examples:
+                invalid_code_0:
+                  summary: 'Decode: wrong number of digits'
+                  value:
+                    error:
+                      code: invalid_code
+                      message: Not an N-Ways Senegal code.
+  /v1/zones:
+    get:
+      summary: The 46 code zones
+      operationId: zones
+      responses:
+        '200':
+          description: Zones (example shortened to two)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Zones'
+              examples:
+                zones:
+                  summary: Zones
+                  value:
+                    count: 46
+                    zones:
+                    - key: BIG
+                      index: 0
+                      name: Bignona
+                      plateName: Bignona
+                      region: SN-ZG
+                      digits: 4
+                      cellMetres: 10
+                      origin:
+                        e: 306000
+                        n: 1388000
+                      frameMetres: 98000
+                      areas: 595
+                      codes: 65019
+                      byStatus:
+                        provisional: 65019
+                      bbox:
+                      - -16.7871
+                      - 12.5542
+                      - -15.894
+                      - 13.1704
+                    - key: BKL
+                      index: 1
+                      name: Bakel
+                      plateName: Bakel
+                      region: SN-TC
+                      digits: 5
+                      cellMetres: 10
+                      origin:
+                        e: 748000
+                        n: 1473000
+                      frameMetres: 199000
+                      areas: 219
+                      codes: 41737
+                      byStatus:
+                        provisional: 41737
+                      bbox:
+                      - -12.6877
+                      - 13.3111
+                      - -11.8642
+                      - 15.1112
+  /v1/zones/{key}:
+    get:
+      summary: One zone with its areas
+      operationId: zone
+      parameters:
+      - name: key
+        in: path
+        required: true
+        schema:
+          type: string
+        example: TBA
+      responses:
+        '200':
+          description: The zone (example shortened)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Zone'
+              examples:
+                zone:
+                  summary: One zone, with its areas
+                  value:
+                    key: TBA
+                    index: 40
+                    name: Touba-Mbacké (arr. de Ndame)
+                    plateName: Touba-Mbacké
+                    region: SN-DB
+                    digits: 4
+                    cellMetres: 5
+                    origin:
+                      e: 379000
+                      n: 1627000
+                    frameMetres: 49000
+                    areas: 241
+                    codes: 289328
+                    byStatus:
+                      provisional: 289328
+                    bbox:
+                    - -16.1161
+                    - 14.718
+                    - -15.6734
+                    - 14.9977
+                    areaList:
+                    - id: TBA-0000
+                      plateName: Afé Gouye
+                      officialName: Afé Gouye
+                      kind: locality
+                      digits: 4
+                      blocks:
+                      - - 1000
+                        - 2999
+                      codes: 657
+                    - id: TBA-0001
+                      plateName: Alie
+                      officialName: Alie
+                      kind: suburb
+                      digits: 5
+                      blocks:
+                      - - 10000
+                        - 23999
+                      codes: 4643
+        '404':
+          description: not_found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              examples:
+                not_found_0:
+                  summary: An unknown zone
+                  value:
+                    error:
+                      code: not_found
+                      message: There is no zone 'XYZ'. GET /v1/zones lists the 46 zones.
+  /v1/zones/{key}/codes:
+    get:
+      summary: Every address of a zone, by machine form, page by page
+      operationId: zoneCodes
+      parameters:
+      - name: key
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: after
+        in: query
+        schema:
+          type: string
+        description: The `next` of the previous page
+      - name: limit
+        in: query
+        schema:
+          type: integer
+          default: 100
+          minimum: 1
+          maximum: 1000
+      responses:
+        '200':
+          description: A page
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Page'
+              examples:
+                first:
+                  summary: Addresses of a zone, page by page
+                  value:
+                    zone: DKR
+                    after: null
+                    count: 3
+                    codes:
+                    - machine: SN-DKR-0000-1001-M
+                      remembered: Almadies 1001
+                      status: provisional
+                      entrance:
+                        lat: 14.7383683
+                        lng: -17.5167533
+                        kind: centre
+                      spotCode: DKR 1013 5451
+                    - machine: SN-DKR-0000-1004-X
+                      remembered: Almadies 1004
+                      status: provisional
+                      entrance:
+                        lat: 14.7384155
+                        lng: -17.5165486
+                        kind: centre
+                      spotCode: DKR 1024 5454
+                    - machine: SN-DKR-0000-1007-K
+                      remembered: Almadies 1007
+                      status: provisional
+                      entrance:
+                        lat: 14.7385692
+                        lng: -17.5166776
+                        kind: centre
+                      spotCode: DKR 1018 5462
+                    next: SN-DKR-0000-1007-K
+                next:
+                  summary: The next page
+                  value:
+                    zone: DKR
+                    after: SN-DKR-0000-1007-R
+                    count: 3
+                    codes:
+                    - machine: SN-DKR-0000-1010-J
+                      remembered: Almadies 1010
+                      status: provisional
+                      entrance:
+                        lat: 14.738798
+                        lng: -17.5168995
+                        kind: centre
+                      spotCode: DKR 1006 5475
+                    - machine: SN-DKR-0000-1013-T
+                      remembered: Almadies 1013
+                      status: provisional
+                      entrance:
+                        lat: 14.7387805
+                        lng: -17.5167382
+                        kind: centre
+                      spotCode: DKR 1014 5474
+                    - machine: SN-DKR-0000-1016-H
+                      remembered: Almadies 1016
+                      status: provisional
+                      entrance:
+                        lat: 14.7390099
+                        lng: -17.5166789
+                        kind: centre
+                      spotCode: DKR 1018 5487
+                    next: SN-DKR-0000-1016-H
+        '404':
+          description: not_found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              examples:
+                not_found_0:
+                  summary: An unknown zone
+                  value:
+                    error:
+                      code: not_found
+                      message: There is no zone 'XYZ'. GET /v1/zones lists the 46 zones.
+  /v1/areas:
+    get:
+      summary: Areas by plate name, official name or alias
+      operationId: areas
+      parameters:
+      - name: name
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Matching areas (at most 50; example shortened)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Areas'
+              examples:
+                areas:
+                  summary: Areas by name
+                  value:
+                    name: Darou Salam
+                    count: 40
+                    areas:
+                    - id: BKL-0034
+                      zone: BKL
+                      index: 34
+                      plateName: Darou Salam
+                      officialName: Darou Salam
+                      kind: village
+                      aliases: []
+                      nearTown: null
+                      coverage: nways
+                      needsCommuneChoice: false
+                      nameKey: darusalam
+                      family: 1684
+                      digits: 5
+                      blocks:
+                      - - 10000
+                        - 10099
+                      sameName:
+                      - DBL-0023
+                      - DBL-0024
+                      - GOS-0049
+                      - KAF-0042
+                      - KAF-0043
+                      - KAF-0044
+                      - KBM-0079
+                      - KGH-0028
+                      - KGH-0029
+                      - KNL-0038
+                      - KPT-0035
+                      - MBR-0032
+                      - MHD-0024
+                      - MHD-0025
+                      - NRP-0041
+                      - NRP-0042
+                      - PKN-0010
+                      - RAN-0022
+                      - TBA-0054
+                      - TBC-0056
+                      - TIV-0089
+                      - VEL-0041
+                      position:
+                        lat: 14.4013825
+                        lng: -12.2114724
+                        e: 800710.0
+                        n: 1593939.0
+                      codes:
+                        total: 17
+                        byStatus:
+                          provisional: 17
+                    - id: DBL-0023
+                      zone: DBL
+                      index: 23
+                      plateName: Darou Salam
+                      officialName: Darou Salam
+                      kind: village
+                      aliases:
+                      - Darou Salam (Ndiourene)
+                      nearTown: Ndindy
+                      coverage: nways
+                      needsCommuneChoice: false
+                      nameKey: darusalam
+                      family: 1684
+                      digits: 5
+                      blocks:
+                      - - 10100
+                        - 10199
+                      sameName:
+                      - BKL-0034
+                      - DBL-0024
+                      - GOS-0049
+                      - KAF-0042
+                      - KAF-0043
+                      - KAF-0044
+                      - KBM-0079
+                      - KGH-0028
+                      - KGH-0029
+                      - KNL-0038
+                      - KPT-0035
+                      - MBR-0032
+                      - MHD-0024
+                      - MHD-0025
+                      - NRP-0041
+                      - NRP-0042
+                      - PKN-0010
+                      - RAN-0022
+                      - TBA-0054
+                      - TBC-0056
+                      - TIV-0089
+                      - VEL-0041
+                      position:
+                        lat: 14.788929
+                        lng: -16.2773276
+                        e: 362534.0
+                        n: 1635372.0
+                      codes:
+                        total: 16
+                        byStatus:
+                          provisional: 16
+  /v1/areas/{id}:
+    get:
+      summary: 'One area: names, blocks and how much of each is used'
+      operationId: area
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+        example: DKR-0080
+      responses:
+        '200':
+          description: The area
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Area'
+              examples:
+                area:
+                  summary: One area
+                  value:
+                    id: DKR-0080
+                    zone: DKR
+                    index: 80
+                    plateName: Ouakam
+                    officialName: Ouakam
+                    kind: suburb
+                    aliases: []
+                    nearTown: null
+                    coverage: nways
+                    needsCommuneChoice: false
+                    nameKey: wakam
+                    family: 10796
+                    digits: 4
+                    blocks:
+                    - - 1000
+                      - 3399
+                    sameName: []
+                    position:
+                      lat: 14.7247404
+                      lng: -17.4850623
+                      e: 232425.0
+                      n: 1629357.0
+                    codes:
+                      total: 788
+                      byStatus:
+                        provisional: 788
+                    blockUse:
+                    - block:
+                      - 1000
+                      - 3399
+                      size: 2400
+                      used: 788
+components:
+  schemas:
+    Error:
+      type: object
+      required:
+      - error
+      properties:
+        error:
+          type: object
+          required:
+          - code
+          - message
+          properties:
+            code:
+              type: string
+              enum:
+              - bad_request
+              - invalid_code
+              - not_found
+              - retired
+              - outside
+              - exists
+              - bad_outline
+              - far
+              - full
+              - limit
+              - conflict
+              - unauthorized
+              - read_only
+              - method_not_allowed
+              - too_large
+              - internal
+            message:
+              type: string
+              description: A sentence a person can act on
+            existing:
+              $ref: '#/components/schemas/Card'
+              description: 'With `exists`: the address the building already has'
+    Entrance:
+      type: object
+      properties:
+        lat:
+          type: number
+        lng:
+          type: number
+        kind:
+          type: string
+          enum:
+          - centre
+          - gate
+          - door
+    RegistryRow:
+      type: object
+      description: The address exactly as the published registry file holds it (registry/README.md); every value is text
+      properties:
+        canonical:
+          type: string
+        remembered:
+          type: string
+        written:
+          type: string
+        lieu:
+          type: string
+        official_name:
+          type: string
+        number:
+          type: string
+        check:
+          type: string
+        status:
+          type: string
+        issued:
+          type: string
+        issued_at:
+          type: string
+        entrance_lat:
+          type: string
+        entrance_lng:
+          type: string
+        entrance_kind:
+          type: string
+        spot_code:
+          type: string
+        class:
+          type: string
+        use:
+          type: string
+        kind:
+          type: string
+        structures:
+          type: string
+        floor_area_m2:
+          type: string
+        postcode:
+          type: string
+        coverage:
+          type: string
+        official_address:
+          type: string
+    Card:
+      type: object
+      description: One issued address
+      properties:
+        machine:
+          type: string
+          description: 'Machine form, with the check letter: SN-<zone>-<area index>-<number>-<check>'
+        remembered:
+          type: string
+          description: 'What people say and type: plate name and number'
+        written:
+          type: string
+          description: 'Plates and forms: upper case, with the zone name; no check letter'
+        spokenFr:
+          type: string
+        spokenWo:
+          type: string
+        number:
+          type: integer
+        check:
+          type: string
+          description: The check letter (machine use only)
+        status:
+          type: string
+          enum:
+          - provisional
+          - confirmed
+          - retired
+        issued:
+          type: string
+          enum:
+          - bulk
+          - on-demand
+        issuedAt:
+          type: string
+          format: date-time
+        entrance:
+          $ref: '#/components/schemas/Entrance'
+        spotCode:
+          type: string
+        plusCode:
+          type: string
+        area:
+          type: object
+          properties:
+            id:
+              type: string
+            plateName:
+              type: string
+            officialName:
+              type: string
+            kind:
+              type: string
+            nearTown:
+              type:
+              - string
+              - 'null'
+            needsCommuneChoice:
+              type: boolean
+        zone:
+          type: object
+          properties:
+            key:
+              type: string
+            name:
+              type: string
+            plateName:
+              type: string
+            region:
+              type: string
+        compound:
+          type: object
+          properties:
+            class:
+              type:
+              - string
+              - 'null'
+            use:
+              type: string
+            kind:
+              type: string
+            structures:
+              type: integer
+            floorAreaM2:
+              type: number
+        postcode:
+          type:
+          - string
+          - 'null'
+        coverage:
+          type:
+          - string
+          - 'null'
+          enum:
+          - official
+          - official-pending
+          - null
+        officialAddress:
+          type:
+          - string
+          - 'null'
+        registry:
+          $ref: '#/components/schemas/RegistryRow'
+        credit:
+          type: string
+        creditUrl:
+          type: string
+        distanceM:
+          type: number
+    Brief:
+      type: object
+      properties:
+        distanceM:
+          type: number
+        machine:
+          type: string
+        remembered:
+          type: string
+        status:
+          type: string
+        entrance:
+          $ref: '#/components/schemas/Entrance'
+        spotCode:
+          type: string
+    Health:
+      type: object
+      properties:
+        status:
+          type: string
+        country:
+          type: string
+        codes:
+          type: integer
+        registryExported:
+          type: string
+    Info:
+      type: object
+      properties:
+        country:
+          type: string
+        name:
+          type: string
+        zones:
+          type: integer
+        areas:
+          type: integer
+        codes:
+          type: object
+          properties:
+            total:
+              type: integer
+            byStatus:
+              type: object
+              additionalProperties:
+                type: integer
+        byZone:
+          type: object
+          additionalProperties:
+            type: integer
+        registry:
+          type: object
+          properties:
+            exported:
+              type: string
+            imported:
+              type: string
+            addresses:
+              type: integer
+        licences:
+          type: object
+          additionalProperties:
+            type: string
+        credit:
+          type: string
+        creditUrl:
+          type: string
+        engine:
+          type: string
+        spec:
+          type: string
+        issuing:
+          type: object
+          properties:
+            enabled:
+              type: boolean
+            perKeyPerDay:
+              type: integer
+    Find:
+      type: object
+      properties:
+        query:
+          type: string
+        kind:
+          type: string
+          enum:
+          - remembered
+          - machine
+          - official
+          - spot
+        matches:
+          type: array
+          items:
+            $ref: '#/components/schemas/Card'
+    At:
+      type: object
+      properties:
+        status:
+          type: string
+          enum:
+          - found
+          - none
+        distanceM:
+          type: number
+        zone:
+          type: object
+          properties:
+            key:
+              type: string
+            name:
+              type: string
+            plateName:
+              type: string
+        code:
+          $ref: '#/components/schemas/Card'
+        area:
+          type:
+          - object
+          - 'null'
+          description: 'With `none`: the area a new address here would be numbered in'
+        spotCode:
+          type: string
+    Near:
+      type: object
+      properties:
+        lat:
+          type: number
+        lng:
+          type: number
+        radiusM:
+          type: number
+        count:
+          type: integer
+        codes:
+          type: array
+          items:
+            $ref: '#/components/schemas/Brief'
+    Verify:
+      type: object
+      properties:
+        code:
+          type: string
+        kind:
+          type: string
+          enum:
+          - machine
+          - spot
+        valid:
+          type: boolean
+        reason:
+          type:
+          - string
+          - 'null'
+        machine:
+          type: string
+        issued:
+          type:
+          - boolean
+          - 'null'
+        status:
+          type:
+          - string
+          - 'null'
+    Spot:
+      type: object
+      properties:
+        spotCode:
+          type: string
+        zone:
+          type: string
+        cellMetres:
+          type: number
+        spokenFr:
+          type: string
+        spokenWo:
+          type: string
+        plusCode:
+          type: string
+    SpotDecode:
+      type: object
+      properties:
+        spotCode:
+          type: string
+        zone:
+          type: string
+        lat:
+          type: number
+        lng:
+          type: number
+        cellMetres:
+          type: number
+    Zone:
+      type: object
+      properties:
+        key:
+          type: string
+        index:
+          type: integer
+        name:
+          type: string
+        plateName:
+          type: string
+        region:
+          type: string
+        digits:
+          type: integer
+        cellMetres:
+          type: number
+        origin:
+          type: object
+          properties:
+            e:
+              type: number
+            n:
+              type: number
+        frameMetres:
+          type: number
+        areas:
+          type: integer
+        codes:
+          type: integer
+        byStatus:
+          type: object
+          additionalProperties:
+            type: integer
+        bbox:
+          type: array
+          items:
+            type: number
+          minItems: 4
+          maxItems: 4
+        areaList:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              plateName:
+                type: string
+              officialName:
+                type: string
+              kind:
+                type: string
+              digits:
+                type: integer
+              blocks:
+                type: array
+                items:
+                  type: array
+                  items:
+                    type: integer
+              codes:
+                type: integer
+    Zones:
+      type: object
+      properties:
+        count:
+          type: integer
+        zones:
+          type: array
+          items:
+            $ref: '#/components/schemas/Zone'
+    Area:
+      type: object
+      properties:
+        id:
+          type: string
+        zone:
+          type: string
+        index:
+          type: integer
+        plateName:
+          type: string
+        officialName:
+          type: string
+        kind:
+          type: string
+        aliases:
+          type: array
+          items:
+            type: string
+        nearTown:
+          type:
+          - string
+          - 'null'
+        coverage:
+          type:
+          - string
+          - 'null'
+        needsCommuneChoice:
+          type: boolean
+        nameKey:
+          type: string
+        family:
+          type: integer
+        digits:
+          type: integer
+        blocks:
+          type: array
+          items:
+            type: array
+            items:
+              type: integer
+        sameName:
+          type: array
+          items:
+            type: string
+        position:
+          type: object
+          properties:
+            lat:
+              type: number
+            lng:
+              type: number
+            e:
+              type: number
+            n:
+              type: number
+        codes:
+          type: object
+          properties:
+            total:
+              type: integer
+            byStatus:
+              type: object
+              additionalProperties:
+                type: integer
+        blockUse:
+          type: array
+          items:
+            type: object
+            properties:
+              block:
+                type: array
+                items:
+                  type: integer
+              size:
+                type: integer
+              used:
+                type: integer
+    Areas:
+      type: object
+      properties:
+        name:
+          type: string
+        count:
+          type: integer
+        areas:
+          type: array
+          items:
+            $ref: '#/components/schemas/Area'
+    Page:
+      type: object
+      properties:
+        zone:
+          type: string
+        after:
+          type:
+          - string
+          - 'null'
+        count:
+          type: integer
+        codes:
+          type: array
+          items:
+            $ref: '#/components/schemas/Brief'
+        next:
+          type:
+          - string
+          - 'null'
+    IssueRequest:
+      type: object
+      required:
+      - lat
+      - lng
+      properties:
+        lat:
+          type: number
+        lng:
+          type: number
+        outline:
+          type: array
+          items:
+            type: array
+            items:
+              type: number
+            minItems: 2
+            maxItems: 2
+          description: The building outline as [lng, lat] points (12 m² to 2 ha); used to refuse a building that already has
+            an address
+        of:
+          type: string
+          description: Machine form of the compound this is another door of (within 80 m)
+    PatchRequest:
+      type: object
+      properties:
+        status:
+          type: string
+          enum:
+          - confirmed
+          - retired
+          - provisional
+        entrance:
+          type: object
+          properties:
+            lat:
+              type: number
+            lng:
+              type: number
+          description: The real gate, at most 80 m from the current entrance and never more than 300 m outside the national
+            border
+  securitySchemes:
+    issuingKey:
+      type: http
+      scheme: bearer
+      description: One of the keys in ISSUE_KEYS. Without ISSUE_KEYS the deployment is read-only.

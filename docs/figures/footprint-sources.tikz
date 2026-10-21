@@ -1,0 +1,23 @@
+% Building footprints by region and source (model/building-stats.json): OpenStreetMap against the
+% machine-learned sets (Google Open Buildings and Microsoft, as distributed by Overture Maps).
+\documentclass[border=2mm]{standalone}
+\usepackage{common}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+  width=11cm, height=8cm, scale only axis,
+  xbar stacked, bar width=9pt,
+  xmin=0, xmax=850, enlarge y limits=0.05,
+  ytick=data, yticklabels from table={data/sources.dat}{region},
+  y tick label style={font=\scriptsize},
+  xlabel={\tr{footprints (thousands)}{empreintes (milliers)}},
+  xmajorgrids, grid style={muted!25}, axis lines*=left,
+  legend style={at={(0.98,0.04)}, anchor=south east, font=\scriptsize, draw=none, fill=white},
+  legend cell align=left, reverse legend,
+]
+\addplot[fill=sngreen, draw=white, line width=0.3pt] table[y expr=\coordindex, x expr=\thisrow{osm}/1000] {data/sources.dat};
+\addplot[fill=sngold, draw=white, line width=0.3pt] table[y expr=\coordindex, x expr=\thisrow{ml}/1000] {data/sources.dat};
+\legend{OpenStreetMap, \tr{machine-learned (Google, Microsoft)}{apprentissage automatique (Google, Microsoft)}}
+\end{axis}
+\end{tikzpicture}
+\end{document}

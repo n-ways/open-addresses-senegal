@@ -1,0 +1,934 @@
+{
+ "spot": [
+  {
+   "place": "Place de l'Indépendance, Dakar-Plateau",
+   "lat": 14.6681,
+   "lon": -17.4317,
+   "code": "DKR 5553 1512",
+   "decoded": [
+    14.668102,
+    -17.431693
+   ],
+   "cellMetres": 2,
+   "errorMetres": 0.82,
+   "spokenFr": "D K R | cinquante-cinq, cinquante-trois | quinze, douze",
+   "spokenWo": "D K R | juróom, juróom, juróom, ñett | benn, juróom, benn, ñaar"
+  },
+  {
+   "place": "Grande Mosquée de Touba",
+   "lat": 14.8613,
+   "lon": -15.877,
+   "code": "TBA 5330 3234",
+   "decoded": [
+    14.861318,
+    -15.876998
+   ],
+   "cellMetres": 5,
+   "errorMetres": 2.06,
+   "spokenFr": "T B A | cinquante-trois, trente | trente-deux, trente-quatre",
+   "spokenWo": "T B A | juróom, ñett, ñett, tus | ñett, ñaar, ñett, ñeent"
+  },
+  {
+   "place": "Pont Faidherbe, Saint-Louis",
+   "lat": 16.0247,
+   "lon": -16.5044,
+   "code": "STL 0609 4250",
+   "decoded": [
+    16.024714,
+    -16.504385
+   ],
+   "cellMetres": 5,
+   "errorMetres": 2.23,
+   "spokenFr": "S T L | zéro six, zéro neuf | quarante-deux, cinquante",
+   "spokenWo": "S T L | tus, juróom benn, tus, juróom ñeent | ñeent, ñaar, juróom, tus"
+  },
+  {
+   "place": "Gare routière de Ziguinchor (approx.)",
+   "lat": 12.565,
+   "lon": -16.273,
+   "code": "ZIG 2970 2236",
+   "decoded": [
+    12.564993,
+    -16.273021
+   ],
+   "cellMetres": 10,
+   "errorMetres": 2.43,
+   "spokenFr": "Z I G | vingt-neuf, soixante-dix | vingt-deux, trente-six",
+   "spokenWo": "Z I G | ñaar, juróom ñeent, juróom ñaar, tus | ñaar, ñaar, ñett, juróom benn"
+  },
+  {
+   "place": "Marché Sandaga, Dakar",
+   "lat": 14.6719,
+   "lon": -17.4339,
+   "code": "DKR 5436 1723",
+   "decoded": [
+    14.671891,
+    -17.433906
+   ],
+   "cellMetres": 2,
+   "errorMetres": 1.18,
+   "spokenFr": "D K R | cinquante-quatre, trente-six | dix-sept, vingt-trois",
+   "spokenWo": "D K R | juróom, ñeent, ñett, juróom benn | benn, juróom ñaar, ñaar, ñett"
+  },
+  {
+   "place": "Sphères ministérielles, Diamniadio (approx.)",
+   "lat": 14.7163,
+   "lon": -17.198,
+   "code": "RUF 2667 3020",
+   "decoded": [
+    14.716309,
+    -17.198014
+   ],
+   "cellMetres": 5,
+   "errorMetres": 1.82,
+   "spokenFr": "R U F | vingt-six, soixante-sept | trente, vingt",
+   "spokenWo": "R U F | ñaar, juróom benn, juróom benn, juróom ñaar | ñett, tus, ñaar, tus"
+  },
+  {
+   "place": "Saly Portudal (beach front, approx.)",
+   "lat": 14.447,
+   "lon": -17.012,
+   "code": "MBR 1510 4411",
+   "decoded": [
+    14.447013,
+    -17.012045
+   ],
+   "cellMetres": 10,
+   "errorMetres": 5.02,
+   "spokenFr": "M B R | quinze, dix | quarante-quatre, onze",
+   "spokenWo": "M B R | benn, juróom, benn, tus | ñeent, ñeent, benn, benn"
+  },
+  {
+   "place": "Kédougou town centre (approx.)",
+   "lat": 12.556,
+   "lon": -12.175,
+   "code": "KDG 11699 02868",
+   "decoded": [
+    12.556022,
+    -12.175006
+   ],
+   "cellMetres": 10,
+   "errorMetres": 2.55,
+   "spokenFr": "K D G | un, seize, quatre-vingt-dix-neuf | zéro, vingt-huit, soixante-huit",
+   "spokenWo": "K D G | benn, benn, juróom benn, juróom ñeent, juróom ñeent | tus, ñaar, juróom ñett, juróom benn, juróom ñett"
+  },
+  {
+   "place": "Guédiawaye, Golf Sud (approx.)",
+   "lat": 14.777,
+   "lon": -17.402,
+   "code": "GDW 3435 4044",
+   "decoded": [
+    14.777001,
+    -17.401996
+   ],
+   "cellMetres": 1,
+   "errorMetres": 0.46,
+   "spokenFr": "G D W | trente-quatre, trente-cinq | quarante, quarante-quatre",
+   "spokenWo": "G D W | ñett, ñeent, ñett, juróom | ñeent, tus, ñeent, ñeent"
+  }
+ ],
+ "addressCheck": [
+  {
+   "name": "Ouakam",
+   "family": 10796,
+   "number": 2512,
+   "payload": "1079602512",
+   "letter": "J"
+  },
+  {
+   "name": "Médina",
+   "family": 6334,
+   "number": 12150,
+   "payload": "0633412150",
+   "letter": "Q"
+  },
+  {
+   "name": "Médina",
+   "family": 6334,
+   "number": 23150,
+   "payload": "0633423150",
+   "letter": "H"
+  },
+  {
+   "name": "-",
+   "family": 0,
+   "number": 100,
+   "payload": "0000000100",
+   "letter": "M"
+  }
+ ],
+ "numbers": [
+  {
+   "number": 120,
+   "written": "120",
+   "spokenFr": "cent vingt",
+   "spokenWo": "benn, ñaar, tus"
+  },
+  {
+   "number": 4512,
+   "written": "4512",
+   "spokenFr": "quarante-cinq, douze",
+   "spokenWo": "ñeent, juróom, benn, ñaar"
+  },
+  {
+   "number": 9071,
+   "written": "9071",
+   "spokenFr": "quatre-vingt-dix, soixante et onze",
+   "spokenWo": "juróom ñeent, tus, juróom ñaar, benn"
+  },
+  {
+   "number": 45128,
+   "written": "45 128",
+   "spokenFr": "quarante-cinq, cent vingt-huit",
+   "spokenWo": "ñeent, juróom, benn, ñaar, juróom ñett"
+  },
+  {
+   "number": 10307,
+   "written": "10 307",
+   "spokenFr": "dix, trois cent sept",
+   "spokenWo": "benn, tus, ñett, tus, juróom ñaar"
+  }
+ ],
+ "sameName": [
+  {
+   "typed": "Médina 11495",
+   "zone": "DKR",
+   "zoneName": "Dakar",
+   "lieu": 71,
+   "family": 6334,
+   "digits": 5,
+   "block": [
+    10400,
+    17699
+   ],
+   "decoded": [
+    "DKR/71"
+   ],
+   "remembered": "Medina 11 495",
+   "written": "MEDINA 11 495 · DAKAR",
+   "canonical": "SN-DKR-0071-11495-M",
+   "slipIntoOtherLieu": {
+    "typed": "Médina 21495 M",
+    "wouldBe": "STL/90",
+    "withoutLetter": [
+     "STL/90"
+    ],
+    "withLetter": []
+   }
+  },
+  {
+   "typed": "Medina 22875",
+   "zone": "ZIG",
+   "zoneName": "Ziguinchor",
+   "lieu": 155,
+   "family": 6334,
+   "digits": 5,
+   "block": [
+    22800,
+    23299
+   ],
+   "decoded": [
+    "ZIG/155"
+   ],
+   "remembered": "Medina 22 875",
+   "written": "MEDINA 22 875 · ZIGUINCHOR",
+   "canonical": "SN-ZIG-0155-22875-X",
+   "slipIntoOtherLieu": {
+    "typed": "Medina 12875 X",
+    "wouldBe": "DKR/71",
+    "withoutLetter": [
+     "DKR/71"
+    ],
+    "withLetter": []
+   }
+  },
+  {
+   "typed": "Médina 19995",
+   "zone": "STL",
+   "zoneName": "Saint-Louis",
+   "lieu": 90,
+   "family": 6334,
+   "digits": 5,
+   "block": [
+    19500,
+    22799
+   ],
+   "decoded": [
+    "STL/90"
+   ],
+   "remembered": "Médina 19 995",
+   "written": "MÉDINA 19 995 · SAINT-LOUIS",
+   "canonical": "SN-STL-0090-19995-H",
+   "slipIntoOtherLieu": {
+    "typed": "Médina 10995 H",
+    "wouldBe": "DKR/71",
+    "withoutLetter": [
+     "DKR/71"
+    ],
+    "withLetter": []
+   }
+  },
+  {
+   "typed": "Pikine 11635",
+   "zone": "DBL",
+   "zoneName": "Diourbel",
+   "lieu": 329,
+   "family": 8194,
+   "digits": 5,
+   "block": [
+    10000,
+    20899
+   ],
+   "decoded": [
+    "DBL/329"
+   ],
+   "remembered": "Pikine 11 635",
+   "written": "PIKINE 11 635 · DIOURBEL",
+   "canonical": "SN-DBL-0329-11635-W",
+   "slipIntoOtherLieu": {
+    "typed": "Pikine 21635 W",
+    "wouldBe": "STL/151",
+    "withoutLetter": [
+     "STL/151"
+    ],
+    "withLetter": []
+   }
+  },
+  {
+   "typed": "Pikine 22265",
+   "zone": "STL",
+   "zoneName": "Saint-Louis",
+   "lieu": 151,
+   "family": 8194,
+   "digits": 5,
+   "block": [
+    20900,
+    29999
+   ],
+   "decoded": [
+    "STL/151"
+   ],
+   "remembered": "Pikine 22 265",
+   "written": "PIKINE 22 265 · SAINT-LOUIS",
+   "canonical": "SN-STL-0151-22265-J",
+   "slipIntoOtherLieu": {
+    "typed": "Pikine 12265 J",
+    "wouldBe": "DBL/329",
+    "withoutLetter": [
+     "DBL/329"
+    ],
+    "withLetter": []
+   }
+  },
+  {
+   "typed": "Pikine 3 32415",
+   "zone": "STL",
+   "zoneName": "Saint-Louis",
+   "lieu": 152,
+   "family": 8194,
+   "digits": 5,
+   "block": [
+    30000,
+    46099
+   ],
+   "decoded": [
+    "STL/152"
+   ],
+   "remembered": "Pikine 3 32 415",
+   "written": "PIKINE 3 32 415 · SAINT-LOUIS",
+   "canonical": "SN-STL-0152-32415-T",
+   "slipIntoOtherLieu": {
+    "typed": "Pikine 3 12415 T",
+    "wouldBe": "DBL/329",
+    "withoutLetter": [],
+    "withLetter": []
+   }
+  },
+  {
+   "typed": "Darou Salam 26590",
+   "zone": "PKN",
+   "zoneName": "Pikine (incl. Keur Massar)",
+   "lieu": 10,
+   "family": 1684,
+   "digits": 5,
+   "block": [
+    23200,
+    45799
+   ],
+   "decoded": [
+    "PKN/10"
+   ],
+   "remembered": "Darou Salam 26 590",
+   "written": "DAROU SALAM 26 590 · PIKINE",
+   "canonical": "SN-PKN-0010-26590-H",
+   "slipIntoOtherLieu": {
+    "typed": "Darou Salam 16590 H",
+    "wouldBe": "MBR/32",
+    "withoutLetter": [
+     "MBR/32"
+    ],
+    "withLetter": []
+   }
+  },
+  {
+   "typed": "Darou Salam 50760",
+   "zone": "TBA",
+   "zoneName": "Touba-Mbacké (arr. de Ndame)",
+   "lieu": 54,
+   "family": 1684,
+   "digits": 5,
+   "block": [
+    46200,
+    76599
+   ],
+   "decoded": [
+    "TBA/54"
+   ],
+   "remembered": "Darou Salam 50 760",
+   "written": "DAROU SALAM 50 760 · TOUBA-MBACKÉ",
+   "canonical": "SN-TBA-0054-50760-W",
+   "slipIntoOtherLieu": {
+    "typed": "Darou Salam 10760 W",
+    "wouldBe": "GOS/49",
+    "withoutLetter": [
+     "GOS/49"
+    ],
+    "withLetter": []
+   }
+  },
+  {
+   "typed": "Gounas 11800",
+   "zone": "GDW",
+   "zoneName": "Guédiawaye",
+   "lieu": 6,
+   "family": 2844,
+   "digits": 5,
+   "block": [
+    10000,
+    21999
+   ],
+   "decoded": [
+    "GDW/6"
+   ],
+   "remembered": "Gounas 11 800",
+   "written": "GOUNAS 11 800 · GUÉDIAWAYE",
+   "canonical": "SN-GDW-0006-11800-X",
+   "slipIntoOtherLieu": {
+    "typed": "Gounas 31800 X",
+    "wouldBe": "VEL/204",
+    "withoutLetter": [
+     "VEL/204"
+    ],
+    "withLetter": []
+   }
+  },
+  {
+   "typed": "Gounas 29455",
+   "zone": "VEL",
+   "zoneName": "Vélingara",
+   "lieu": 204,
+   "family": 2844,
+   "digits": 5,
+   "block": [
+    22000,
+    71699
+   ],
+   "decoded": [
+    "VEL/204"
+   ],
+   "remembered": "Gounas 29 455",
+   "written": "GOUNAS 29 455 · VÉLINGARA",
+   "canonical": "SN-VEL-0204-29455-Q",
+   "slipIntoOtherLieu": {
+    "typed": "Gounas 19455 Q",
+    "wouldBe": "GDW/6",
+    "withoutLetter": [
+     "GDW/6"
+    ],
+    "withLetter": []
+   }
+  },
+  {
+   "typed": "HLM 2 13385",
+   "zone": "DKR",
+   "zoneName": "Dakar",
+   "lieu": 51,
+   "family": 5373,
+   "digits": 5,
+   "block": [
+    13100,
+    14999
+   ],
+   "decoded": [
+    "DKR/51"
+   ],
+   "remembered": "HLM 2 13 385",
+   "written": "HLM 2 13 385 · DAKAR",
+   "canonical": "SN-DKR-0051-13385-M",
+   "slipIntoOtherLieu": {
+    "typed": "HLM 2 10385 M",
+    "wouldBe": "DKR/44",
+    "withoutLetter": [],
+    "withLetter": []
+   }
+  },
+  {
+   "typed": "HLM 5 17295",
+   "zone": "DKR",
+   "zoneName": "Dakar",
+   "lieu": 54,
+   "family": 5373,
+   "digits": 5,
+   "block": [
+    17100,
+    18399
+   ],
+   "decoded": [
+    "DKR/54"
+   ],
+   "remembered": "HLM 5 17 295",
+   "written": "HLM 5 17 295 · DAKAR",
+   "canonical": "SN-DKR-0054-17295-Z",
+   "slipIntoOtherLieu": {
+    "typed": "HLM 5 10295 Z",
+    "wouldBe": "DKR/44",
+    "withoutLetter": [],
+    "withLetter": []
+   }
+  }
+ ],
+ "plateNames": {
+  "long": [
+   {
+    "officialName": "S.I.C.A.P. Liberté Six",
+    "plateName": "Liberté 6",
+    "plateLength": 9,
+    "plateRule": "cleaned",
+    "needsCouncilChoice": false,
+    "source": null,
+    "remembered": "Liberté 6 16 020",
+    "written": "LIBERTÉ 6 16 020 · DAKAR",
+    "canonical": "SN-DKR-0094-16020-M",
+    "decodedPlate": [
+     "DKR/94"
+    ],
+    "decodedOfficial": [
+     "DKR/94"
+    ],
+    "lieu": "DKR/94"
+   },
+   {
+    "officialName": "Saly Portudal",
+    "plateName": "Saly",
+    "plateLength": 4,
+    "plateRule": "known",
+    "needsCouncilChoice": false,
+    "source": "N1: fr.wikipedia.org/wiki/Saly_Portudal, \"Saly Portudal (ou couramment Saly) est une station balnéaire\" (accessed 2026-10-18)",
+    "remembered": "Saly 18 570",
+    "written": "SALY 18 570 · MBOUR",
+    "canonical": "SN-MBR-0347-18570-X",
+    "decodedPlate": [
+     "MBR/347"
+    ],
+    "decodedOfficial": [
+     "MBR/347"
+    ],
+    "lieu": "MBR/347"
+   },
+   {
+    "officialName": "Mbenguène Diawar",
+    "plateName": "Diawar",
+    "plateLength": 6,
+    "plateRule": "distinctive",
+    "needsCouncilChoice": false,
+    "source": null,
+    "remembered": "Diawar 4085",
+    "written": "DIAWAR 4085 · KÉBÉMER",
+    "canonical": "SN-KBM-0319-4085-M",
+    "decodedPlate": [
+     "KBM/319"
+    ],
+    "decodedOfficial": [
+     "KBM/319"
+    ],
+    "lieu": "KBM/319"
+   },
+   {
+    "officialName": "Parcelles Assainies",
+    "plateName": "Parcelles",
+    "plateLength": 9,
+    "plateRule": "council",
+    "needsCouncilChoice": true,
+    "source": null,
+    "remembered": "Parcelles 14 110",
+    "written": "PARCELLES 14 110 · DAKAR",
+    "canonical": "SN-DKR-0081-14110-J",
+    "decodedPlate": [
+     "DKR/81"
+    ],
+    "decodedOfficial": [
+     "DKR/81"
+    ],
+    "lieu": "DKR/81"
+   }
+  ],
+  "collide": [
+   [
+    {
+     "lieu": "DAG/35",
+     "officialName": "Diawar",
+     "plateName": "Diawar",
+     "family": 3505,
+     "digits": 4,
+     "block": [
+      1000,
+      3799
+     ],
+     "remembered": "Diawar 1420",
+     "decoded": [
+      "DAG/35"
+     ]
+    },
+    {
+     "lieu": "KBM/319",
+     "officialName": "Mbenguène Diawar",
+     "plateName": "Diawar",
+     "family": 3505,
+     "digits": 4,
+     "block": [
+      3800,
+      5699
+     ],
+     "remembered": "Diawar 4085",
+     "decoded": [
+      "KBM/319"
+     ]
+    }
+   ],
+   [
+    {
+     "lieu": "BKL/70",
+     "officialName": "Gabou",
+     "plateName": "Gabou",
+     "family": 2375,
+     "digits": 4,
+     "block": [
+      1000,
+      3399
+     ],
+     "remembered": "Gabou 1360",
+     "decoded": [
+      "BKL/70"
+     ]
+    },
+    {
+     "lieu": "DAG/102",
+     "officialName": "Massara Gabou",
+     "plateName": "Gabou",
+     "family": 2375,
+     "digits": 4,
+     "block": [
+      3400,
+      4199
+     ],
+     "remembered": "Gabou 3520",
+     "decoded": [
+      "DAG/102"
+     ]
+    }
+   ]
+  ]
+ },
+ "samples": {
+  "dakar-medina.csv": {
+   "footprints": 362,
+   "compounds": 312,
+   "multiStructureCompounds": 43,
+   "first": [
+    {
+     "remembered": "Gibraltar 1167",
+     "written": "GIBRALTAR 1167 · DAKAR",
+     "canonical": "SN-DKR-0036-1167-X",
+     "coverage": "official-municipal",
+     "shownSource": "N-Ways (temporary, until the official address is confirmed)",
+     "rule": "satellite",
+     "structures": 2,
+     "classes": [
+      "res.concession",
+      "res.annexe"
+     ]
+    },
+    {
+     "remembered": "Gibraltar 1502",
+     "written": "GIBRALTAR 1502 · DAKAR",
+     "canonical": "SN-DKR-0036-1502-F",
+     "coverage": "official-municipal",
+     "shownSource": "N-Ways (temporary, until the official address is confirmed)",
+     "rule": "satellite",
+     "structures": 2,
+     "classes": [
+      "res.concession",
+      "res.annexe"
+     ]
+    },
+    {
+     "remembered": "Gibraltar 1838",
+     "written": "GIBRALTAR 1838 · DAKAR",
+     "canonical": "SN-DKR-0036-1838-T",
+     "coverage": "official-municipal",
+     "shownSource": "N-Ways (temporary, until the official address is confirmed)",
+     "rule": "single",
+     "structures": 1,
+     "classes": [
+      "res.maison"
+     ]
+    },
+    {
+     "remembered": "Gibraltar 2173",
+     "written": "GIBRALTAR 2173 · DAKAR",
+     "canonical": "SN-DKR-0036-2173-W",
+     "coverage": "official-municipal",
+     "shownSource": "N-Ways (temporary, until the official address is confirmed)",
+     "rule": "single",
+     "structures": 1,
+     "classes": [
+      "res.maison"
+     ]
+    },
+    {
+     "remembered": "Gibraltar 2508",
+     "written": "GIBRALTAR 2508 · DAKAR",
+     "canonical": "SN-DKR-0036-2508-Q",
+     "coverage": "official-municipal",
+     "shownSource": "N-Ways (temporary, until the official address is confirmed)",
+     "rule": "single",
+     "structures": 1,
+     "classes": [
+      "res.maison"
+     ]
+    }
+   ]
+  },
+  "touba.csv": {
+   "footprints": 331,
+   "compounds": 247,
+   "multiStructureCompounds": 67,
+   "first": [
+    {
+     "remembered": "Khoudosse 24 921",
+     "written": "KHOUDOSSE 24 921 · TOUBA-MBACKÉ",
+     "canonical": "SN-TBA-0189-24921-K",
+     "coverage": "nways",
+     "shownSource": "N-Ways",
+     "rule": "satellite",
+     "structures": 3,
+     "classes": [
+      "res.concession",
+      "res.annexe",
+      "res.annexe"
+     ]
+    },
+    {
+     "remembered": "Khoudosse 24 965",
+     "written": "KHOUDOSSE 24 965 · TOUBA-MBACKÉ",
+     "canonical": "SN-TBA-0189-24965-H",
+     "coverage": "nways",
+     "shownSource": "N-Ways",
+     "rule": "single",
+     "structures": 1,
+     "classes": [
+      "res.maison"
+     ]
+    },
+    {
+     "remembered": "Khoudosse 25 009",
+     "written": "KHOUDOSSE 25 009 · TOUBA-MBACKÉ",
+     "canonical": "SN-TBA-0189-25009-T",
+     "coverage": "nways",
+     "shownSource": "N-Ways",
+     "rule": "single",
+     "structures": 1,
+     "classes": [
+      "inconnu"
+     ]
+    },
+    {
+     "remembered": "Khoudosse 25 053",
+     "written": "KHOUDOSSE 25 053 · TOUBA-MBACKÉ",
+     "canonical": "SN-TBA-0189-25053-Z",
+     "coverage": "nways",
+     "shownSource": "N-Ways",
+     "rule": "single",
+     "structures": 1,
+     "classes": [
+      "inconnu"
+     ]
+    },
+    {
+     "remembered": "Khoudosse 25 096",
+     "written": "KHOUDOSSE 25 096 · TOUBA-MBACKÉ",
+     "canonical": "SN-TBA-0189-25096-Z",
+     "coverage": "nways",
+     "shownSource": "N-Ways",
+     "rule": "satellite",
+     "structures": 3,
+     "classes": [
+      "res.concession",
+      "res.annexe",
+      "res.annexe"
+     ]
+    }
+   ]
+  },
+  "bambey-village.csv": {
+   "footprints": 328,
+   "compounds": 257,
+   "multiStructureCompounds": 53,
+   "first": [
+    {
+     "remembered": "Nanlar 1079",
+     "written": "NANLAR 1079 · BAMBEY",
+     "canonical": "SN-BMB-0235-1079-K",
+     "coverage": "nways",
+     "shownSource": "N-Ways",
+     "rule": "satellite",
+     "structures": 2,
+     "classes": [
+      "res.concession",
+      "res.annexe"
+     ]
+    },
+    {
+     "remembered": "Nanlar 1239",
+     "written": "NANLAR 1239 · BAMBEY",
+     "canonical": "SN-BMB-0235-1239-K",
+     "coverage": "nways",
+     "shownSource": "N-Ways",
+     "rule": "satellite",
+     "structures": 2,
+     "classes": [
+      "res.concession",
+      "res.annexe"
+     ]
+    },
+    {
+     "remembered": "Nanlar 1398",
+     "written": "NANLAR 1398 · BAMBEY",
+     "canonical": "SN-BMB-0235-1398-R",
+     "coverage": "nways",
+     "shownSource": "N-Ways",
+     "rule": "single",
+     "structures": 1,
+     "classes": [
+      "inconnu"
+     ]
+    },
+    {
+     "remembered": "Nanlar 1558",
+     "written": "NANLAR 1558 · BAMBEY",
+     "canonical": "SN-BMB-0235-1558-R",
+     "coverage": "nways",
+     "shownSource": "N-Ways",
+     "rule": "single",
+     "structures": 1,
+     "classes": [
+      "inconnu"
+     ]
+    },
+    {
+     "remembered": "Nanlar 1718",
+     "written": "NANLAR 1718 · BAMBEY",
+     "canonical": "SN-BMB-0235-1718-R",
+     "coverage": "nways",
+     "shownSource": "N-Ways",
+     "rule": "single",
+     "structures": 1,
+     "classes": [
+      "res.maison"
+     ]
+    }
+   ]
+  }
+ },
+ "addMyHome": {
+  "dakar-medina.csv": {
+   "gateInsideExisting": {
+    "gate": [
+     14.684735,
+     -17.450074
+    ],
+    "status": "flagged",
+    "reason": "gate inside existing compound SN-DKR-0071-13852-R"
+   },
+   "newHome": {
+    "gate": [
+     14.683769,
+     -17.447645
+    ],
+    "status": "provisional-alias",
+    "number": 6616,
+    "officialName": "Gibraltar",
+    "remembered": "Gibraltar 6616",
+    "written": null,
+    "canonical": "SN-DKR-0036-6616-Z",
+    "spokenFr": "Gibraltar, soixante-six, seize",
+    "spokenWo": "Gibraltar, juróom benn, juróom benn, benn, juróom benn",
+    "coverage": "official-municipal",
+    "spotCode": "DKR 4703 2388",
+    "note": "official addressing area: the N-Ways address is only an alias until the commune gives the official number"
+   }
+  },
+  "touba.csv": {
+   "gateInsideExisting": {
+    "gate": [
+     14.865267,
+     -15.879879
+    ],
+    "status": "flagged",
+    "reason": "gate inside existing compound SN-TBA-0189-30300-Q"
+   },
+   "newHome": {
+    "gate": [
+     14.865583,
+     -15.878191
+    ],
+    "status": "provisional",
+    "number": 34869,
+    "officialName": "Penium Darou Khoudosse",
+    "remembered": "Khoudosse 34 869",
+    "written": "KHOUDOSSE 34 869 · TOUBA-MBACKÉ",
+    "canonical": "SN-TBA-0189-34869-J",
+    "spokenFr": "Khoudosse, trente-quatre, huit cent soixante-neuf",
+    "spokenWo": "Khoudosse, ñett, ñeent, juróom ñett, juróom benn, juróom ñeent",
+    "coverage": "nways",
+    "spotCode": "TBA 5305 3328"
+   }
+  },
+  "bambey-village.csv": {
+   "gateInsideExisting": {
+    "gate": [
+     14.790775,
+     -16.620627
+    ],
+    "status": "flagged",
+    "reason": "gate inside existing compound SN-BMB-0338-13664-Q"
+   },
+   "newHome": {
+    "gate": [
+     14.791749,
+     -16.617568
+    ],
+    "status": "provisional",
+    "number": 8460,
+    "officialName": "Nanlar",
+    "remembered": "Nanlar 8460",
+    "written": "NANLAR 8460 · BAMBEY",
+    "canonical": "SN-BMB-0235-8460-J",
+    "spokenFr": "Nanlar, quatre-vingt-quatre, soixante",
+    "spokenWo": "Nanlar, juróom ñett, ñeent, juróom benn, tus",
+    "coverage": "nways",
+    "spotCode": "BMB 1582 4584"
+   }
+  }
+ }
+}

@@ -1,0 +1,2176 @@
+{
+ "computed": "2026-10-18",
+ "note": "N-Ways reference statistics; classes and compounds are inferred (SPEC.md sections 5-6), not surveyed. Structures = building footprints (OpenStreetMap + Google/Microsoft).",
+ "skippedOutsideZones": 10415,
+ "gates": {
+  "BIG": 12,
+  "BKL": 3,
+  "BMB": 6,
+  "DAG": 21,
+  "DBL": 10,
+  "DKR": 402,
+  "FDG": 2,
+  "FTK": 10,
+  "GDW": 4,
+  "GMP": 5,
+  "GNG": 6,
+  "GRY": 4,
+  "KAF": 2,
+  "KAO": 13,
+  "KBM": 5,
+  "KDG": 4,
+  "KGH": 6,
+  "KLD": 8,
+  "KPT": 2,
+  "LGA": 17,
+  "LNG": 10,
+  "MAT": 7,
+  "MBR": 117,
+  "MYF": 6,
+  "NRP": 13,
+  "OUS": 4,
+  "PKN": 71,
+  "POD": 9,
+  "RUF": 120,
+  "SED": 9,
+  "SRY": 6,
+  "STL": 125,
+  "TBA": 5,
+  "TBC": 53,
+  "THS": 79,
+  "TIV": 20,
+  "VEL": 163,
+  "ZIG": 44
+ },
+ "enclosures": {
+  "BIG": 141,
+  "BKL": 69,
+  "BMB": 102,
+  "BNK": 20,
+  "BRK": 44,
+  "DAG": 87,
+  "DBL": 87,
+  "DKR": 869,
+  "FDG": 99,
+  "FTK": 181,
+  "GDW": 125,
+  "GMP": 13,
+  "GNG": 67,
+  "GOS": 44,
+  "GRY": 28,
+  "KAF": 90,
+  "KAO": 132,
+  "KBM": 150,
+  "KDG": 41,
+  "KGH": 51,
+  "KLD": 35,
+  "KNL": 63,
+  "KPT": 45,
+  "KTF": 28,
+  "LGA": 262,
+  "LNG": 147,
+  "MAT": 105,
+  "MBR": 350,
+  "MHD": 41,
+  "MYF": 32,
+  "NRP": 194,
+  "OUS": 35,
+  "PKN": 414,
+  "POD": 83,
+  "RAN": 31,
+  "RUF": 438,
+  "SED": 19,
+  "SLM": 8,
+  "SRY": 15,
+  "STL": 364,
+  "TBA": 209,
+  "TBC": 129,
+  "THS": 335,
+  "TIV": 325,
+  "VEL": 80,
+  "ZIG": 124
+ },
+ "nwaysSitesInSenegal": {
+  "government": 202,
+  "site": 5804,
+  "military": 68,
+  "police": 65,
+  "estate": 7
+ },
+ "osmBuildingValues": {
+  "yes": 1099686,
+  "residential": 256104,
+  "house": 8048,
+  "construction": 4077,
+  "hut": 1658,
+  "mosque": 1187,
+  "commercial": 655,
+  "school": 635,
+  "apartments": 581,
+  "roof": 255,
+  "": 235,
+  "industrial": 186,
+  "cabin": 147,
+  "hotel": 132,
+  "detached": 128,
+  "retail": 111,
+  "shed": 102,
+  "storage_tank": 96,
+  "hospital": 90,
+  "farm": 80,
+  "dormitory": 74,
+  "public": 72,
+  "bungalow": 56,
+  "greenhouse": 46,
+  "hangar": 44,
+  "office": 44,
+  "warehouse": 44,
+  "university": 35,
+  "church": 34,
+  "unclassified": 32
+ },
+ "mlHeightFiller": {
+  "rows": 4257726,
+  "distinct": 36,
+  "min": 3.5,
+  "max": 7.0
+ },
+ "regions": {
+  "SN-DB": {
+   "structures": 731035,
+   "bySource": {
+    "osm": 63295,
+    "ml": 667740
+   },
+   "compounds": 463545,
+   "shareInMultiStructureCompounds": 0.548,
+   "groups": {
+    "residential": 0.8871,
+    "unknown": 0.1123,
+    "religious": 0.0003,
+    "commercial": 0.0002,
+    "education": 0.0,
+    "health": 0.0,
+    "hospitality": 0.0,
+    "government": 0.0,
+    "transport": 0.0,
+    "under construction": 0.0,
+    "industrial": 0.0
+   },
+   "footprintM2": {
+    "p10": 13.3,
+    "p25": 17.1,
+    "median": 25.8,
+    "p75": 59.2,
+    "p90": 132.5,
+    "p99": 332.9
+   },
+   "areaHistogram": {
+    "<10": 2343,
+    "<25": 354431,
+    "<50": 159638,
+    "<100": 105213,
+    "<200": 76011,
+    "<400": 29888,
+    "<1000": 3305,
+    "<5000": 192,
+    ">=5000": 14
+   },
+   "floors": {
+    "unknown": 731014,
+    "2": 4,
+    "1": 14,
+    "3": 3
+   },
+   "heightKnownShare": 0.0,
+   "floorAreaKm2": 40.0,
+   "confidence": {
+    "low": 729777,
+    "high": 1088,
+    "medium": 170
+   }
+  },
+  "SN-DK": {
+   "structures": 530668,
+   "bySource": {
+    "osm": 109958,
+    "ml": 420710
+   },
+   "compounds": 413099,
+   "shareInMultiStructureCompounds": 0.358,
+   "groups": {
+    "residential": 0.9495,
+    "unknown": 0.037,
+    "commercial": 0.0071,
+    "religious": 0.0015,
+    "education": 0.0015,
+    "hospitality": 0.0013,
+    "health": 0.001,
+    "industrial": 0.0004,
+    "under construction": 0.0004,
+    "government": 0.0002,
+    "transport": 0.0001,
+    "mixed-use": 0.0,
+    "agricultural": 0.0,
+    "ruin": 0.0
+   },
+   "footprintM2": {
+    "p10": 18.0,
+    "p25": 32.6,
+    "median": 76.8,
+    "p75": 148.4,
+    "p90": 217.1,
+    "p99": 631.3
+   },
+   "areaHistogram": {
+    "<10": 1260,
+    "<25": 93626,
+    "<50": 102220,
+    "<100": 115592,
+    "<200": 154468,
+    "<400": 50276,
+    "<1000": 10847,
+    "<5000": 2213,
+    ">=5000": 166
+   },
+   "floors": {
+    "unknown": 530059,
+    "6+": 140,
+    "5": 26,
+    "3": 83,
+    "2": 182,
+    "1": 133,
+    "4": 45
+   },
+   "heightKnownShare": 0.001,
+   "floorAreaKm2": 62.49,
+   "confidence": {
+    "medium": 4154,
+    "high": 3607,
+    "low": 522907
+   }
+  },
+  "SN-FK": {
+   "structures": 374909,
+   "bySource": {
+    "osm": 45073,
+    "ml": 329836
+   },
+   "compounds": 211817,
+   "shareInMultiStructureCompounds": 0.609,
+   "groups": {
+    "residential": 0.9172,
+    "unknown": 0.0811,
+    "commercial": 0.0007,
+    "religious": 0.0003,
+    "hospitality": 0.0002,
+    "under construction": 0.0002,
+    "health": 0.0001,
+    "education": 0.0001,
+    "government": 0.0,
+    "industrial": 0.0,
+    "transport": 0.0,
+    "agricultural": 0.0
+   },
+   "footprintM2": {
+    "p10": 12.7,
+    "p25": 16.5,
+    "median": 23.4,
+    "p75": 51.9,
+    "p90": 108.8,
+    "p99": 245.1
+   },
+   "areaHistogram": {
+    "<10": 4265,
+    "<25": 196099,
+    "<50": 77677,
+    "<100": 53522,
+    "<200": 35788,
+    "<400": 6832,
+    "<1000": 638,
+    "<5000": 84,
+    ">=5000": 4
+   },
+   "floors": {
+    "unknown": 374895,
+    "1": 12,
+    "2": 2
+   },
+   "heightKnownShare": 0.0,
+   "floorAreaKm2": 17.03,
+   "confidence": {
+    "low": 373826,
+    "high": 753,
+    "medium": 330
+   }
+  },
+  "SN-KA": {
+   "structures": 308780,
+   "bySource": {
+    "osm": 21059,
+    "ml": 287721
+   },
+   "compounds": 182828,
+   "shareInMultiStructureCompounds": 0.564,
+   "groups": {
+    "residential": 0.8149,
+    "unknown": 0.1842,
+    "commercial": 0.0006,
+    "religious": 0.0002,
+    "education": 0.0,
+    "health": 0.0,
+    "hospitality": 0.0,
+    "under construction": 0.0,
+    "government": 0.0,
+    "industrial": 0.0
+   },
+   "footprintM2": {
+    "p10": 13.2,
+    "p25": 16.7,
+    "median": 21.0,
+    "p75": 29.5,
+    "p90": 67.1,
+    "p99": 188.9
+   },
+   "areaHistogram": {
+    "<10": 1144,
+    "<25": 205673,
+    "<50": 57676,
+    "<100": 27107,
+    "<200": 14640,
+    "<400": 2307,
+    "<1000": 213,
+    "<5000": 19,
+    ">=5000": 1
+   },
+   "floors": {
+    "unknown": 308778,
+    "1": 1,
+    "2": 1
+   },
+   "heightKnownShare": 0.0,
+   "floorAreaKm2": 10.22,
+   "confidence": {
+    "low": 304945,
+    "high": 3808,
+    "medium": 27
+   }
+  },
+  "SN-KD": {
+   "structures": 409734,
+   "bySource": {
+    "osm": 241230,
+    "ml": 168504
+   },
+   "compounds": 231350,
+   "shareInMultiStructureCompounds": 0.617,
+   "groups": {
+    "residential": 0.8967,
+    "unknown": 0.1005,
+    "under construction": 0.0023,
+    "education": 0.0002,
+    "commercial": 0.0002,
+    "religious": 0.0001,
+    "government": 0.0,
+    "health": 0.0,
+    "hospitality": 0.0,
+    "transport": 0.0,
+    "ruin": 0.0
+   },
+   "footprintM2": {
+    "p10": 13.4,
+    "p25": 18.4,
+    "median": 26.4,
+    "p75": 44.0,
+    "p90": 102.7,
+    "p99": 260.0
+   },
+   "areaHistogram": {
+    "<10": 5787,
+    "<25": 183351,
+    "<50": 131316,
+    "<100": 46831,
+    "<200": 32848,
+    "<400": 8863,
+    "<1000": 703,
+    "<5000": 34,
+    ">=5000": 1
+   },
+   "floors": {
+    "unknown": 409692,
+    "2": 1,
+    "1": 5,
+    "4": 4,
+    "5": 16,
+    "6+": 16
+   },
+   "heightKnownShare": 0.0,
+   "floorAreaKm2": 18.31,
+   "confidence": {
+    "low": 404427,
+    "high": 5262,
+    "medium": 45
+   }
+  },
+  "SN-KE": {
+   "structures": 150063,
+   "bySource": {
+    "osm": 65593,
+    "ml": 84470
+   },
+   "compounds": 99037,
+   "shareInMultiStructureCompounds": 0.49,
+   "groups": {
+    "residential": 0.7194,
+    "unknown": 0.2747,
+    "under construction": 0.0053,
+    "commercial": 0.0002,
+    "education": 0.0001,
+    "health": 0.0001,
+    "hospitality": 0.0001,
+    "religious": 0.0001,
+    "government": 0.0001,
+    "agricultural": 0.0,
+    "industrial": 0.0,
+    "transport": 0.0
+   },
+   "footprintM2": {
+    "p10": 11.2,
+    "p25": 14.6,
+    "median": 20.7,
+    "p75": 30.3,
+    "p90": 56.5,
+    "p99": 199.4
+   },
+   "areaHistogram": {
+    "<10": 4804,
+    "<25": 90466,
+    "<50": 37429,
+    "<100": 10072,
+    "<200": 5806,
+    "<400": 1297,
+    "<1000": 175,
+    "<5000": 14
+   },
+   "floors": {
+    "unknown": 150060,
+    "1": 1,
+    "6+": 1,
+    "3": 1
+   },
+   "heightKnownShare": 0.0,
+   "floorAreaKm2": 4.74,
+   "confidence": {
+    "low": 146990,
+    "high": 3036,
+    "medium": 37
+   }
+  },
+  "SN-KL": {
+   "structures": 442506,
+   "bySource": {
+    "osm": 46398,
+    "ml": 396108
+   },
+   "compounds": 272452,
+   "shareInMultiStructureCompounds": 0.555,
+   "groups": {
+    "residential": 0.9042,
+    "unknown": 0.0945,
+    "commercial": 0.0005,
+    "religious": 0.0003,
+    "under construction": 0.0002,
+    "education": 0.0001,
+    "health": 0.0001,
+    "hospitality": 0.0001,
+    "industrial": 0.0,
+    "government": 0.0,
+    "agricultural": 0.0,
+    "transport": 0.0
+   },
+   "footprintM2": {
+    "p10": 13.5,
+    "p25": 17.9,
+    "median": 26.4,
+    "p75": 60.4,
+    "p90": 115.5,
+    "p99": 286.9
+   },
+   "areaHistogram": {
+    "<10": 2514,
+    "<25": 207441,
+    "<50": 99042,
+    "<100": 76251,
+    "<200": 44987,
+    "<400": 10284,
+    "<1000": 1658,
+    "<5000": 308,
+    ">=5000": 21
+   },
+   "floors": {
+    "unknown": 442485,
+    "1": 15,
+    "2": 3,
+    "3": 3
+   },
+   "heightKnownShare": 0.0,
+   "floorAreaKm2": 23.08,
+   "confidence": {
+    "low": 439234,
+    "high": 3162,
+    "medium": 110
+   }
+  },
+  "SN-LG": {
+   "structures": 516209,
+   "bySource": {
+    "osm": 102495,
+    "ml": 413714
+   },
+   "compounds": 322353,
+   "shareInMultiStructureCompounds": 0.558,
+   "groups": {
+    "residential": 0.9132,
+    "unknown": 0.0858,
+    "religious": 0.0005,
+    "commercial": 0.0003,
+    "education": 0.0001,
+    "health": 0.0001,
+    "government": 0.0,
+    "hospitality": 0.0,
+    "under construction": 0.0,
+    "industrial": 0.0,
+    "transport": 0.0,
+    "agricultural": 0.0
+   },
+   "footprintM2": {
+    "p10": 12.5,
+    "p25": 15.9,
+    "median": 22.0,
+    "p75": 41.7,
+    "p90": 98.8,
+    "p99": 277.2
+   },
+   "areaHistogram": {
+    "<10": 7084,
+    "<25": 286499,
+    "<50": 114816,
+    "<100": 56984,
+    "<200": 36367,
+    "<400": 12996,
+    "<1000": 1248,
+    "<5000": 193,
+    ">=5000": 22
+   },
+   "floors": {
+    "unknown": 516200,
+    "1": 7,
+    "2": 2
+   },
+   "heightKnownShare": 0.0,
+   "floorAreaKm2": 22.46,
+   "confidence": {
+    "high": 30312,
+    "low": 485777,
+    "medium": 120
+   }
+  },
+  "SN-MT": {
+   "structures": 280135,
+   "bySource": {
+    "osm": 176989,
+    "ml": 103146
+   },
+   "compounds": 175981,
+   "shareInMultiStructureCompounds": 0.545,
+   "groups": {
+    "residential": 0.9355,
+    "unknown": 0.0629,
+    "health": 0.0005,
+    "commercial": 0.0004,
+    "religious": 0.0003,
+    "under construction": 0.0002,
+    "education": 0.0001,
+    "hospitality": 0.0,
+    "government": 0.0,
+    "industrial": 0.0,
+    "transport": 0.0
+   },
+   "footprintM2": {
+    "p10": 10.1,
+    "p25": 13.7,
+    "median": 22.2,
+    "p75": 55.8,
+    "p90": 124.9,
+    "p99": 344.9
+   },
+   "areaHistogram": {
+    "<10": 27611,
+    "<25": 124193,
+    "<50": 51191,
+    "<100": 39664,
+    "<200": 24772,
+    "<400": 11020,
+    "<1000": 1575,
+    "<5000": 105,
+    ">=5000": 4
+   },
+   "floors": {
+    "unknown": 280130,
+    "1": 5
+   },
+   "heightKnownShare": 0.0,
+   "floorAreaKm2": 14.24,
+   "confidence": {
+    "high": 76240,
+    "low": 203651,
+    "medium": 244
+   }
+  },
+  "SN-SE": {
+   "structures": 148636,
+   "bySource": {
+    "osm": 100938,
+    "ml": 47698
+   },
+   "compounds": 96416,
+   "shareInMultiStructureCompounds": 0.529,
+   "groups": {
+    "residential": 0.9771,
+    "unknown": 0.0224,
+    "commercial": 0.0002,
+    "education": 0.0001,
+    "religious": 0.0001,
+    "health": 0.0,
+    "government": 0.0,
+    "hospitality": 0.0,
+    "under construction": 0.0,
+    "transport": 0.0
+   },
+   "footprintM2": {
+    "p10": 15.6,
+    "p25": 23.4,
+    "median": 52.0,
+    "p75": 134.7,
+    "p90": 213.0,
+    "p99": 379.6
+   },
+   "areaHistogram": {
+    "<10": 1562,
+    "<25": 39894,
+    "<50": 31545,
+    "<100": 25042,
+    "<200": 32989,
+    "<400": 16455,
+    "<1000": 1102,
+    "<5000": 36,
+    ">=5000": 11
+   },
+   "floors": {
+    "unknown": 148635,
+    "2": 1
+   },
+   "heightKnownShare": 0.0,
+   "floorAreaKm2": 13.52,
+   "confidence": {
+    "low": 148398,
+    "high": 215,
+    "medium": 23
+   }
+  },
+  "SN-SL": {
+   "structures": 401420,
+   "bySource": {
+    "ml": 282763,
+    "osm": 118657
+   },
+   "compounds": 253865,
+   "shareInMultiStructureCompounds": 0.553,
+   "groups": {
+    "residential": 0.9223,
+    "unknown": 0.0703,
+    "under construction": 0.0025,
+    "commercial": 0.0025,
+    "education": 0.0007,
+    "health": 0.0007,
+    "religious": 0.0005,
+    "hospitality": 0.0003,
+    "government": 0.0001,
+    "agricultural": 0.0001,
+    "industrial": 0.0,
+    "ruin": 0.0,
+    "transport": 0.0,
+    "mixed-use": 0.0
+   },
+   "footprintM2": {
+    "p10": 12.5,
+    "p25": 16.9,
+    "median": 26.9,
+    "p75": 56.2,
+    "p90": 111.1,
+    "p99": 305.1
+   },
+   "areaHistogram": {
+    "<10": 9353,
+    "<25": 177367,
+    "<50": 101659,
+    "<100": 66133,
+    "<200": 34041,
+    "<400": 10816,
+    "<1000": 1709,
+    "<5000": 278,
+    ">=5000": 64
+   },
+   "floors": {
+    "unknown": 395937,
+    "2": 743,
+    "1": 4648,
+    "4": 8,
+    "5": 1,
+    "3": 82,
+    "6+": 1
+   },
+   "heightKnownShare": 0.014,
+   "floorAreaKm2": 21.96,
+   "confidence": {
+    "low": 389236,
+    "high": 11628,
+    "medium": 556
+   }
+  },
+  "SN-TC": {
+   "structures": 371314,
+   "bySource": {
+    "osm": 162336,
+    "ml": 208978
+   },
+   "compounds": 217861,
+   "shareInMultiStructureCompounds": 0.571,
+   "groups": {
+    "residential": 0.8911,
+    "unknown": 0.1082,
+    "religious": 0.0002,
+    "commercial": 0.0001,
+    "under construction": 0.0001,
+    "education": 0.0001,
+    "health": 0.0001,
+    "hospitality": 0.0001,
+    "government": 0.0,
+    "transport": 0.0,
+    "industrial": 0.0
+   },
+   "footprintM2": {
+    "p10": 12.0,
+    "p25": 15.4,
+    "median": 21.2,
+    "p75": 33.5,
+    "p90": 84.2,
+    "p99": 282.1
+   },
+   "areaHistogram": {
+    "<10": 9009,
+    "<25": 224318,
+    "<50": 74201,
+    "<100": 33949,
+    "<200": 20437,
+    "<400": 8325,
+    "<1000": 1013,
+    "<5000": 56,
+    ">=5000": 6
+   },
+   "floors": {
+    "unknown": 371300,
+    "2": 1,
+    "1": 13
+   },
+   "heightKnownShare": 0.0,
+   "floorAreaKm2": 14.56,
+   "confidence": {
+    "low": 238157,
+    "high": 133088,
+    "medium": 69
+   }
+  },
+  "SN-TH": {
+   "structures": 800303,
+   "bySource": {
+    "osm": 66327,
+    "ml": 733976
+   },
+   "compounds": 525647,
+   "shareInMultiStructureCompounds": 0.517,
+   "groups": {
+    "residential": 0.9249,
+    "unknown": 0.0725,
+    "commercial": 0.0012,
+    "religious": 0.0005,
+    "hospitality": 0.0004,
+    "education": 0.0002,
+    "health": 0.0001,
+    "under construction": 0.0001,
+    "industrial": 0.0001,
+    "government": 0.0,
+    "agricultural": 0.0,
+    "transport": 0.0,
+    "ruin": 0.0
+   },
+   "footprintM2": {
+    "p10": 13.4,
+    "p25": 18.5,
+    "median": 34.5,
+    "p75": 84.3,
+    "p90": 162.9,
+    "p99": 384.9
+   },
+   "areaHistogram": {
+    "<10": 2787,
+    "<25": 304388,
+    "<50": 184678,
+    "<100": 143830,
+    "<200": 113767,
+    "<400": 43563,
+    "<1000": 6187,
+    "<5000": 1007,
+    ">=5000": 96
+   },
+   "floors": {
+    "unknown": 800160,
+    "1": 64,
+    "2": 56,
+    "3": 7,
+    "4": 13,
+    "5": 3
+   },
+   "heightKnownShare": 0.0,
+   "floorAreaKm2": 55.72,
+   "confidence": {
+    "medium": 805,
+    "low": 796935,
+    "high": 2563
+   }
+  },
+  "SN-ZG": {
+   "structures": 166969,
+   "bySource": {
+    "osm": 54607,
+    "ml": 112362
+   },
+   "compounds": 129377,
+   "shareInMultiStructureCompounds": 0.377,
+   "groups": {
+    "residential": 0.9748,
+    "unknown": 0.0173,
+    "under construction": 0.0048,
+    "commercial": 0.0009,
+    "education": 0.0007,
+    "hospitality": 0.0006,
+    "religious": 0.0005,
+    "health": 0.0003,
+    "government": 0.0001,
+    "transport": 0.0,
+    "industrial": 0.0
+   },
+   "footprintM2": {
+    "p10": 17.2,
+    "p25": 31.2,
+    "median": 83.1,
+    "p75": 165.3,
+    "p90": 235.4,
+    "p99": 414.0
+   },
+   "areaHistogram": {
+    "<10": 616,
+    "<25": 31443,
+    "<50": 29694,
+    "<100": 30748,
+    "<200": 47357,
+    "<400": 25189,
+    "<1000": 1799,
+    "<5000": 118,
+    ">=5000": 5
+   },
+   "floors": {
+    "unknown": 166922,
+    "2": 7,
+    "1": 36,
+    "3": 3,
+    "5": 1
+   },
+   "heightKnownShare": 0.0,
+   "floorAreaKm2": 18.49,
+   "confidence": {
+    "low": 164634,
+    "high": 2081,
+    "medium": 254
+   }
+  }
+ },
+ "zones": {
+  "BIG": {
+   "structures": 83677,
+   "compounds": 65014,
+   "structuresInMultiStructureCompounds": 31661,
+   "shareInMulti": 0.378,
+   "compoundsWithKnownGate": 1,
+   "shareCompoundsWithKnownGate": 0.0,
+   "groupingRules": {
+    "single": 51982,
+    "satellite": 8798,
+    "rural-concession": 4104,
+    "enclosure": 130
+   },
+   "urbanShare": 0.08
+  },
+  "BKL": {
+   "structures": 65534,
+   "compounds": 41719,
+   "structuresInMultiStructureCompounds": 34237,
+   "shareInMulti": 0.522,
+   "compoundsWithKnownGate": 2,
+   "shareCompoundsWithKnownGate": 0.0,
+   "groupingRules": {
+    "single": 31260,
+    "rural-concession": 3945,
+    "satellite": 6449,
+    "enclosure": 65
+   },
+   "urbanShare": 0.505
+  },
+  "BMB": {
+   "structures": 145574,
+   "compounds": 82990,
+   "structuresInMultiStructureCompounds": 87561,
+   "shareInMulti": 0.601,
+   "compoundsWithKnownGate": 1,
+   "shareCompoundsWithKnownGate": 0.0,
+   "groupingRules": {
+    "single": 57975,
+    "satellite": 13269,
+    "rural-concession": 11648,
+    "enclosure": 98
+   },
+   "urbanShare": 0.351
+  },
+  "BNK": {
+   "structures": 61056,
+   "compounds": 36246,
+   "structuresInMultiStructureCompounds": 35829,
+   "shareInMulti": 0.587,
+   "compoundsWithKnownGate": 0,
+   "shareCompoundsWithKnownGate": 0.0,
+   "groupingRules": {
+    "satellite": 6100,
+    "single": 25225,
+    "rural-concession": 4906,
+    "enclosure": 15
+   },
+   "urbanShare": 0.217
+  },
+  "BRK": {
+   "structures": 59350,
+   "compounds": 33638,
+   "structuresInMultiStructureCompounds": 35213,
+   "shareInMulti": 0.593,
+   "compoundsWithKnownGate": 0,
+   "shareCompoundsWithKnownGate": 0.0,
+   "groupingRules": {
+    "rural-concession": 4893,
+    "single": 24121,
+    "satellite": 4580,
+    "enclosure": 44
+   },
+   "urbanShare": 0.353
+  },
+  "DAG": {
+   "structures": 142790,
+   "compounds": 89037,
+   "structuresInMultiStructureCompounds": 79358,
+   "shareInMulti": 0.556,
+   "compoundsWithKnownGate": 4,
+   "shareCompoundsWithKnownGate": 0.0,
+   "groupingRules": {
+    "single": 63393,
+    "rural-concession": 11053,
+    "satellite": 14506,
+    "enclosure": 85
+   },
+   "urbanShare": 0.431
+  },
+  "DBL": {
+   "structures": 125762,
+   "compounds": 68340,
+   "structuresInMultiStructureCompounds": 79284,
+   "shareInMulti": 0.63,
+   "compoundsWithKnownGate": 3,
+   "shareCompoundsWithKnownGate": 0.0,
+   "groupingRules": {
+    "single": 46456,
+    "rural-concession": 10047,
+    "satellite": 11751,
+    "enclosure": 86
+   },
+   "urbanShare": 0.364
+  },
+  "DKR": {
+   "structures": 135785,
+   "compounds": 107391,
+   "structuresInMultiStructureCompounds": 44236,
+   "shareInMulti": 0.326,
+   "compoundsWithKnownGate": 126,
+   "shareCompoundsWithKnownGate": 0.0012,
+   "groupingRules": {
+    "single": 91153,
+    "rural-concession": 2278,
+    "satellite": 13227,
+    "enclosure": 733
+   },
+   "urbanShare": 0.755
+  },
+  "FDG": {
+   "structures": 131064,
+   "compounds": 79386,
+   "structuresInMultiStructureCompounds": 75066,
+   "shareInMulti": 0.573,
+   "compoundsWithKnownGate": 1,
+   "shareCompoundsWithKnownGate": 0.0,
+   "groupingRules": {
+    "single": 55960,
+    "rural-concession": 8485,
+    "satellite": 14849,
+    "enclosure": 92
+   },
+   "urbanShare": 0.386
+  },
+  "FTK": {
+   "structures": 185048,
+   "compounds": 101619,
+   "structuresInMultiStructureCompounds": 114770,
+   "shareInMulti": 0.62,
+   "compoundsWithKnownGate": 2,
+   "shareCompoundsWithKnownGate": 0.0,
+   "groupingRules": {
+    "single": 70223,
+    "rural-concession": 15820,
+    "satellite": 15410,
+    "enclosure": 166
+   },
+   "urbanShare": 0.262
+  },
+  "GDW": {
+   "structures": 29604,
+   "compounds": 23541,
+   "structuresInMultiStructureCompounds": 9832,
+   "shareInMulti": 0.332,
+   "compoundsWithKnownGate": 2,
+   "shareCompoundsWithKnownGate": 0.0001,
+   "groupingRules": {
+    "single": 19706,
+    "satellite": 3427,
+    "enclosure": 122,
+    "rural-concession": 286
+   },
+   "urbanShare": 0.889
+  },
+  "GMP": {
+   "structures": 40397,
+   "compounds": 27855,
+   "structuresInMultiStructureCompounds": 19729,
+   "shareInMulti": 0.488,
+   "compoundsWithKnownGate": 2,
+   "shareCompoundsWithKnownGate": 0.0001,
+   "groupingRules": {
+    "single": 20664,
+    "satellite": 4416,
+    "rural-concession": 2763,
+    "enclosure": 12
+   },
+   "urbanShare": 0.078
+  },
+  "GNG": {
+   "structures": 69597,
+   "compounds": 39821,
+   "structuresInMultiStructureCompounds": 41972,
+   "shareInMulti": 0.603,
+   "compoundsWithKnownGate": 2,
+   "shareCompoundsWithKnownGate": 0.0001,
+   "groupingRules": {
+    "satellite": 5736,
+    "single": 27601,
+    "rural-concession": 6417,
+    "enclosure": 67
+   },
+   "urbanShare": 0.282
+  },
+  "GOS": {
+   "structures": 58797,
+   "compounds": 30812,
+   "structuresInMultiStructureCompounds": 38412,
+   "shareInMulti": 0.653,
+   "compoundsWithKnownGate": 0,
+   "shareCompoundsWithKnownGate": 0.0,
+   "groupingRules": {
+    "single": 20377,
+    "rural-concession": 6434,
+    "satellite": 3957,
+    "enclosure": 44
+   },
+   "urbanShare": 0.202
+  },
+  "GRY": {
+   "structures": 67211,
+   "compounds": 35869,
+   "structuresInMultiStructureCompounds": 40985,
+   "shareInMulti": 0.61,
+   "compoundsWithKnownGate": 0,
+   "shareCompoundsWithKnownGate": 0.0,
+   "groupingRules": {
+    "rural-concession": 5949,
+    "single": 26216,
+    "satellite": 3677,
+    "enclosure": 27
+   },
+   "urbanShare": 0.319
+  },
+  "KAF": {
+   "structures": 119189,
+   "compounds": 75371,
+   "structuresInMultiStructureCompounds": 61437,
+   "shareInMulti": 0.515,
+   "compoundsWithKnownGate": 1,
+   "shareCompoundsWithKnownGate": 0.0,
+   "groupingRules": {
+    "single": 57717,
+    "satellite": 10063,
+    "rural-concession": 7507,
+    "enclosure": 84
+   },
+   "urbanShare": 0.495
+  },
+  "KAO": {
+   "structures": 202107,
+   "compounds": 129000,
+   "structuresInMultiStructureCompounds": 108207,
+   "shareInMulti": 0.535,
+   "compoundsWithKnownGate": 4,
+   "shareCompoundsWithKnownGate": 0.0,
+   "groupingRules": {
+    "single": 93857,
+    "satellite": 23631,
+    "rural-concession": 11381,
+    "enclosure": 131
+   },
+   "urbanShare": 0.502
+  },
+  "KBM": {
+   "structures": 153288,
+   "compounds": 94350,
+   "structuresInMultiStructureCompounds": 87286,
+   "shareInMulti": 0.569,
+   "compoundsWithKnownGate": 1,
+   "shareCompoundsWithKnownGate": 0.0,
+   "groupingRules": {
+    "rural-concession": 12804,
+    "single": 65936,
+    "satellite": 15460,
+    "enclosure": 150
+   },
+   "urbanShare": 0.333
+  },
+  "KDG": {
+   "structures": 74743,
+   "compounds": 47454,
+   "structuresInMultiStructureCompounds": 39774,
+   "shareInMulti": 0.532,
+   "compoundsWithKnownGate": 2,
+   "shareCompoundsWithKnownGate": 0.0,
+   "groupingRules": {
+    "single": 34955,
+    "rural-concession": 4773,
+    "satellite": 7688,
+    "enclosure": 38
+   },
+   "urbanShare": 0.515
+  },
+  "KGH": {
+   "structures": 86230,
+   "compounds": 48690,
+   "structuresInMultiStructureCompounds": 51790,
+   "shareInMulti": 0.601,
+   "compoundsWithKnownGate": 0,
+   "shareCompoundsWithKnownGate": 0.0,
+   "groupingRules": {
+    "rural-concession": 8875,
+    "single": 34420,
+    "satellite": 5349,
+    "enclosure": 46
+   },
+   "urbanShare": 0.342
+  },
+  "KLD": {
+   "structures": 128220,
+   "compounds": 72580,
+   "structuresInMultiStructureCompounds": 79931,
+   "shareInMulti": 0.623,
+   "compoundsWithKnownGate": 3,
+   "shareCompoundsWithKnownGate": 0.0,
+   "groupingRules": {
+    "single": 48284,
+    "rural-concession": 10386,
+    "satellite": 13876,
+    "enclosure": 34
+   },
+   "urbanShare": 0.336
+  },
+  "KNL": {
+   "structures": 102055,
+   "compounds": 65987,
+   "structuresInMultiStructureCompounds": 52767,
+   "shareInMulti": 0.517,
+   "compoundsWithKnownGate": 0,
+   "shareCompoundsWithKnownGate": 0.0,
+   "groupingRules": {
+    "single": 49253,
+    "satellite": 8862,
+    "rural-concession": 7811,
+    "enclosure": 61
+   },
+   "urbanShare": 0.322
+  },
+  "KPT": {
+   "structures": 72279,
+   "compounds": 40207,
+   "structuresInMultiStructureCompounds": 44409,
+   "shareInMulti": 0.614,
+   "compoundsWithKnownGate": 0,
+   "shareCompoundsWithKnownGate": 0.0,
+   "groupingRules": {
+    "single": 27848,
+    "rural-concession": 8362,
+    "satellite": 3954,
+    "enclosure": 43
+   },
+   "urbanShare": 0.295
+  },
+  "KTF": {
+   "structures": 42691,
+   "compounds": 22922,
+   "structuresInMultiStructureCompounds": 27321,
+   "shareInMulti": 0.64,
+   "compoundsWithKnownGate": 0,
+   "shareCompoundsWithKnownGate": 0.0,
+   "groupingRules": {
+    "rural-concession": 4987,
+    "single": 15359,
+    "satellite": 2549,
+    "enclosure": 27
+   },
+   "urbanShare": 0.178
+  },
+  "LGA": {
+   "structures": 199517,
+   "compounds": 131158,
+   "structuresInMultiStructureCompounds": 104423,
+   "shareInMulti": 0.523,
+   "compoundsWithKnownGate": 4,
+   "shareCompoundsWithKnownGate": 0.0,
+   "groupingRules": {
+    "single": 94955,
+    "rural-concession": 14274,
+    "satellite": 21675,
+    "enclosure": 254
+   },
+   "urbanShare": 0.409
+  },
+  "LNG": {
+   "structures": 163404,
+   "compounds": 96845,
+   "structuresInMultiStructureCompounds": 96315,
+   "shareInMulti": 0.589,
+   "compoundsWithKnownGate": 3,
+   "shareCompoundsWithKnownGate": 0.0,
+   "groupingRules": {
+    "rural-concession": 19512,
+    "single": 67021,
+    "satellite": 10173,
+    "enclosure": 139
+   },
+   "urbanShare": 0.176
+  },
+  "MAT": {
+   "structures": 113057,
+   "compounds": 77412,
+   "structuresInMultiStructureCompounds": 55502,
+   "shareInMulti": 0.491,
+   "compoundsWithKnownGate": 3,
+   "shareCompoundsWithKnownGate": 0.0,
+   "groupingRules": {
+    "rural-concession": 7706,
+    "single": 57517,
+    "satellite": 12090,
+    "enclosure": 99
+   },
+   "urbanShare": 0.362
+  },
+  "MBR": {
+   "structures": 312513,
+   "compounds": 205241,
+   "structuresInMultiStructureCompounds": 161215,
+   "shareInMulti": 0.516,
+   "compoundsWithKnownGate": 23,
+   "shareCompoundsWithKnownGate": 0.0001,
+   "groupingRules": {
+    "single": 151177,
+    "rural-concession": 17274,
+    "satellite": 36499,
+    "enclosure": 291
+   },
+   "urbanShare": 0.444
+  },
+  "MHD": {
+   "structures": 44011,
+   "compounds": 25129,
+   "structuresInMultiStructureCompounds": 25824,
+   "shareInMulti": 0.587,
+   "compoundsWithKnownGate": 0,
+   "shareCompoundsWithKnownGate": 0.0,
+   "groupingRules": {
+    "single": 18172,
+    "satellite": 2193,
+    "rural-concession": 4725,
+    "enclosure": 39
+   },
+   "urbanShare": 0.325
+  },
+  "MYF": {
+   "structures": 104321,
+   "compounds": 54530,
+   "structuresInMultiStructureCompounds": 66814,
+   "shareInMulti": 0.64,
+   "compoundsWithKnownGate": 1,
+   "shareCompoundsWithKnownGate": 0.0,
+   "groupingRules": {
+    "single": 37497,
+    "rural-concession": 7738,
+    "satellite": 9270,
+    "enclosure": 25
+   },
+   "urbanShare": 0.397
+  },
+  "NRP": {
+   "structures": 170802,
+   "compounds": 103631,
+   "structuresInMultiStructureCompounds": 95526,
+   "shareInMulti": 0.559,
+   "compoundsWithKnownGate": 1,
+   "shareCompoundsWithKnownGate": 0.0,
+   "groupingRules": {
+    "single": 75190,
+    "satellite": 18010,
+    "rural-concession": 10249,
+    "enclosure": 182
+   },
+   "urbanShare": 0.416
+  },
+  "OUS": {
+   "structures": 21023,
+   "compounds": 16166,
+   "structuresInMultiStructureCompounds": 7863,
+   "shareInMulti": 0.374,
+   "compoundsWithKnownGate": 1,
+   "shareCompoundsWithKnownGate": 0.0001,
+   "groupingRules": {
+    "single": 13151,
+    "satellite": 1825,
+    "rural-concession": 1158,
+    "enclosure": 32
+   },
+   "urbanShare": 0.08
+  },
+  "PKN": {
+   "structures": 156529,
+   "compounds": 123528,
+   "structuresInMultiStructureCompounds": 55068,
+   "shareInMulti": 0.352,
+   "compoundsWithKnownGate": 17,
+   "shareCompoundsWithKnownGate": 0.0001,
+   "groupingRules": {
+    "satellite": 19905,
+    "single": 101243,
+    "rural-concession": 1999,
+    "enclosure": 381
+   },
+   "urbanShare": 0.84
+  },
+  "POD": {
+   "structures": 147301,
+   "compounds": 91206,
+   "structuresInMultiStructureCompounds": 84376,
+   "shareInMulti": 0.573,
+   "compoundsWithKnownGate": 2,
+   "shareCompoundsWithKnownGate": 0.0,
+   "groupingRules": {
+    "rural-concession": 16370,
+    "single": 62893,
+    "satellite": 11860,
+    "enclosure": 83
+   },
+   "urbanShare": 0.168
+  },
+  "RAN": {
+   "structures": 65023,
+   "compounds": 32582,
+   "structuresInMultiStructureCompounds": 44428,
+   "shareInMulti": 0.683,
+   "compoundsWithKnownGate": 0,
+   "shareCompoundsWithKnownGate": 0.0,
+   "groupingRules": {
+    "single": 20591,
+    "rural-concession": 10005,
+    "satellite": 1959,
+    "enclosure": 27
+   },
+   "urbanShare": 0.094
+  },
+  "RUF": {
+   "structures": 208750,
+   "compounds": 158639,
+   "structuresInMultiStructureCompounds": 80850,
+   "shareInMulti": 0.387,
+   "compoundsWithKnownGate": 28,
+   "shareCompoundsWithKnownGate": 0.0002,
+   "groupingRules": {
+    "single": 127692,
+    "satellite": 22579,
+    "rural-concession": 7994,
+    "enclosure": 374
+   },
+   "urbanShare": 0.532
+  },
+  "SED": {
+   "structures": 47183,
+   "compounds": 32315,
+   "structuresInMultiStructureCompounds": 23101,
+   "shareInMulti": 0.49,
+   "compoundsWithKnownGate": 2,
+   "shareCompoundsWithKnownGate": 0.0001,
+   "groupingRules": {
+    "single": 24078,
+    "satellite": 4951,
+    "rural-concession": 3268,
+    "enclosure": 18
+   },
+   "urbanShare": 0.161
+  },
+  "SLM": {
+   "structures": 10317,
+   "compounds": 5832,
+   "structuresInMultiStructureCompounds": 6490,
+   "shareInMulti": 0.629,
+   "compoundsWithKnownGate": 0,
+   "shareCompoundsWithKnownGate": 0.0,
+   "groupingRules": {
+    "satellite": 685,
+    "rural-concession": 1312,
+    "single": 3827,
+    "enclosure": 8
+   },
+   "urbanShare": 0.072
+  },
+  "SRY": {
+   "structures": 65003,
+   "compounds": 45751,
+   "structuresInMultiStructureCompounds": 27336,
+   "shareInMulti": 0.421,
+   "compoundsWithKnownGate": 2,
+   "shareCompoundsWithKnownGate": 0.0,
+   "groupingRules": {
+    "single": 37662,
+    "rural-concession": 2776,
+    "satellite": 5300,
+    "enclosure": 13
+   },
+   "urbanShare": 0.673
+  },
+  "STL": {
+   "structures": 111329,
+   "compounds": 73622,
+   "structuresInMultiStructureCompounds": 58195,
+   "shareInMulti": 0.523,
+   "compoundsWithKnownGate": 16,
+   "shareCompoundsWithKnownGate": 0.0002,
+   "groupingRules": {
+    "single": 52886,
+    "rural-concession": 4669,
+    "satellite": 15732,
+    "enclosure": 335
+   },
+   "urbanShare": 0.595
+  },
+  "TBA": {
+   "structures": 417008,
+   "compounds": 289293,
+   "structuresInMultiStructureCompounds": 206461,
+   "shareInMulti": 0.495,
+   "compoundsWithKnownGate": 3,
+   "shareCompoundsWithKnownGate": 0.0,
+   "groupingRules": {
+    "single": 210435,
+    "rural-concession": 13601,
+    "satellite": 65051,
+    "enclosure": 206
+   },
+   "urbanShare": 0.705
+  },
+  "TBC": {
+   "structures": 166290,
+   "compounds": 100066,
+   "structuresInMultiStructureCompounds": 92406,
+   "shareInMulti": 0.556,
+   "compoundsWithKnownGate": 14,
+   "shareCompoundsWithKnownGate": 0.0001,
+   "groupingRules": {
+    "single": 73846,
+    "rural-concession": 12492,
+    "satellite": 13607,
+    "enclosure": 121
+   },
+   "urbanShare": 0.46
+  },
+  "THS": {
+   "structures": 261816,
+   "compounds": 175559,
+   "structuresInMultiStructureCompounds": 131555,
+   "shareInMulti": 0.502,
+   "compoundsWithKnownGate": 22,
+   "shareCompoundsWithKnownGate": 0.0001,
+   "groupingRules": {
+    "single": 130112,
+    "rural-concession": 13244,
+    "satellite": 31879,
+    "enclosure": 324
+   },
+   "urbanShare": 0.472
+  },
+  "TIV": {
+   "structures": 225974,
+   "compounds": 144847,
+   "structuresInMultiStructureCompounds": 120894,
+   "shareInMulti": 0.535,
+   "compoundsWithKnownGate": 4,
+   "shareCompoundsWithKnownGate": 0.0,
+   "groupingRules": {
+    "single": 104920,
+    "satellite": 25417,
+    "rural-concession": 14204,
+    "enclosure": 306
+   },
+   "urbanShare": 0.412
+  },
+  "VEL": {
+   "structures": 177193,
+   "compounds": 104240,
+   "structuresInMultiStructureCompounds": 106170,
+   "shareInMulti": 0.599,
+   "compoundsWithKnownGate": 39,
+   "shareCompoundsWithKnownGate": 0.0004,
+   "groupingRules": {
+    "rural-concession": 14429,
+    "single": 70998,
+    "satellite": 18743,
+    "enclosure": 70
+   },
+   "urbanShare": 0.389
+  },
+  "ZIG": {
+   "structures": 62269,
+   "compounds": 48197,
+   "structuresInMultiStructureCompounds": 23348,
+   "shareInMulti": 0.375,
+   "compoundsWithKnownGate": 16,
+   "shareCompoundsWithKnownGate": 0.0003,
+   "groupingRules": {
+    "rural-concession": 2066,
+    "single": 38869,
+    "satellite": 7146,
+    "enclosure": 116
+   },
+   "urbanShare": 0.511
+  }
+ },
+ "detail": {
+  "BMB": {
+   "classes": {
+    "res.annexe": 35465,
+    "res.case": 33806,
+    "res.concession": 31317,
+    "res.maison": 26546,
+    "inconnu": 18357,
+    "rel.mosquee": 33,
+    "edu.ecole": 8,
+    "san.centre": 7,
+    "com.entrepot": 6,
+    "com.boutique": 5,
+    "tra.gare": 4,
+    "chantier": 4,
+    "gov.admin": 4,
+    "rel.eglise": 3,
+    "hot.restaurant": 2,
+    "san.pharmacie": 2,
+    "com.station": 2,
+    "com.marche": 1,
+    "com.bureau": 1,
+    "hot.hotel": 1
+   },
+   "footprintM2": {
+    "p10": 13.0,
+    "p25": 16.5,
+    "median": 22.0,
+    "p75": 42.1,
+    "p90": 91.5,
+    "p99": 230.8
+   },
+   "areaHistogram": {
+    "<10": 204,
+    "<25": 83220,
+    "<50": 31946,
+    "<100": 17616,
+    "<200": 10267,
+    "<400": 2078,
+    "<1000": 211,
+    "<5000": 26,
+    ">=5000": 6
+   },
+   "floors": {
+    "unknown": 145574
+   },
+   "rPlus": {
+    "unknown": 145574
+   },
+   "compoundSizes": {
+    "1": 58013,
+    "2": 12894,
+    "3": 4924,
+    "4": 2409,
+    "5": 1394,
+    "6": 965,
+    "7": 664,
+    "8": 438,
+    "9": 310,
+    "10+": 979
+   }
+  },
+  "DKR": {
+   "classes": {
+    "res.maison": 81614,
+    "res.concession": 23691,
+    "res.annexe": 17892,
+    "inconnu": 4825,
+    "res.case": 2768,
+    "com.boutique": 1232,
+    "com.bureau": 821,
+    "edu.ecole": 488,
+    "hot.restaurant": 475,
+    "com.entrepot": 407,
+    "res.immeuble": 403,
+    "rel.mosquee": 265,
+    "san.pharmacie": 154,
+    "hot.hotel": 136,
+    "san.centre": 132,
+    "com.marche": 79,
+    "gov.admin": 64,
+    "chantier": 60,
+    "rel.eglise": 53,
+    "ind.usine": 48,
+    "edu.universite": 45,
+    "com.atelier": 44,
+    "com.station": 43,
+    "san.hopital": 20,
+    "mix.immeuble": 16,
+    "tra.gare": 5,
+    "ruine": 2,
+    "agr.ferme": 2,
+    "agr.magasin": 1
+   },
+   "footprintM2": {
+    "p10": 19.8,
+    "p25": 37.5,
+    "median": 93.6,
+    "p75": 168.1,
+    "p90": 278.4,
+    "p99": 935.7
+   },
+   "areaHistogram": {
+    "<10": 420,
+    "<25": 20025,
+    "<50": 23465,
+    "<100": 26975,
+    "<200": 39437,
+    "<400": 18908,
+    "<1000": 5355,
+    "<5000": 1139,
+    ">=5000": 61
+   },
+   "floors": {
+    "unknown": 135270,
+    "6": 138,
+    "5": 24,
+    "3": 65,
+    "2": 149,
+    "1": 97,
+    "4": 42
+   },
+   "rPlus": {
+    "unknown": 135270,
+    "R+1": 149,
+    "R+5 et plus": 138,
+    "RDC": 97,
+    "R+2": 65,
+    "R+3": 42,
+    "R+4": 24
+   },
+   "compoundSizes": {
+    "1": 91549,
+    "2": 11972,
+    "3": 2320,
+    "4": 680,
+    "5": 290,
+    "6": 145,
+    "7": 97,
+    "8": 66,
+    "9": 47,
+    "10+": 225
+   }
+  },
+  "GDW": {
+   "classes": {
+    "res.maison": 18317,
+    "res.concession": 5222,
+    "res.annexe": 4425,
+    "inconnu": 1042,
+    "res.case": 220,
+    "com.boutique": 100,
+    "rel.mosquee": 78,
+    "edu.ecole": 56,
+    "com.bureau": 34,
+    "com.entrepot": 22,
+    "com.marche": 20,
+    "san.pharmacie": 16,
+    "san.centre": 14,
+    "gov.admin": 8,
+    "hot.restaurant": 8,
+    "hot.hotel": 6,
+    "com.atelier": 5,
+    "res.immeuble": 4,
+    "san.hopital": 2,
+    "com.station": 2,
+    "mix.immeuble": 1,
+    "rel.eglise": 1,
+    "chantier": 1
+   },
+   "footprintM2": {
+    "p10": 19.2,
+    "p25": 36.1,
+    "median": 80.4,
+    "p75": 138.5,
+    "p90": 198.6,
+    "p99": 559.4
+   },
+   "areaHistogram": {
+    "<10": 200,
+    "<25": 4449,
+    "<50": 5530,
+    "<100": 7432,
+    "<200": 9085,
+    "<400": 2277,
+    "<1000": 558,
+    "<5000": 71,
+    ">=5000": 2
+   },
+   "floors": {
+    "unknown": 29597,
+    "3": 3,
+    "1": 3,
+    "2": 1
+   },
+   "rPlus": {
+    "unknown": 29597,
+    "R+2": 3,
+    "RDC": 3,
+    "R+1": 1
+   },
+   "compoundSizes": {
+    "1": 19772,
+    "2": 2978,
+    "3": 519,
+    "4": 103,
+    "5": 44,
+    "6": 27,
+    "7": 15,
+    "8": 7,
+    "9": 7,
+    "10+": 69
+   }
+  },
+  "KLD": {
+   "classes": {
+    "res.concession": 38074,
+    "res.maison": 35793,
+    "res.annexe": 34318,
+    "res.case": 13863,
+    "inconnu": 6117,
+    "edu.ecole": 20,
+    "com.bureau": 6,
+    "san.centre": 6,
+    "hot.restaurant": 5,
+    "com.entrepot": 4,
+    "rel.mosquee": 3,
+    "gov.admin": 3,
+    "com.station": 3,
+    "com.boutique": 2,
+    "com.marche": 1,
+    "tra.gare": 1,
+    "rel.eglise": 1
+   },
+   "footprintM2": {
+    "p10": 14.0,
+    "p25": 20.4,
+    "median": 31.5,
+    "p75": 60.7,
+    "p90": 129.0,
+    "p99": 265.9
+   },
+   "areaHistogram": {
+    "<10": 1569,
+    "<25": 44477,
+    "<50": 43936,
+    "<100": 18932,
+    "<200": 15548,
+    "<400": 3502,
+    "<1000": 239,
+    "<5000": 17
+   },
+   "floors": {
+    "unknown": 128218,
+    "2": 1,
+    "1": 1
+   },
+   "rPlus": {
+    "unknown": 128218,
+    "R+1": 1,
+    "RDC": 1
+   },
+   "compoundSizes": {
+    "1": 48289,
+    "2": 13076,
+    "3": 4902,
+    "4": 2332,
+    "5": 1351,
+    "6": 850,
+    "7": 550,
+    "8": 341,
+    "9": 229,
+    "10+": 660
+   }
+  },
+  "PKN": {
+   "classes": {
+    "res.maison": 93577,
+    "res.concession": 28076,
+    "res.annexe": 25999,
+    "inconnu": 6073,
+    "res.case": 1758,
+    "rel.mosquee": 195,
+    "com.entrepot": 185,
+    "com.boutique": 149,
+    "edu.ecole": 118,
+    "com.bureau": 87,
+    "ind.usine": 71,
+    "san.centre": 60,
+    "san.pharmacie": 46,
+    "tra.gare": 31,
+    "hot.restaurant": 24,
+    "res.immeuble": 14,
+    "gov.admin": 13,
+    "com.marche": 13,
+    "rel.eglise": 9,
+    "com.station": 9,
+    "san.hopital": 8,
+    "com.atelier": 6,
+    "hot.hotel": 3,
+    "ruine": 3,
+    "edu.universite": 2
+   },
+   "footprintM2": {
+    "p10": 18.5,
+    "p25": 32.5,
+    "median": 73.2,
+    "p75": 141.4,
+    "p90": 198.9,
+    "p99": 488.5
+   },
+   "areaHistogram": {
+    "<10": 316,
+    "<25": 27186,
+    "<50": 31605,
+    "<100": 37266,
+    "<200": 44677,
+    "<400": 12871,
+    "<1000": 2221,
+    "<5000": 358,
+    ">=5000": 29
+   },
+   "floors": {
+    "unknown": 156489,
+    "2": 14,
+    "1": 15,
+    "3": 7,
+    "4": 2,
+    "6": 1,
+    "5": 1
+   },
+   "rPlus": {
+    "unknown": 156489,
+    "RDC": 15,
+    "R+1": 14,
+    "R+2": 7,
+    "R+3": 2,
+    "R+5 et plus": 1,
+    "R+4": 1
+   },
+   "compoundSizes": {
+    "1": 101461,
+    "2": 17255,
+    "3": 3327,
+    "4": 741,
+    "5": 270,
+    "6": 116,
+    "7": 91,
+    "8": 50,
+    "9": 45,
+    "10+": 172
+   }
+  },
+  "RUF": {
+   "classes": {
+    "res.maison": 113564,
+    "res.concession": 43967,
+    "res.annexe": 33493,
+    "res.case": 8875,
+    "inconnu": 7711,
+    "com.entrepot": 303,
+    "rel.mosquee": 197,
+    "chantier": 127,
+    "edu.ecole": 86,
+    "com.boutique": 84,
+    "ind.usine": 73,
+    "com.bureau": 63,
+    "hot.restaurant": 35,
+    "san.centre": 33,
+    "san.pharmacie": 28,
+    "com.marche": 25,
+    "gov.admin": 17,
+    "hot.hotel": 16,
+    "com.station": 15,
+    "agr.magasin": 14,
+    "res.immeuble": 9,
+    "rel.eglise": 7,
+    "com.atelier": 4,
+    "tra.gare": 3,
+    "san.hopital": 1
+   },
+   "footprintM2": {
+    "p10": 16.7,
+    "p25": 29.7,
+    "median": 70.0,
+    "p75": 144.4,
+    "p90": 195.6,
+    "p99": 514.1
+   },
+   "areaHistogram": {
+    "<10": 324,
+    "<25": 41966,
+    "<50": 41620,
+    "<100": 43919,
+    "<200": 61269,
+    "<400": 16220,
+    "<1000": 2713,
+    "<5000": 645,
+    ">=5000": 74
+   },
+   "floors": {
+    "unknown": 208703,
+    "1": 18,
+    "2": 18,
+    "3": 8,
+    "5": 1,
+    "4": 1,
+    "6": 1
+   },
+   "rPlus": {
+    "unknown": 208703,
+    "RDC": 18,
+    "R+1": 18,
+    "R+2": 8,
+    "R+4": 1,
+    "R+3": 1,
+    "R+5 et plus": 1
+   },
+   "compoundSizes": {
+    "1": 127900,
+    "2": 22034,
+    "3": 5199,
+    "4": 1674,
+    "5": 745,
+    "6": 321,
+    "7": 227,
+    "8": 133,
+    "9": 95,
+    "10+": 311
+   }
+  },
+  "TBA": {
+   "classes": {
+    "res.maison": 140715,
+    "res.annexe": 99524,
+    "res.concession": 90193,
+    "inconnu": 50776,
+    "res.case": 35501,
+    "rel.mosquee": 121,
+    "com.boutique": 60,
+    "com.entrepot": 37,
+    "com.bureau": 13,
+    "san.pharmacie": 11,
+    "res.immeuble": 11,
+    "san.centre": 9,
+    "hot.hotel": 8,
+    "edu.ecole": 6,
+    "com.station": 5,
+    "gov.admin": 3,
+    "hot.restaurant": 3,
+    "com.marche": 3,
+    "ind.usine": 2,
+    "chantier": 2,
+    "tra.gare": 2,
+    "san.hopital": 1,
+    "edu.universite": 1,
+    "rel.eglise": 1
+   },
+   "footprintM2": {
+    "p10": 13.7,
+    "p25": 17.9,
+    "median": 32.5,
+    "p75": 76.3,
+    "p90": 157.7,
+    "p99": 368.7
+   },
+   "areaHistogram": {
+    "<10": 1876,
+    "<25": 169919,
+    "<50": 96976,
+    "<100": 67665,
+    "<200": 53286,
+    "<400": 24343,
+    "<1000": 2804,
+    "<5000": 134,
+    ">=5000": 5
+   },
+   "floors": {
+    "unknown": 416989,
+    "1": 14,
+    "2": 2,
+    "3": 3
+   },
+   "rPlus": {
+    "unknown": 416989,
+    "RDC": 14,
+    "R+2": 3,
+    "R+1": 2
+   },
+   "compoundSizes": {
+    "1": 210547,
+    "2": 54713,
+    "3": 15174,
+    "4": 4464,
+    "5": 1752,
+    "6": 938,
+    "7": 527,
+    "8": 341,
+    "9": 244,
+    "10+": 593
+   }
+  },
+  "ZIG": {
+   "classes": {
+    "res.maison": 34710,
+    "res.concession": 12821,
+    "res.annexe": 9627,
+    "res.case": 2119,
+    "inconnu": 1871,
+    "chantier": 798,
+    "edu.ecole": 64,
+    "com.bureau": 41,
+    "com.boutique": 35,
+    "rel.mosquee": 33,
+    "hot.restaurant": 27,
+    "com.entrepot": 18,
+    "gov.admin": 15,
+    "hot.hotel": 15,
+    "san.hopital": 13,
+    "com.marche": 12,
+    "rel.eglise": 12,
+    "san.centre": 11,
+    "san.pharmacie": 11,
+    "com.station": 6,
+    "res.immeuble": 5,
+    "edu.universite": 2,
+    "com.atelier": 2,
+    "ind.usine": 1
+   },
+   "footprintM2": {
+    "p10": 17.4,
+    "p25": 32.4,
+    "median": 82.4,
+    "p75": 152.1,
+    "p90": 217.7,
+    "p99": 452.1
+   },
+   "areaHistogram": {
+    "<10": 208,
+    "<25": 11395,
+    "<50": 10713,
+    "<100": 13080,
+    "<200": 18898,
+    "<400": 7099,
+    "<1000": 792,
+    "<5000": 83,
+    ">=5000": 1
+   },
+   "floors": {
+    "unknown": 62257,
+    "3": 3,
+    "1": 4,
+    "2": 4,
+    "5": 1
+   },
+   "rPlus": {
+    "unknown": 62257,
+    "RDC": 4,
+    "R+1": 4,
+    "R+2": 3,
+    "R+4": 1
+   },
+   "compoundSizes": {
+    "1": 38921,
+    "2": 7086,
+    "3": 1428,
+    "4": 368,
+    "5": 156,
+    "6": 82,
+    "7": 43,
+    "8": 26,
+    "9": 16,
+    "10+": 71
+   }
+  }
+ }
+}

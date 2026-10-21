@@ -1,0 +1,28 @@
+% Share of compounds by the number of digits in their number, under the three numbering designs
+% measured on the same compounds (model/name-families.json): the issued design is the last row.
+\documentclass[border=2mm]{standalone}
+\usepackage{common}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+  width=11cm, height=3.6cm, scale only axis,
+  xbar stacked, bar width=14pt,
+  xmin=0, xmax=100, ymin=0.4, ymax=3.6,
+  ytick={1,2,3}, y dir=reverse,
+  yticklabels={\tr{one range per place}{une plage par lieu}, \tr{one range per name, official names}{une plage par nom, noms officiels}, \tr{one range per name, plate names (issued)}{une plage par nom, noms de plaque (émis)}},
+  y tick label style={font=\scriptsize, align=flush right, text width=3.6cm},
+  xlabel={\tr{share of compounds (\%)}{part des concessions (\%)}},
+  axis lines*=left,
+  nodes near coords={\pgfmathprintnumber[fixed, fixed zerofill, precision=1]{\pgfplotspointmeta}},
+  nodes near coords style={font=\scriptsize, text=white},
+  every node near coord/.append style={xshift=-12pt, anchor=east},
+  point meta=explicit,
+  legend style={at={(0.5,1.03)}, anchor=south, legend columns=3, font=\scriptsize, draw=none},
+]
+\addplot[fill=sngreen!55, draw=white] table[y=row, x=d3, meta=d3] {data/designs.dat};
+\addplot[fill=sngreen, draw=white] table[y=row, x=d4, meta=d4] {data/designs.dat};
+\addplot[fill=sngreen!50!black, draw=white] table[y=row, x=d5, meta=d5] {data/designs.dat};
+\legend{\tr{3 digits}{3 chiffres}, \tr{4 digits}{4 chiffres}, \tr{5 digits}{5 chiffres}}
+\end{axis}
+\end{tikzpicture}
+\end{document}

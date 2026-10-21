@@ -1,0 +1,30 @@
+% The spot grid of zone DKR (model/zones.json): a 16 km square frame from E0 = 227 000 m,
+% N0 = 1 620 000 m in UTM zone 28N, cut into 2 m cells, so x and y run from 0000 to 7999 (Eqs. (2) and (16)).
+% The outline is the zone's (model/zones.geojson); the two points are worked examples of the paper.
+\documentclass[border=2mm]{standalone}
+\usepackage{common}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+  width=10cm, axis equal image, scale only axis,
+  xmin=0, xmax=8000, ymin=0, ymax=8000,
+  xtick={0,1000,...,8000}, ytick={0,1000,...,8000},
+  xticklabels={0000,1000,2000,3000,4000,5000,6000,7000,7999},
+  yticklabels={0000,1000,2000,3000,4000,5000,6000,7000,7999},
+  xlabel={\tr{$x$: easting cell (2 m)}{$x$ : maille en abscisse (2 m)}},
+  ylabel={\tr{$y$: northing cell (2 m)}{$y$ : maille en ordonnée (2 m)}},
+  grid=major, grid style={muted!30}, axis lines*=box,
+]
+\addplot[fill=sngreen!14, draw=sngreen, line width=0.6pt, unbounded coords=jump] table[x=x, y=y] {data/dakar-frame.dat};
+\addplot[only marks, mark=*, mark size=2.2pt, color=snred] coordinates {(5553,1512) (2719,4676)};
+\node[anchor=west, font=\scriptsize, fill=white, inner sep=1.5pt, align=left] at (axis cs:5700,1350)
+  {Place de l'Indépendance\\\texttt{DKR 5553 1512}};
+\node[anchor=east, font=\scriptsize, fill=white, inner sep=1.5pt, align=right] at (axis cs:2580,4676)
+  {Ouakam 2512\\\texttt{DKR 2719 4676}};
+\node[anchor=north west, font=\scriptsize, text=ink, align=left] at (axis cs:150,7850)
+  {\tr{frame $F = 16$ km, cell $= 2$ m}{cadre $F = 16$ km, maille $= 2$ m}\\
+   \tr{maximum decoding error $\sqrt{2}$ m}{erreur maximale au décodage : $\sqrt{2}$ m}};
+\node[anchor=south west, font=\scriptsize, text=muted] at (axis cs:60,60) {$(E_0, N_0)$};
+\end{axis}
+\end{tikzpicture}
+\end{document}

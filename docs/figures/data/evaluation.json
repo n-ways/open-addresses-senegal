@@ -1,0 +1,293 @@
+{
+ "addresses": 3597128,
+ "uniqueCanonical": 3597128,
+ "duplicateCanonical": 0,
+ "uniqueRemembered": 3597128,
+ "duplicateRemembered": 0,
+ "decode": {
+  "exact": 3597128,
+  "none": 0,
+  "several": 0,
+  "wrong": 0
+ },
+ "digits": {
+  "3": 717894,
+  "4": 1676892,
+  "5": 1202342
+ },
+ "rememberedLength": {
+  "min": 6,
+  "median": 13.0,
+  "p95": 18,
+  "p99": 20,
+  "max": 33,
+  "atMost12": 1326897,
+  "atMost16": 3103543
+ },
+ "slips": {
+  "sampled": 100000,
+  "variants": 3621599,
+  "sameLieuIssued": 819268,
+  "otherLieuIssued": 46486,
+  "otherLieuUnissued": 104792,
+  "sameLieuUnissued": 1997676,
+  "noBlock": 653377,
+  "shares": {
+   "sameLieuIssued": 0.2262,
+   "otherLieuIssued": 0.0128,
+   "otherLieuUnissued": 0.0289,
+   "sameLieuUnissued": 0.5516,
+   "noBlock": 0.1804
+  }
+ },
+ "checkLetter": {
+  "single": [
+   9000000,
+   9000000
+  ],
+  "adjacentSwap": [
+   800830,
+   800830
+  ]
+ },
+ "spot": {
+  "BIG": {
+   "cell": 10,
+   "maxError": 6.851,
+   "bound": 7.071
+  },
+  "BKL": {
+   "cell": 10,
+   "maxError": 6.886,
+   "bound": 7.071
+  },
+  "BMB": {
+   "cell": 5,
+   "maxError": 3.423,
+   "bound": 3.536
+  },
+  "BNK": {
+   "cell": 10,
+   "maxError": 6.739,
+   "bound": 7.071
+  },
+  "BRK": {
+   "cell": 10,
+   "maxError": 6.717,
+   "bound": 7.071
+  },
+  "DAG": {
+   "cell": 10,
+   "maxError": 6.864,
+   "bound": 7.071
+  },
+  "DBL": {
+   "cell": 10,
+   "maxError": 6.684,
+   "bound": 7.071
+  },
+  "DKR": {
+   "cell": 2,
+   "maxError": 1.337,
+   "bound": 1.414
+  },
+  "FDG": {
+   "cell": 10,
+   "maxError": 6.81,
+   "bound": 7.071
+  },
+  "FTK": {
+   "cell": 10,
+   "maxError": 6.935,
+   "bound": 7.071
+  },
+  "GDW": {
+   "cell": 1,
+   "maxError": 0.671,
+   "bound": 0.707
+  },
+  "GMP": {
+   "cell": 10,
+   "maxError": 6.794,
+   "bound": 7.071
+  },
+  "GNG": {
+   "cell": 5,
+   "maxError": 3.38,
+   "bound": 3.536
+  },
+  "GOS": {
+   "cell": 10,
+   "maxError": 6.708,
+   "bound": 7.071
+  },
+  "GRY": {
+   "cell": 10,
+   "maxError": 6.833,
+   "bound": 7.071
+  },
+  "KAF": {
+   "cell": 10,
+   "maxError": 6.988,
+   "bound": 7.071
+  },
+  "KAO": {
+   "cell": 10,
+   "maxError": 6.964,
+   "bound": 7.071
+  },
+  "KBM": {
+   "cell": 10,
+   "maxError": 6.944,
+   "bound": 7.071
+  },
+  "KDG": {
+   "cell": 10,
+   "maxError": 6.962,
+   "bound": 7.071
+  },
+  "KGH": {
+   "cell": 10,
+   "maxError": 6.791,
+   "bound": 7.071
+  },
+  "KLD": {
+   "cell": 10,
+   "maxError": 6.875,
+   "bound": 7.071
+  },
+  "KNL": {
+   "cell": 10,
+   "maxError": 6.867,
+   "bound": 7.071
+  },
+  "KPT": {
+   "cell": 10,
+   "maxError": 6.865,
+   "bound": 7.071
+  },
+  "KTF": {
+   "cell": 10,
+   "maxError": 6.687,
+   "bound": 7.071
+  },
+  "LGA": {
+   "cell": 10,
+   "maxError": 6.926,
+   "bound": 7.071
+  },
+  "LNG": {
+   "cell": 10,
+   "maxError": 7.023,
+   "bound": 7.071
+  },
+  "MAT": {
+   "cell": 10,
+   "maxError": 6.943,
+   "bound": 7.071
+  },
+  "MBR": {
+   "cell": 10,
+   "maxError": 6.815,
+   "bound": 7.071
+  },
+  "MHD": {
+   "cell": 10,
+   "maxError": 6.83,
+   "bound": 7.071
+  },
+  "MYF": {
+   "cell": 10,
+   "maxError": 6.967,
+   "bound": 7.071
+  },
+  "NRP": {
+   "cell": 10,
+   "maxError": 6.984,
+   "bound": 7.071
+  },
+  "OUS": {
+   "cell": 5,
+   "maxError": 3.524,
+   "bound": 3.536
+  },
+  "PKN": {
+   "cell": 2,
+   "maxError": 1.344,
+   "bound": 1.414
+  },
+  "POD": {
+   "cell": 10,
+   "maxError": 6.917,
+   "bound": 7.071
+  },
+  "RAN": {
+   "cell": 10,
+   "maxError": 6.861,
+   "bound": 7.071
+  },
+  "RUF": {
+   "cell": 5,
+   "maxError": 3.397,
+   "bound": 3.536
+  },
+  "SED": {
+   "cell": 10,
+   "maxError": 6.917,
+   "bound": 7.071
+  },
+  "SLM": {
+   "cell": 10,
+   "maxError": 7.05,
+   "bound": 7.071
+  },
+  "SRY": {
+   "cell": 10,
+   "maxError": 6.9,
+   "bound": 7.071
+  },
+  "STL": {
+   "cell": 5,
+   "maxError": 3.354,
+   "bound": 3.536
+  },
+  "TBA": {
+   "cell": 5,
+   "maxError": 3.378,
+   "bound": 3.536
+  },
+  "TBC": {
+   "cell": 10,
+   "maxError": 6.986,
+   "bound": 7.071
+  },
+  "THS": {
+   "cell": 10,
+   "maxError": 6.911,
+   "bound": 7.071
+  },
+  "TIV": {
+   "cell": 10,
+   "maxError": 7.019,
+   "bound": 7.071
+  },
+  "VEL": {
+   "cell": 10,
+   "maxError": 6.774,
+   "bound": 7.071
+  },
+  "ZIG": {
+   "cell": 10,
+   "maxError": 6.891,
+   "bound": 7.071
+  }
+ },
+ "locality": {
+  "pairs": 3582131,
+  "consecutiveMedian": 23.4,
+  "consecutiveP90": 80.8,
+  "randomMedian": 561.4,
+  "randomP90": 1912.1
+ },
+ "seed": 20261020
+}

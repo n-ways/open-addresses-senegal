@@ -1,0 +1,1301 @@
+[
+ {
+  "case": {
+   "kind": "new",
+   "lat": 12.6387567,
+   "lng": -12.8192919
+  },
+  "issuer": {
+   "lieu": "SLM-0090",
+   "number": 1607,
+   "canonical": "SN-SLM-0090-1607-M",
+   "remembered": "Roudji 1607",
+   "written": "ROUDJI 1607 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "un_batiment",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "new",
+   "lat": 12.641909,
+   "lng": -12.9060872
+  },
+  "issuer": {
+   "lieu": "SLM-0043",
+   "number": 8101,
+   "canonical": "SN-SLM-0043-8101-Z",
+   "remembered": "Hamdalaye 8101",
+   "written": "HAMDALAYE 8101 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "un_batiment",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "new",
+   "lat": 12.638298,
+   "lng": -12.8342852
+  },
+  "issuer": {
+   "lieu": "SLM-0086",
+   "number": 346,
+   "canonical": "SN-SLM-0086-346-H",
+   "remembered": "Samou 346",
+   "written": "SAMOU 346 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "un_batiment",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "new",
+   "lat": 12.5589724,
+   "lng": -12.8953583
+  },
+  "issuer": {
+   "lieu": "SLM-0066",
+   "number": 237,
+   "canonical": "SN-SLM-0066-237-H",
+   "remembered": "Mbon Peul 237",
+   "written": "MBON PEUL 237 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "un_batiment",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "new",
+   "lat": 12.5639096,
+   "lng": -12.7659578
+  },
+  "issuer": {
+   "lieu": "SLM-0008",
+   "number": 186,
+   "canonical": "SN-SLM-0008-186-Z",
+   "remembered": "Bilél 186",
+   "written": "BILÉL 186 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "un_batiment",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "new",
+   "lat": 12.5727606,
+   "lng": -12.7706619
+  },
+  "issuer": {
+   "lieu": "SLM-0008",
+   "number": 378,
+   "canonical": "SN-SLM-0008-378-Q",
+   "remembered": "Bilél 378",
+   "written": "BILÉL 378 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "un_batiment",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "new",
+   "lat": 12.6318618,
+   "lng": -12.7895025
+  },
+  "issuer": {
+   "lieu": "SLM-0011",
+   "number": 4500,
+   "canonical": "SN-SLM-0011-4500-M",
+   "remembered": "Dar Salam 4500",
+   "written": "DAR SALAM 4500 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "un_batiment",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "new",
+   "lat": 12.4096323,
+   "lng": -12.4160312
+  },
+  "issuer": {
+   "lieu": "SLM-0096",
+   "number": 156,
+   "canonical": "SN-SLM-0096-156-H",
+   "remembered": "Yéro Guédo 156",
+   "written": "YÉRO GUÉDO 156 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "un_batiment",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "new",
+   "lat": 12.6338623,
+   "lng": -12.8020095
+  },
+  "issuer": {
+   "lieu": "SLM-0011",
+   "number": 4959,
+   "canonical": "SN-SLM-0011-4959-F",
+   "remembered": "Dar Salam 4959",
+   "written": "DAR SALAM 4959 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "un_batiment",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "new",
+   "lat": 12.6224027,
+   "lng": -12.7982695
+  },
+  "issuer": {
+   "lieu": "SLM-0011",
+   "number": 4844,
+   "canonical": "SN-SLM-0011-4844-F",
+   "remembered": "Dar Salam 4844",
+   "written": "DAR SALAM 4844 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "un_batiment",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "new",
+   "lat": 12.3980203,
+   "lng": -12.5297155
+  },
+  "issuer": {
+   "lieu": "SLM-0040",
+   "number": 120,
+   "canonical": "SN-SLM-0040-120-J",
+   "remembered": "Gourénétéré 120",
+   "written": "GOURÉNÉTÉRÉ 120 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "un_batiment",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "new",
+   "lat": 12.6416965,
+   "lng": -12.9078515
+  },
+  "issuer": {
+   "lieu": "SLM-0043",
+   "number": 8170,
+   "canonical": "SN-SLM-0043-8170-R",
+   "remembered": "Hamdalaye 8170",
+   "written": "HAMDALAYE 8170 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "un_batiment",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "new",
+   "lat": 12.6101111,
+   "lng": -12.7769799
+  },
+  "issuer": {
+   "lieu": "SLM-0014",
+   "number": 262,
+   "canonical": "SN-SLM-0014-262-H",
+   "remembered": "Diara Pont 262",
+   "written": "DIARA PONT 262 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "un_batiment",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "new",
+   "lat": 12.6758566,
+   "lng": -12.8268876
+  },
+  "issuer": {
+   "lieu": "SLM-0047",
+   "number": 135,
+   "canonical": "SN-SLM-0047-135-W",
+   "remembered": "Kékéressi 135",
+   "written": "KÉKÉRESSI 135 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "un_batiment",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "new",
+   "lat": 12.4546274,
+   "lng": -12.6485289
+  },
+  "issuer": {
+   "lieu": "SLM-0010",
+   "number": 1793,
+   "canonical": "SN-SLM-0010-1793-Z",
+   "remembered": "Dakateli 1793",
+   "written": "DAKATELI 1793 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "un_batiment",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "new",
+   "lat": 12.6505735,
+   "lng": -12.8284758
+  },
+  "issuer": {
+   "lieu": "SLM-0086",
+   "number": 406,
+   "canonical": "SN-SLM-0086-406-X",
+   "remembered": "Samou 406",
+   "written": "SAMOU 406 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "un_batiment",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "new",
+   "lat": 12.5502789,
+   "lng": -12.6145098
+  },
+  "issuer": {
+   "lieu": "SLM-0093",
+   "number": 468,
+   "canonical": "SN-SLM-0093-468-H",
+   "remembered": "Mbourou 468",
+   "written": "MBOUROU 468 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "un_batiment",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "new",
+   "lat": 12.6229584,
+   "lng": -12.8443005
+  },
+  "issuer": {
+   "lieu": "SLM-0025",
+   "number": 190,
+   "canonical": "SN-SLM-0025-190-Q",
+   "remembered": "Egache 190",
+   "written": "EGACHE 190 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "un_batiment",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "new",
+   "lat": 12.4056352,
+   "lng": -12.4137005
+  },
+  "issuer": {
+   "lieu": "SLM-0096",
+   "number": 410,
+   "canonical": "SN-SLM-0096-410-Q",
+   "remembered": "Yéro Guédo 410",
+   "written": "YÉRO GUÉDO 410 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "un_batiment",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "new",
+   "lat": 12.6308294,
+   "lng": -12.8190451
+  },
+  "issuer": {
+   "lieu": "SLM-0090",
+   "number": 3500,
+   "canonical": "SN-SLM-0090-3500-Q",
+   "remembered": "Roudji 3500",
+   "written": "ROUDJI 3500 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "un_batiment",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "new",
+   "lat": 12.4098638,
+   "lng": -12.4188825
+  },
+  "issuer": {
+   "lieu": "SLM-0096",
+   "number": 358,
+   "canonical": "SN-SLM-0096-358-K",
+   "remembered": "Yéro Guédo 358",
+   "written": "YÉRO GUÉDO 358 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "un_batiment",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "new",
+   "lat": 12.5100957,
+   "lng": -12.7303481
+  },
+  "issuer": {
+   "lieu": "SLM-0050",
+   "number": 310,
+   "canonical": "SN-SLM-0050-310-J",
+   "remembered": "Kévoye 310",
+   "written": "KÉVOYE 310 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "un_batiment",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "new",
+   "lat": 12.5840612,
+   "lng": -12.8519937
+  },
+  "issuer": {
+   "lieu": "SLM-0032",
+   "number": 123,
+   "canonical": "SN-SLM-0032-123-J",
+   "remembered": "Ethiolo 123",
+   "written": "ETHIOLO 123 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "un_batiment",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "new",
+   "lat": 12.5896418,
+   "lng": -12.803591
+  },
+  "issuer": {
+   "lieu": "SLM-0039",
+   "number": 166,
+   "canonical": "SN-SLM-0039-166-Q",
+   "remembered": "Goumo 166",
+   "written": "GOUMO 166 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "un_batiment",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "new",
+   "lat": 12.4568835,
+   "lng": -12.646886
+  },
+  "issuer": {
+   "lieu": "SLM-0010",
+   "number": 1065,
+   "canonical": "SN-SLM-0010-1065-W",
+   "remembered": "Dakateli 1065",
+   "written": "DAKATELI 1065 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "un_batiment",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "new",
+   "lat": 12.6096421,
+   "lng": -12.7815297
+  },
+  "issuer": {
+   "lieu": "SLM-0014",
+   "number": 289,
+   "canonical": "SN-SLM-0014-289-H",
+   "remembered": "Diara Pont 289",
+   "written": "DIARA PONT 289 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "un_batiment",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "new",
+   "lat": 12.445131,
+   "lng": -12.7423699
+  },
+  "issuer": {
+   "lieu": "SLM-0000",
+   "number": 236,
+   "canonical": "SN-SLM-0000-236-W",
+   "remembered": "Aïkoun 236",
+   "written": "AÏKOUN 236 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "un_batiment",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "new",
+   "lat": 12.6674688,
+   "lng": -12.8706081
+  },
+  "issuer": {
+   "lieu": "SLM-0024",
+   "number": 261,
+   "canonical": "SN-SLM-0024-261-Z",
+   "remembered": "Edine 261",
+   "written": "EDINE 261 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "un_batiment",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "new",
+   "lat": 12.3929943,
+   "lng": -12.5607321
+  },
+  "issuer": {
+   "lieu": "SLM-0074",
+   "number": 121,
+   "canonical": "SN-SLM-0074-121-H",
+   "remembered": "Népène 121",
+   "written": "NÉPÈNE 121 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "un_batiment",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "new",
+   "lat": 12.5439213,
+   "lng": -12.5445333
+  },
+  "issuer": {
+   "lieu": "SLM-0049",
+   "number": 1055,
+   "canonical": "SN-SLM-0049-1055-M",
+   "remembered": "Kérévane 1055",
+   "written": "KÉRÉVANE 1055 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "un_batiment",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "door",
+   "lat": 12.4376913,
+   "lng": -12.517236,
+   "of": "SN-SLM-0046-252-F"
+  },
+  "issuer": {
+   "lieu": "SLM-0046",
+   "number": 266,
+   "canonical": "SN-SLM-0046-266-Z",
+   "remembered": "Kadioré 266",
+   "written": "KADIORÉ 266 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "porte",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "door",
+   "lat": 12.4377363,
+   "lng": -12.517236,
+   "of": "SN-SLM-0046-252-F"
+  },
+  "issuer": {
+   "lieu": "SLM-0046",
+   "number": 267,
+   "canonical": "SN-SLM-0046-267-W",
+   "remembered": "Kadioré 267",
+   "written": "KADIORÉ 267 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "porte",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "door",
+   "lat": 12.4377812,
+   "lng": -12.517236,
+   "of": "SN-SLM-0046-252-F"
+  },
+  "issuer": {
+   "lieu": "SLM-0046",
+   "number": 270,
+   "canonical": "SN-SLM-0046-270-T",
+   "remembered": "Kadioré 270",
+   "written": "KADIORÉ 270 · SALÉMATA",
+   "newBlocks": [
+    [
+     270,
+     279
+    ]
+   ],
+   "class": "",
+   "use": "unknown",
+   "kind": "porte",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "door",
+   "lat": 12.4378261,
+   "lng": -12.517236,
+   "of": "SN-SLM-0046-252-F"
+  },
+  "issuer": {
+   "lieu": "SLM-0046",
+   "number": 250,
+   "canonical": "SN-SLM-0046-250-M",
+   "remembered": "Kadioré 250",
+   "written": "KADIORÉ 250 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "porte",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "door",
+   "lat": 12.437871,
+   "lng": -12.517236,
+   "of": "SN-SLM-0046-252-F"
+  },
+  "issuer": {
+   "lieu": "SLM-0046",
+   "number": 251,
+   "canonical": "SN-SLM-0046-251-J",
+   "remembered": "Kadioré 251",
+   "written": "KADIORÉ 251 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "porte",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "door",
+   "lat": 12.4379159,
+   "lng": -12.517236,
+   "of": "SN-SLM-0046-252-F"
+  },
+  "issuer": {
+   "lieu": "SLM-0046",
+   "number": 254,
+   "canonical": "SN-SLM-0046-254-T",
+   "remembered": "Kadioré 254",
+   "written": "KADIORÉ 254 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "porte",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "door",
+   "lat": 12.4379608,
+   "lng": -12.517236,
+   "of": "SN-SLM-0046-252-F"
+  },
+  "issuer": {
+   "lieu": "SLM-0046",
+   "number": 255,
+   "canonical": "SN-SLM-0046-255-Q",
+   "remembered": "Kadioré 255",
+   "written": "KADIORÉ 255 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "porte",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "door",
+   "lat": 12.4376913,
+   "lng": -12.5171901,
+   "of": "SN-SLM-0046-252-F"
+  },
+  "issuer": {
+   "lieu": "SLM-0046",
+   "number": 265,
+   "canonical": "SN-SLM-0046-265-H",
+   "remembered": "Kadioré 265",
+   "written": "KADIORÉ 265 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "porte",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "door",
+   "lat": 12.4377363,
+   "lng": -12.5171901,
+   "of": "SN-SLM-0046-252-F"
+  },
+  "issuer": {
+   "lieu": "SLM-0046",
+   "number": 271,
+   "canonical": "SN-SLM-0046-271-Q",
+   "remembered": "Kadioré 271",
+   "written": "KADIORÉ 271 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "porte",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "door",
+   "lat": 12.4377812,
+   "lng": -12.5171901,
+   "of": "SN-SLM-0046-252-F"
+  },
+  "issuer": {
+   "lieu": "SLM-0046",
+   "number": 272,
+   "canonical": "SN-SLM-0046-272-K",
+   "remembered": "Kadioré 272",
+   "written": "KADIORÉ 272 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "porte",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "door",
+   "lat": 12.4378261,
+   "lng": -12.5171901,
+   "of": "SN-SLM-0046-252-F"
+  },
+  "issuer": {
+   "lieu": "SLM-0046",
+   "number": 273,
+   "canonical": "SN-SLM-0046-273-H",
+   "remembered": "Kadioré 273",
+   "written": "KADIORÉ 273 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "porte",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "door",
+   "lat": 12.437871,
+   "lng": -12.5171901,
+   "of": "SN-SLM-0046-252-F"
+  },
+  "issuer": {
+   "lieu": "SLM-0046",
+   "number": 274,
+   "canonical": "SN-SLM-0046-274-Z",
+   "remembered": "Kadioré 274",
+   "written": "KADIORÉ 274 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "porte",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "door",
+   "lat": 12.4379159,
+   "lng": -12.5171901,
+   "of": "SN-SLM-0046-252-F"
+  },
+  "issuer": {
+   "lieu": "SLM-0046",
+   "number": 253,
+   "canonical": "SN-SLM-0046-253-X",
+   "remembered": "Kadioré 253",
+   "written": "KADIORÉ 253 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "porte",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "door",
+   "lat": 12.4379608,
+   "lng": -12.5171901,
+   "of": "SN-SLM-0046-252-F"
+  },
+  "issuer": {
+   "lieu": "SLM-0046",
+   "number": 275,
+   "canonical": "SN-SLM-0046-275-W",
+   "remembered": "Kadioré 275",
+   "written": "KADIORÉ 275 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "porte",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "door",
+   "lat": 12.4376913,
+   "lng": -12.5171441,
+   "of": "SN-SLM-0046-252-F"
+  },
+  "issuer": {
+   "lieu": "SLM-0046",
+   "number": 276,
+   "canonical": "SN-SLM-0046-276-R",
+   "remembered": "Kadioré 276",
+   "written": "KADIORÉ 276 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "porte",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "door",
+   "lat": 12.4377363,
+   "lng": -12.5171441,
+   "of": "SN-SLM-0046-252-F"
+  },
+  "issuer": {
+   "lieu": "SLM-0046",
+   "number": 277,
+   "canonical": "SN-SLM-0046-277-M",
+   "remembered": "Kadioré 277",
+   "written": "KADIORÉ 277 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "porte",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "door",
+   "lat": 12.4377812,
+   "lng": -12.5171441,
+   "of": "SN-SLM-0046-252-F"
+  },
+  "issuer": {
+   "lieu": "SLM-0046",
+   "number": 278,
+   "canonical": "SN-SLM-0046-278-J",
+   "remembered": "Kadioré 278",
+   "written": "KADIORÉ 278 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "porte",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "door",
+   "lat": 12.4378261,
+   "lng": -12.5171441,
+   "of": "SN-SLM-0046-252-F"
+  },
+  "issuer": {
+   "lieu": "SLM-0046",
+   "number": 279,
+   "canonical": "SN-SLM-0046-279-F",
+   "remembered": "Kadioré 279",
+   "written": "KADIORÉ 279 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "porte",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "door",
+   "lat": 12.437871,
+   "lng": -12.5171441,
+   "of": "SN-SLM-0046-252-F"
+  },
+  "issuer": {
+   "lieu": "SLM-0046",
+   "number": 280,
+   "canonical": "SN-SLM-0046-280-K",
+   "remembered": "Kadioré 280",
+   "written": "KADIORÉ 280 · SALÉMATA",
+   "newBlocks": [
+    [
+     280,
+     289
+    ]
+   ],
+   "class": "",
+   "use": "unknown",
+   "kind": "porte",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "door",
+   "lat": 12.4379159,
+   "lng": -12.5171441,
+   "of": "SN-SLM-0046-252-F"
+  },
+  "issuer": {
+   "lieu": "SLM-0046",
+   "number": 281,
+   "canonical": "SN-SLM-0046-281-H",
+   "remembered": "Kadioré 281",
+   "written": "KADIORÉ 281 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "porte",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "door",
+   "lat": 12.4379608,
+   "lng": -12.5171441,
+   "of": "SN-SLM-0046-252-F"
+  },
+  "issuer": {
+   "lieu": "SLM-0046",
+   "number": 282,
+   "canonical": "SN-SLM-0046-282-Z",
+   "remembered": "Kadioré 282",
+   "written": "KADIORÉ 282 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "porte",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "door",
+   "lat": 12.4376913,
+   "lng": -12.5170981,
+   "of": "SN-SLM-0046-252-F"
+  },
+  "issuer": {
+   "lieu": "SLM-0046",
+   "number": 283,
+   "canonical": "SN-SLM-0046-283-W",
+   "remembered": "Kadioré 283",
+   "written": "KADIORÉ 283 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "porte",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "door",
+   "lat": 12.4377363,
+   "lng": -12.5170981,
+   "of": "SN-SLM-0046-252-F"
+  },
+  "issuer": {
+   "lieu": "SLM-0046",
+   "number": 284,
+   "canonical": "SN-SLM-0046-284-R",
+   "remembered": "Kadioré 284",
+   "written": "KADIORÉ 284 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "porte",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "door",
+   "lat": 12.4377812,
+   "lng": -12.5170981,
+   "of": "SN-SLM-0046-252-F"
+  },
+  "issuer": {
+   "lieu": "SLM-0046",
+   "number": 285,
+   "canonical": "SN-SLM-0046-285-M",
+   "remembered": "Kadioré 285",
+   "written": "KADIORÉ 285 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "porte",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "door",
+   "lat": 12.437871,
+   "lng": -12.5170981,
+   "of": "SN-SLM-0046-252-F"
+  },
+  "issuer": {
+   "lieu": "SLM-0046",
+   "number": 286,
+   "canonical": "SN-SLM-0046-286-J",
+   "remembered": "Kadioré 286",
+   "written": "KADIORÉ 286 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "porte",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "door",
+   "lat": 12.4379159,
+   "lng": -12.5170981,
+   "of": "SN-SLM-0046-252-F"
+  },
+  "issuer": {
+   "lieu": "SLM-0046",
+   "number": 287,
+   "canonical": "SN-SLM-0046-287-F",
+   "remembered": "Kadioré 287",
+   "written": "KADIORÉ 287 · SALÉMATA",
+   "class": "",
+   "use": "unknown",
+   "kind": "porte",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ },
+ {
+  "case": {
+   "kind": "outline",
+   "lat": 12.7299936,
+   "lng": -13.0362823,
+   "outline": [
+    [
+     -13.0362961,
+     12.7299801
+    ],
+    [
+     -13.0362685,
+     12.7299801
+    ],
+    [
+     -13.0362685,
+     12.730007
+    ],
+    [
+     -13.0362961,
+     12.730007
+    ]
+   ]
+  },
+  "issuer": {
+   "error": "bad_outline",
+   "class": "",
+   "structures": 0,
+   "floorAreaM2": 0,
+   "areaM2": 8.9
+  }
+ },
+ {
+  "case": {
+   "kind": "outline",
+   "lat": 12.6685915,
+   "lng": -12.8721164,
+   "outline": [
+    [
+     -12.8721625,
+     12.6685466
+    ],
+    [
+     -12.8720704,
+     12.6685466
+    ],
+    [
+     -12.8720704,
+     12.6686365
+    ],
+    [
+     -12.8721625,
+     12.6686365
+    ]
+   ]
+  },
+  "issuer": {
+   "lieu": "SLM-0024",
+   "number": 280,
+   "canonical": "SN-SLM-0024-280-M",
+   "remembered": "Edine 280",
+   "written": "EDINE 280 · SALÉMATA",
+   "class": "res.maison",
+   "use": "residential",
+   "kind": "un_batiment",
+   "structures": 1,
+   "floorAreaM2": 99.6,
+   "areaM2": 99.6
+  }
+ },
+ {
+  "case": {
+   "kind": "outline",
+   "lat": 12.4703722,
+   "lng": -12.7087131,
+   "outline": [
+    [
+     -12.708842,
+     12.4702464
+    ],
+    [
+     -12.7085843,
+     12.4702464
+    ],
+    [
+     -12.7085843,
+     12.4704979
+    ],
+    [
+     -12.708842,
+     12.4704979
+    ]
+   ]
+  },
+  "issuer": {
+   "lieu": "SLM-0051",
+   "number": 132,
+   "canonical": "SN-SLM-0051-132-W",
+   "remembered": "Kéwé 132",
+   "written": "KÉWÉ 132 · SALÉMATA",
+   "class": "inconnu",
+   "use": "unknown",
+   "kind": "un_batiment",
+   "structures": 1,
+   "floorAreaM2": 780,
+   "areaM2": 780
+  }
+ },
+ {
+  "case": {
+   "kind": "outline",
+   "lat": 12.4808055,
+   "lng": -12.5432252,
+   "outline": [
+    [
+     -12.5434322,
+     12.4806033
+    ],
+    [
+     -12.5430182,
+     12.4806033
+    ],
+    [
+     -12.5430182,
+     12.4810076
+    ],
+    [
+     -12.5434322,
+     12.4810076
+    ]
+   ]
+  },
+  "issuer": {
+   "lieu": "SLM-0007",
+   "number": 145,
+   "canonical": "SN-SLM-0007-145-X",
+   "remembered": "Batimba 145",
+   "written": "BATIMBA 145 · SALÉMATA",
+   "class": "com.entrepot",
+   "use": "commercial",
+   "kind": "un_batiment",
+   "structures": 1,
+   "floorAreaM2": 2014.8,
+   "areaM2": 2014.8
+  }
+ },
+ {
+  "case": {
+   "kind": "outline",
+   "lat": 12.4368312,
+   "lng": -12.6166611,
+   "outline": [
+    [
+     -12.6166818,
+     12.436811
+    ],
+    [
+     -12.6166404,
+     12.436811
+    ],
+    [
+     -12.6166404,
+     12.4368514
+    ],
+    [
+     -12.6166818,
+     12.4368514
+    ]
+   ]
+  },
+  "issuer": {
+   "lieu": "SLM-0082",
+   "number": 302,
+   "canonical": "SN-SLM-0082-302-F",
+   "remembered": "Outioumbél 302",
+   "written": "OUTIOUMBÉL 302 · SALÉMATA",
+   "class": "inconnu",
+   "use": "unknown",
+   "kind": "un_batiment",
+   "structures": 1,
+   "floorAreaM2": 20.1,
+   "areaM2": 20.1
+  }
+ },
+ {
+  "case": {
+   "kind": "outside",
+   "lat": 13.45,
+   "lng": -16.58
+  },
+  "issuer": {
+   "error": "outside",
+   "class": "",
+   "structures": 0,
+   "floorAreaM2": 0
+  }
+ }
+]

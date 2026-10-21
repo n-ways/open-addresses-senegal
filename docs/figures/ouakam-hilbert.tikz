@@ -1,0 +1,25 @@
+% Ouakam (zone DKR, place 80): the 788 compounds of its block 1000-3399, at their centroids
+% (registry/anchors), coloured by the number issued. The grey line joins the numbers in order,
+% which is the order of the Hilbert curve (Eqs. (10)-(12)).
+\documentclass[border=2mm]{standalone}
+\usepackage{common}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+  width=11cm, axis equal image, scale only axis,
+  xmin=5120, xmax=5880, ymin=9010, ymax=9720,
+  xlabel={$E - E_0$ (m)}, ylabel={$N - N_0$ (m)},
+  colorbar, colormap/viridis, point meta min=1000, point meta max=3400,
+  colorbar style={width=2.5mm, ytick={1000,1600,2200,2800,3400},
+    ylabel={\tr{number in the address}{numéro de l'adresse}}, ylabel style={font=\scriptsize}},
+  axis lines*=box, ymajorgrids, xmajorgrids, grid style={muted!20},
+]
+\addplot[draw=muted!70, line width=0.35pt] table[x=x, y=y] {data/ouakam.dat};
+\addplot[scatter, only marks, mark=*, mark size=1.9pt, scatter/use mapped color={draw=white, fill=mapped color},
+  point meta=\thisrow{number}] table[x=x, y=y] {data/ouakam.dat};
+\draw[snred, line width=0.9pt] (axis cs:5438.4,9353.1) circle[radius=5pt];
+\draw[snred, line width=0.5pt] (axis cs:5438.4,9353.1) ++(-3pt,3pt) -- (axis cs:5330,9668)
+  node[above, fill=white, inner sep=1.5pt, font=\scriptsize, text=ink] {Ouakam 2512 ($i = 496$)};
+\end{axis}
+\end{tikzpicture}
+\end{document}

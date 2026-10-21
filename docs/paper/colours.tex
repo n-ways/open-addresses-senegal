@@ -1,0 +1,11 @@
+% Senegal: green, yellow and red, the national flag's stripes in order.
+\definecolor{flagA}{HTML}{00853F}
+\definecolor{flagB}{HTML}{FDEF42}
+\definecolor{flagC}{HTML}{E31B23}
+\definecolor{paperink}{HTML}{00853F}
+\newcommand{\flagband}{\begin{tikzpicture}[remember picture,overlay]
+  \fill[flagA] (0,0) rectangle (\paperwidth,-2.2mm);
+  \fill[flagB] (0,-2.2mm) rectangle (\paperwidth,-4.4mm);
+  \fill[flagC] (0,-4.4mm) rectangle (\paperwidth,-6.6mm);
+\end{tikzpicture}}
+\newcommand{\papershort}{N-Ways Addressing for Senegal}

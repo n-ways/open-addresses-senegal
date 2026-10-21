@@ -1,0 +1,14 @@
+{
+  "addresses": 5839,
+  "byZone": {
+    "SLM": 5839
+  },
+  "country": "SN",
+  "credit": "N-Ways Addressing for Senegal, © N-WAYS LIMITED (nways.ng)",
+  "exported": "2026-10-21T13:40:00Z",
+  "licence": "ODbL 1.0 (LICENSE-DATA)",
+  "registryExported": "2026-10-20T15:57:33Z",
+  "sha256": {
+    "SLM.csv": "ed897293ffc5f188fbf6b0a016409ae33031157c083e77a4ae217915b3f09557"
+  }
+}
